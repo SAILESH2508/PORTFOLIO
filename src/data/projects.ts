@@ -4,7 +4,7 @@ export const projects = [
         description: 'Full-stack meteorological prediction system with real-time weather insights and AI-driven forecasts.',
         details: '• Global city search with live weather status indicators. • Real-time forecasts with hourly breakdowns and 7-day predictions. • AI insights using Random Forest & LSTM models for trend analysis. • Interactive data visualizations with Chart.js. • Production-ready deployment on Vercel.',
         tech: ['React', 'Vite', 'Bootstrap', 'Chart.js', 'Django REST', 'Python', 'Scikit-Learn', 'LSTM', 'Vercel'],
-        image: '/weather-ai.svg',
+        image: '/weather-ai.png',
         gradient: 'from-blue-500 via-cyan-500 to-teal-500',
         role: 'Full Stack Developer & ML Engineer',
         category: 'Machine Learning',
