@@ -1,0 +1,108 @@
+<svg width="1024" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#475569;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1024" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1024" height="60" fill="#1e293b" opacity="0.9"/>
+  
+  <!-- Logo and Navigation -->
+  <circle cx="40" cy="30" r="12" fill="#3b82f6"/>
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">WeatherAI</text>
+  
+  <!-- Navigation Items -->
+  <text x="200" y="35" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">🏠 Home</text>
+  <text x="280" y="35" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">☁️ Live Forecast</text>
+  <rect x="380" y="18" width="60" height="24" rx="12" fill="#3b82f6"/>
+  <text x="410" y="32" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">About</text>
+  
+  <!-- Time Display -->
+  <text x="880" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">08:46:51 AM</text>
+  <text x="880" y="40" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Wednesday, Dec. 24</text>
+  
+  <!-- Main Title -->
+  <text x="512" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Weather</text>
+  <text x="650" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#aiGradient)" text-anchor="start">AI</text>
+  
+  <!-- Subtitle -->
+  <text x="512" y="150" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Next-Generation Meteorological Prediction &amp; Analysis System</text>
+  
+  <!-- Left Weather Panel -->
+  <rect x="40" y="80" width="180" height="280" rx="15" fill="url(#cardGradient)" opacity="0.7"/>
+  
+  <!-- Cloud Icon -->
+  <ellipse cx="120" cy="130" rx="25" ry="15" fill="white" opacity="0.8"/>
+  <ellipse cx="105" cy="125" rx="20" ry="12" fill="white" opacity="0.6"/>
+  <ellipse cx="135" cy="125" rx="18" ry="10" fill="white" opacity="0.7"/>
+  
+  <!-- Temperature -->
+  <text x="120" y="180" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">22°</text>
+  <text x="120" y="200" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Cloudy</text>
+  
+  <!-- Location -->
+  <text x="120" y="230" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">📍 Coimbatore, Tamil</text>
+  <text x="120" y="245" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Nadu, India</text>
+  
+  <!-- Wind Info -->
+  <text x="60" y="280" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">WIND</text>
+  <text x="60" y="295" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">7.5 k/h</text>
+  
+  <text x="140" y="280" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">HUMIDITY</text>
+  <text x="140" y="295" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">78%</text>
+  
+  <!-- Search Bar -->
+  <rect x="60" y="320" width="140" height="30" rx="15" fill="#374151" opacity="0.8"/>
+  <text x="130" y="338" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">🔍 Search City...</text>
+  
+  <!-- Feature Cards -->
+  <!-- Home Card -->
+  <rect x="280" y="200" width="200" height="140" rx="15" fill="url(#cardGradient)" opacity="0.8"/>
+  <text x="380" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">🏠</text>
+  <text x="380" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Home</text>
+  <text x="290" y="270" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">The central command center</text>
+  <text x="290" y="285" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">providing instant access to global</text>
+  <text x="290" y="300" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">city search, live status indicators,</text>
+  <text x="290" y="315" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">and quick navigation to all</text>
+  <text x="290" y="330" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">analytical modules.</text>
+  
+  <!-- Live Forecast Card -->
+  <rect x="500" y="200" width="200" height="140" rx="15" fill="url(#cardGradient)" opacity="0.8"/>
+  <text x="600" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">☀️</text>
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">Live Forecast</text>
+  <text x="510" y="270" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Real-time weather tracking</text>
+  <text x="510" y="285" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">powered by Open-Meteo. Features</text>
+  <text x="510" y="300" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">dynamic visuals, hourly</text>
+  <text x="510" y="315" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">breakdowns, and a 7-day</text>
+  <text x="510" y="330" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">predictive outlook.</text>
+  
+  <!-- AI Insights Card -->
+  <rect x="720" y="200" width="200" height="140" rx="15" fill="url(#cardGradient)" opacity="0.8"/>
+  <text x="820" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">🤖</text>
+  <text x="820" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">AI Insights</text>
+  <text x="730" y="270" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Advanced machine learning</text>
+  <text x="730" y="285" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">algorithms analyze historical</text>
+  <text x="730" y="300" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">patterns to provide smart</text>
+  <text x="730" y="315" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">recommendations for travel and</text>
+  <text x="730" y="330" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">outdoor activities.</text>
+  
+  <!-- Bottom Cities -->
+  <text x="60" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">NEW YORK</text>
+  <text x="60" y="395" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">USA 🌡️</text>
+  
+  <text x="160" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">LONDON</text>
+  <text x="160" y="395" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">🔥 Tip: High humidity (>80%)</text>
+</svg>

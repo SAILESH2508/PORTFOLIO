@@ -1,0 +1,79 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a192f"/>
+  
+  <!-- Header -->
+  <rect width="800" height="70" fill="#112240"/>
+  <text x="40" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#64ffda">Alumni Connect</text>
+  <text x="650" y="45" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Smart India Hackathon 2024</text>
+  
+  <!-- Navigation -->
+  <rect x="40" y="90" width="720" height="50" rx="8" fill="#112240"/>
+  <text x="70" y="120" font-family="Arial, sans-serif" font-size="14" fill="#64ffda">Dashboard</text>
+  <text x="180" y="120" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Alumni Directory</text>
+  <text x="330" y="120" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Events</text>
+  <text x="430" y="120" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Donations</text>
+  <text x="550" y="120" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Analytics</text>
+  
+  <!-- Main Content Area -->
+  <!-- Stats Cards -->
+  <rect x="40" y="170" width="220" height="120" rx="12" fill="#112240"/>
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#64ffda">12,458</text>
+  <text x="60" y="240" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Total Alumni</text>
+  <rect x="60" y="255" width="80" height="20" rx="4" fill="#1a3a52"/>
+  <text x="100" y="270" font-family="Arial, sans-serif" font-size="11" fill="#64ffda" text-anchor="middle">+12% ↑</text>
+  
+  <rect x="280" y="170" width="220" height="120" rx="12" fill="#112240"/>
+  <text x="300" y="210" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#64ffda">8,234</text>
+  <text x="300" y="240" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Active Members</text>
+  <rect x="300" y="255" width="80" height="20" rx="4" fill="#1a3a52"/>
+  <text x="340" y="270" font-family="Arial, sans-serif" font-size="11" fill="#64ffda" text-anchor="middle">+8% ↑</text>
+  
+  <rect x="520" y="170" width="240" height="120" rx="12" fill="#112240"/>
+  <text x="540" y="210" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#64ffda">$2.4M</text>
+  <text x="540" y="240" font-family="Arial, sans-serif" font-size="14" fill="#8892b0">Total Donations</text>
+  <rect x="540" y="255" width="80" height="20" rx="4" fill="#1a3a52"/>
+  <text x="580" y="270" font-family="Arial, sans-serif" font-size="11" fill="#64ffda" text-anchor="middle">+25% ↑</text>
+  
+  <!-- Recent Alumni Section -->
+  <rect x="40" y="320" width="360" height="250" rx="12" fill="#112240"/>
+  <text x="60" y="355" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ccd6f6">Recent Alumni Registrations</text>
+  
+  <!-- Alumni Cards -->
+  <rect x="60" y="375" width="320" height="60" rx="8" fill="#0a192f"/>
+  <circle cx="90" cy="405" r="20" fill="#64ffda"/>
+  <text x="95" y="413" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0a192f" text-anchor="middle">RK</text>
+  <text x="125" y="400" font-family="Arial, sans-serif" font-size="14" fill="#ccd6f6">Rajesh Kumar</text>
+  <text x="125" y="420" font-family="Arial, sans-serif" font-size="12" fill="#8892b0">Software Engineer @ Google</text>
+  
+  <rect x="60" y="445" width="320" height="60" rx="8" fill="#0a192f"/>
+  <circle cx="90" cy="475" r="20" fill="#64ffda"/>
+  <text x="95" y="483" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0a192f" text-anchor="middle">PS</text>
+  <text x="125" y="470" font-family="Arial, sans-serif" font-size="14" fill="#ccd6f6">Priya Sharma</text>
+  <text x="125" y="490" font-family="Arial, sans-serif" font-size="12" fill="#8892b0">Data Scientist @ Microsoft</text>
+  
+  <rect x="60" y="515" width="320" height="60" rx="8" fill="#0a192f"/>
+  <circle cx="90" cy="545" r="20" fill="#64ffda"/>
+  <text x="95" y="553" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0a192f" text-anchor="middle">AM</text>
+  <text x="125" y="540" font-family="Arial, sans-serif" font-size="14" fill="#ccd6f6">Amit Mehta</text>
+  <text x="125" y="560" font-family="Arial, sans-serif" font-size="12" fill="#8892b0">Product Manager @ Amazon</text>
+  
+  <!-- Events Section -->
+  <rect x="420" y="320" width="340" height="250" rx="12" fill="#112240"/>
+  <text x="440" y="355" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ccd6f6">Upcoming Events</text>
+  
+  <rect x="440" y="375" width="300" height="55" rx="8" fill="#0a192f"/>
+  <rect x="450" y="385" width="4" height="35" fill="#64ffda"/>
+  <text x="465" y="397" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ccd6f6">Annual Alumni Meet 2025</text>
+  <text x="465" y="417" font-family="Arial, sans-serif" font-size="12" fill="#8892b0">Dec 15, 2025 • Virtual Event</text>
+  
+  <rect x="440" y="440" width="300" height="55" rx="8" fill="#0a192f"/>
+  <rect x="450" y="450" width="4" height="35" fill="#64ffda"/>
+  <text x="465" y="462" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ccd6f6">Career Mentorship Program</text>
+  <text x="465" y="482" font-family="Arial, sans-serif" font-size="12" fill="#8892b0">Jan 10, 2026 • Hybrid</text>
+  
+  <rect x="440" y="505" width="300" height="55" rx="8" fill="#0a192f"/>
+  <rect x="450" y="515" width="4" height="35" fill="#64ffda"/>
+  <text x="465" y="527" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ccd6f6">Tech Talk Series</text>
+  <text x="465" y="547" font-family="Arial, sans-serif" font-size="12" fill="#8892b0">Feb 5, 2026 • Online</text>
+</svg>
