@@ -11,33 +11,17 @@ import { Link } from 'react-router-dom';
 export default function SkillsProjectsPage() {
   const [selectedTech, setSelectedTech] = useState('All');
 
-  // Extract unique technologies for filter
-  const allTechs = useMemo(() => {
-    const techs = new Set<string>(['All']);
-    projects.forEach(project => {
-      project.tech.forEach(t => {
-        // Group HTML, CSS, JavaScript as "Frontend" for filtering purposes
-        if (['HTML', 'CSS', 'JavaScript'].includes(t)) {
-          techs.add('Frontend');
-        } else if (!['Java', 'Python', 'Node.js', 'Spring Boot', 'Kubernetes', 'MySQL', 'SQLite', 'Tkinter', 'ML Frameworks', 'UI/UX tools', 'Bootstrap'].includes(t)) {
-          // Exclude specific backend/other techs from the main filter buttons
-          // Keeping major frameworks like React, Django, PHP
-          techs.add(t);
-        }
-      });
-    });
-    return Array.from(techs).sort();
-  }, []);
+  // Curated list of technologies and categories for filtering
+  const technologies = ['All', 'Full Stack', 'Django', 'PHP', 'React', 'AI/ML/DS'];
 
   // Filter projects based on selection
   const filteredProjects = useMemo(() => {
     if (selectedTech === 'All') return projects;
 
-    return projects.filter(project => {
-      if (selectedTech === 'Frontend') {
-        return project.tech.some(t => ['HTML', 'CSS', 'JavaScript'].includes(t));
-      }
-      return project.tech.includes(selectedTech);
+    return projects.filter(p => {
+      if (selectedTech === 'Full Stack') return p.category === 'Full Stack';
+      if (selectedTech === 'AI/ML/DS') return p.category === 'Machine Learning';
+      return p.tech.includes(selectedTech);
     });
   }, [selectedTech]);
 
@@ -123,7 +107,7 @@ export default function SkillsProjectsPage() {
 
           <RevealOnScroll>
             <ProjectFilter
-              technologies={allTechs}
+              technologies={technologies}
               selectedTech={selectedTech}
               onSelect={setSelectedTech}
             />

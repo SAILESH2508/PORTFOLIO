@@ -3,7 +3,7 @@ export const projects = [
         title: 'WEATHERAI - AI-POWERED WEATHER PREDICTION SYSTEM',
         description: 'Full-stack meteorological prediction system with real-time weather insights and AI-driven forecasts.',
         details: '• Global city search with live weather status indicators. • Real-time forecasts with hourly breakdowns and 7-day predictions. • AI insights using Random Forest & LSTM models for trend analysis. • Interactive data visualizations with Chart.js. • Production-ready deployment on Vercel.',
-        tech: ['React', 'Vite', 'Bootstrap', 'Chart.js', 'Django REST', 'Python', 'Scikit-Learn', 'LSTM', 'Vercel'],
+        tech: ['Django', 'React', 'Vite', 'Bootstrap', 'Chart.js', 'Python', 'Scikit-Learn', 'LSTM', 'Vercel'],
         image: '/weather-ai.png',
         gradient: 'from-blue-500 via-cyan-500 to-teal-500',
         role: 'Full Stack Developer & ML Engineer',
@@ -11,7 +11,8 @@ export const projects = [
         github: 'https://github.com/SAILESH2508',
         demo: 'https://lnkd.in/ght3y7jm',
         award: 'Production Deployed',
-        featured: true
+        featured: true,
+        year: '2024'
     },
     {
         title: 'COLLEGE PLACEMENT DASHBOARD (WEB APPLICATION)',
@@ -22,7 +23,8 @@ export const projects = [
         gradient: 'from-purple-600 to-orange-600',
         role: 'Full Stack Developer',
         category: 'Machine Learning',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'MARKETING EMPLOYEES ATTENDANCE AND TIME TRACKING SYSTEM',
@@ -33,18 +35,21 @@ export const projects = [
         gradient: 'from-orange-600 to-yellow-600',
         role: 'Python Developer',
         category: 'Machine Learning',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'BARTER BAY (E-COMMERCE EXCHANGE PLATFORM)',
         description: 'Peer-to-peer bartering platform for exchanging goods with demo payment/receipt flows.',
         details: '• Implemented user/product modules in PHP. • Developed matching algorithm for barter partners. • Integrated Razorpay (Test Mode) for payments.',
-        tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQLite', 'Razorpay'],
+        tech: ['PHP', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
         image: '/barter-bay.png',
         gradient: 'from-yellow-600 to-green-600',
         role: 'Full Stack Developer',
         category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024',
+        award: 'Razorpay'
     },
     {
         title: 'ALUMNI DATA MANAGEMENT – SIH',
@@ -67,7 +72,8 @@ export const projects = [
         gradient: 'from-blue-600 to-purple-600',
         role: 'Frontend Developer',
         category: 'Frontend',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'EXPENSE TRACKER (FINANCIAL TOOL)',
@@ -78,7 +84,8 @@ export const projects = [
         gradient: 'from-purple-600 to-pink-600',
         role: 'Frontend Developer',
         category: 'Machine Learning',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'CALORIE CALCULATOR',
@@ -89,18 +96,21 @@ export const projects = [
         gradient: 'from-pink-600 to-purple-600',
         role: 'Frontend Developer',
         category: 'Frontend',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'BEAUTY-NEST (E-COMMERCE PLATFORM)',
         description: 'E-commerce prototype focused on beauty product listings and admin controls.',
         details: '• Built CRUD product modules & admin dashboard. • Designed responsive product pages. • Integrated Razorpay (Test Mode) for payments.',
-        tech: ['Django', 'HTML', 'CSS', 'JavaScript', 'SQLite', 'Razorpay'],
+        tech: ['Django', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
         image: '/beauty-nest.png',
         gradient: 'from-purple-600 to-pink-600',
         role: 'Full Stack Developer',
         category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024',
+        award: 'Razorpay'
     },
     {
         title: 'TO-DO LIST (WEB APPLICATION)',
@@ -111,7 +121,8 @@ export const projects = [
         gradient: 'from-blue-600 to-cyan-600',
         role: 'Full Stack Developer',
         category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'FOOD DELIVERY UI',
@@ -122,7 +133,8 @@ export const projects = [
         gradient: 'from-cyan-600 to-green-600',
         role: 'Frontend Developer',
         category: 'Frontend',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'SENTIMENT ANALYSER',
@@ -133,7 +145,8 @@ export const projects = [
         gradient: 'from-green-500 to-teal-500',
         role: 'ML Engineer',
         category: 'Machine Learning',
-        github: 'https://github.com/SAILESH2508'
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'MOVIE RECOMMENDER',
@@ -144,6 +157,56 @@ export const projects = [
         gradient: 'from-purple-500 to-indigo-500',
         role: 'ML Engineer',
         category: 'Machine Learning',
-        github: 'https://github.com/SAILESH2508'
-    }
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
+    },
+    {
+        title: 'PROJECT MANAGEMENT SYSTEM',
+        description: 'Comprehensive project tracking platform with Agile methodologies and smart task prioritization.',
+        details: '• Implemented task CRUD with priority levels and progress tracking. • Developed intuitive dashboard with project analytics and status overview. • Integrated Smart Priority logic for efficient task management. • Designed responsive UI using Django templates and modern CSS.',
+        tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
+        image: '/project-management.png',
+        gradient: 'from-blue-600 to-indigo-600',
+        role: 'Full Stack Developer',
+        category: 'Full Stack',
+        github: 'https://github.com/SAILESH2508',
+        featured: true,
+        year: '2024'
+    },
+    {
+        title: 'MINI SOCIAL MEDIA APP',
+        description: 'Interactive social platform allowing users to share updates and connect with others.',
+        details: '• Built user authentication and profile management system. • Implemented post creation, like/comment functionality, and social feed. • Developed real-time notifications and friend suggestions. • Optimized database queries for smooth feed rendering.',
+        tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
+        image: '/social-media.png',
+        gradient: 'from-pink-500 to-rose-500',
+        role: 'Full Stack Developer',
+        category: 'Full Stack',
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
+    },
+    {
+        title: 'PREMIUM CHAT APPLICATION',
+        description: 'Real-time messaging platform with a modern glassmorphism interface.',
+        details: '• Designed premium Glassmorphism 2.0 UI with smooth animations. • Implemented real-time messaging using WebSockets/Django Channels. • Built secure user authentication and online status indicators. • Optimized mobile responsiveness and dark mode support.',
+        tech: ['Django', 'Channels', 'HTML', 'CSS', 'JavaScript', 'WebSockets'],
+        image: '/chat-app.png',
+        gradient: 'from-cyan-500 to-blue-500',
+        role: 'Full Stack Developer',
+        category: 'Full Stack',
+        github: 'https://github.com/SAILESH2508',
+        featured: true
+    },
+    {
+        title: 'EMPLOYEE MANAGEMENT SYSTEM',
+        description: 'Centralized platform for managing organizational workforce and payroll.',
+        details: '• Built automated attendance tracking and working hours calculation. • Implemented salary management with detailed reporting and analytics. • Developed admin dashboard for employee lifecycle management. • Integrated CSV/PDF export functionality for reports.',
+        tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
+        image: '/employee-management.png',
+        gradient: 'from-emerald-500 to-teal-500',
+        role: 'Full Stack Developer',
+        category: 'Full Stack',
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
+    },
 ];

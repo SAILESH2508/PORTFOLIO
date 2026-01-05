@@ -4,140 +4,22 @@ import { LanguageLogo } from './LanguageLogos';
 import AnimatedTitle from './AnimatedTitle';
 import RevealOnScroll from './RevealOnScroll';
 
-const projects = [
-  {
-    title: 'College Placement Dashboard',
-    description: 'Web dashboard for managing college placement lifecycle with MVT architecture, ORM queries, and ML models for predicting placement outcomes.',
-    details: '• MVT Architecture with Django models • ML prediction models • Admin interfaces with CSV export',
-    tech: ['Django', 'HTML', 'CSS', 'JavaScript', 'SQLite', 'ML'],
-    image: '/placement-dashboard.png',
-    gradient: 'from-blue-600 to-primary',
-    year: '2024',
-    role: 'Full Stack Developer',
-    category: 'Machine Learning',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Marketing Employee Attendance & Time Tracking',
-    description: 'Desktop application tracking employee sign-in/sign-out with responsive Tkinter UI, attendance logic, and CSV export for payroll.',
-    details: '• GUI with Tkinter • Check-in/out logic • Daily/Monthly reports',
-    tech: ['Python', 'Tkinter', 'SQLite', 'ML'],
-    image: '/attendance-tracker.png',
-    gradient: 'from-primary to-blue-500',
-    year: '2024',
-    role: 'Python Developer',
-    category: 'Machine Learning',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Barter Bay – E-Commerce Exchange Platform',
-    description: 'Peer-to-peer bartering platform with matching algorithm, demo QR-payment flow, and receipt generation for UX demos.',
-    details: '• Backend with PHP • Matching algorithm • Payment & receipt flow',
-    tech: ['PHP', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-    image: '/barter-bay.png',
-    gradient: 'from-blue-500 to-cyan-500',
-    year: '2023',
-    role: 'Full Stack Developer',
-    category: 'Full Stack',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Alumni Data Management – SIH',
-    description: 'Scalable microservices platform with Spring Boot, REST APIs, React frontend, and Kubernetes deployment with CI/CD.',
-    details: '• Microservice design • REST APIs • Kubernetes deployment',
-    tech: ['Java', 'Spring Boot', 'React', 'Kubernetes', 'MySQL'],
-    image: '/alumni-management.png',
-    gradient: 'from-cyan-500 to-blue-600',
-    year: '2025',
-    role: 'Full Stack Developer',
-    category: 'Full Stack',
-    github: 'https://github.com/SAILESH2508',
-    award: 'SIH 2025'
-  },
-  {
-    title: 'Music Player and Downloader',
-    description: 'Custom music player with JS-based audio engine, metadata management in SQLite, and secure download support.',
-    details: '• Playback engine with playlists • Metadata indexing • Fast search',
-    tech: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'SQLite'],
-    image: '/music-player.png',
-    gradient: 'from-blue-600 to-indigo-600',
-    year: '2024',
-    role: 'Frontend Developer',
-    category: 'Frontend',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Expense Tracker',
-    description: 'Financial tool with React frontend for logging expenses, categorization, analytics with charts, and CSV export.',
-    details: '• React UI with state persistence • Category-wise summaries • CSV export',
-    tech: ['React', 'HTML', 'CSS', 'JavaScript'],
-    image: '/expense-tracker.png',
-    gradient: 'from-indigo-600 to-primary',
-    year: '2024',
-    role: 'Frontend Developer',
-    category: 'Frontend',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Calorie Calculator',
-    description: 'Web utility calculating BMR and daily caloric recommendations using Mifflin–St Jeor and Harris–Benedict equations with client-side validation.',
-    details: '• Formula implementation • Responsive UI • Input validation',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    image: '/calorie-calculator.png',
-    gradient: 'from-primary to-blue-400',
-    year: '2024',
-    role: 'Frontend Developer',
-    category: 'Frontend',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Beauty-Nest E-Commerce',
-    description: 'E-commerce platform for beauty products with CRUD modules, admin dashboard, and responsive product listing pages.',
-    details: '• Product management • Admin workflows • Responsive UI',
-    tech: ['Django', 'HTML', 'CSS', 'JavaScript'],
-    image: '/beauty-nest.png',
-    gradient: 'from-blue-400 to-primary',
-    year: '2024',
-    role: 'Full Stack Developer',
-    category: 'Full Stack',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'To-Do List Application',
-    description: 'Task management app with full CRUD operations, SQLite persistence, and interactive task toggles with quick-edit modals.',
-    details: '• Task workflows • SQLite storage • Interactive UI',
-    tech: ['Django', 'JavaScript', 'SQLite'],
-    image: '/todo-list.png',
-    gradient: 'from-primary to-blue-600',
-    year: '2024',
-    role: 'Full Stack Developer',
-    category: 'Full Stack',
-    github: 'https://github.com/SAILESH2508'
-  },
-  {
-    title: 'Food Delivery UI',
-    description: 'Frontend UI for restaurant menus with add-to-cart interactions, order summary, and mobile-first responsive design.',
-    details: '• Menu listing • Cart management • Responsive design',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    image: '/food-delivery.png',
-    gradient: 'from-blue-600 to-cyan-500',
-    year: '2024',
-    role: 'Frontend Developer',
-    category: 'Frontend',
-    github: 'https://github.com/SAILESH2508'
-  }
-];
+import { projects } from '../data/projects';
 
 export default function Projects() {
   const [selectedTech, setSelectedTech] = useState('All');
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-  // Get unique technologies from projects
-  const technologies = ['All', ...Array.from(new Set(projects.flatMap(p => p.tech)))];
+  // Curated list of technologies and categories for filtering
+  const technologies = ['All', 'Full Stack', 'Django', 'PHP', 'React', 'AI/ML/DS'];
 
   const filteredProjects = selectedTech === 'All'
     ? projects
-    : projects.filter(p => p.tech.includes(selectedTech));
+    : projects.filter(p => {
+      if (selectedTech === 'Full Stack') return p.category === 'Full Stack';
+      if (selectedTech === 'AI/ML/DS') return p.category === 'Machine Learning';
+      return p.tech.includes(selectedTech);
+    });
 
   return (
     <section id="projects" className="py-24 px-6 relative overflow-hidden">
@@ -204,6 +86,17 @@ export default function Projects() {
                     >
                       <Github size={20} />
                     </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-primary text-white border border-transparent rounded-full hover:bg-white hover:text-primary transition-all transform hover:scale-110 shadow-lg"
+                        title="Live Demo"
+                      >
+                        <Calendar size={20} /> {/* Using Calendar as a generic globe/link icon since ExternalLink isn't imported */}
+                      </a>
+                    )}
                   </div>
                 </div>
 

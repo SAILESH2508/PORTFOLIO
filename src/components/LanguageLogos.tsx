@@ -38,6 +38,9 @@ import VSCodeLogo from './logos/VSCodeLogo';
 import RazorpayLogo from './logos/RazorpayLogo';
 import ScikitImageLogo from './logos/ScikitImageLogo';
 import SciPyLogo from './logos/SciPyLogo';
+import NetlifyLogo from './logos/NetlifyLogo';
+import RenderLogo from './logos/RenderLogo';
+import GoogleCloudLogo from './logos/GoogleCloudLogo';
 
 // Helper for generic skills using Lucide icons
 const GenericSkillLogo = ({ Icon, color }: { Icon: any; color: string }) => (
@@ -111,6 +114,9 @@ const logos: Record<string, () => JSX.Element> = {
   Razorpay: () => <RazorpayLogo size={32} />,
   'Chart.js': () => <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">C</div>,
   Vercel: () => <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold text-xs">▲</div>,
+  Netlify: () => <NetlifyLogo size={32} />,
+  Render: () => <RenderLogo size={32} />,
+  'Google Cloud': () => <GoogleCloudLogo size={32} />,
 
   // Soft Skills & Concepts
   'Problem Solving': () => <GenericSkillLogo Icon={Puzzle} color="bg-green-600" />,
