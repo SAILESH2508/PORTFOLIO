@@ -3,6 +3,13 @@ import RevealOnScroll from './RevealOnScroll';
 
 const internships = [
   {
+    title: 'Full Stack Web Development Internship',
+    company: 'Prodigy InfoTech',
+    period: 'Dec 2025 – Jan 2026',
+    description: 'Worked on frontend & backend development, built and explored real-world web applications, improved problem-solving and practical coding skills, and gained hands-on exposure to full-stack workflows.',
+    skills: ['Full Stack', 'Problem Solving', 'Web Development']
+  },
+  {
     title: 'Full Stack Development Intern',
     company: 'Code Alpha',
     period: 'October 2025',

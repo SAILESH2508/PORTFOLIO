@@ -84,7 +84,7 @@ export default function ExperiencePage() {
                   <p className="text-primary font-bold">2022–2023</p>
                   <p className="text-gray-700 mt-1 text-lg">PMG Matriculation Higher Secondary School, Coimbatore</p>
                   <div className="mt-2">
-                    <span className="text-sm text-gray-600 font-bold bg-gray-100 px-3 py-1 rounded-full border border-gray-200">Percentage: 75%</span>
+                    <span className="text-sm text-gray-600 font-bold bg-gray-100 px-3 py-1 rounded-full border border-gray-200">Percentage: 70%</span>
                   </div>
                 </div>
 
