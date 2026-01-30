@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Services from '../components/Services'; // Added Services component
-import ContinuousLearning from '../components/ContinuousLearning'; // New Component
+import Services from '../components/Services';
+import ContinuousLearning from '../components/ContinuousLearning';
 import Stats from '../components/Stats';
 import ConfettiEffect from '../components/ConfettiEffect';
 import ParticleBackground from '../components/ParticleBackground';
@@ -81,7 +81,6 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <div className="py-24 px-6 relative overflow-hidden bg-white">
-
         <div className="container mx-auto max-w-4xl relative z-10 text-center">
           <RevealOnScroll>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900 drop-shadow-sm">

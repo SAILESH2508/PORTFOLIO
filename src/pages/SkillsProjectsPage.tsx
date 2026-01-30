@@ -12,7 +12,7 @@ export default function SkillsProjectsPage() {
   const [selectedTech, setSelectedTech] = useState('All');
 
   // Curated list of technologies and categories for filtering
-  const technologies = ['All', 'Full Stack', 'Django', 'PHP', 'React', 'AI/ML/DS'];
+  const technologies = ['All', 'Full Stack', 'Django', 'Flask', 'PHP', 'React', 'AI/ML/DS'];
 
   // Filter projects based on selection
   const filteredProjects = useMemo(() => {
@@ -71,7 +71,7 @@ export default function SkillsProjectsPage() {
                 40+ Technologies
               </div>
               <div className="glass px-6 py-3 rounded-full font-semibold text-purple-700 border-purple-500/30 bg-purple-50">
-                13 Major Projects
+                18 Major Projects
               </div>
               <div className="glass px-6 py-3 rounded-full font-semibold text-blue-700 border-blue-500/30 bg-blue-50">
                 Full Stack & ML

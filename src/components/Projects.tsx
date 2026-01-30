@@ -11,7 +11,7 @@ export default function Projects() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   // Curated list of technologies and categories for filtering
-  const technologies = ['All', 'Full Stack', 'Django', 'PHP', 'React', 'AI/ML/DS'];
+  const technologies = ['All', 'Full Stack', 'Django', 'Flask', 'PHP', 'React', 'AI/ML/DS'];
 
   const filteredProjects = selectedTech === 'All'
     ? projects

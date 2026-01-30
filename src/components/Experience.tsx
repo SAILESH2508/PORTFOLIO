@@ -3,6 +3,13 @@ import RevealOnScroll from './RevealOnScroll';
 
 const internships = [
   {
+    title: 'AI & Full Stack Developer (Project-Based)',
+    company: 'ROAMIQ – Tourist Guide',
+    period: '2024 – 2025',
+    description: 'AI-driven smart travel assistant for personalized trip planning, destination discovery, and intelligent recommendations based on user preferences, budget, and mood.',
+    skills: ['React', 'Flask', 'Machine Learning', 'SQLite', 'Python']
+  },
+  {
     title: 'Full Stack Web Development Internship',
     company: 'Prodigy InfoTech',
     period: 'Dec 2025 – Jan 2026',

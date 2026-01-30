@@ -1,4 +1,4 @@
-import { Database, Code2, Terminal, Users, Cpu, Layout, MessageSquare, Briefcase, Puzzle } from 'lucide-react';
+import { Database, Code2, Terminal, Users, Cpu, Layout, MessageSquare, Briefcase, Puzzle, Brain } from 'lucide-react';
 import CLogo from './logos/CLogo';
 import CPPLogo from './logos/CPPLogo';
 import PHPLogo from './logos/PHPLogo';
@@ -103,6 +103,7 @@ const logos: Record<string, () => JSX.Element> = {
   'Power BI': () => <PowerBILogo size={32} />,
   Tableau: () => <TableauLogo size={32} />,
   Streamlit: () => <GenericSkillLogo Icon={Layout} color="bg-[#FF4B4B]" />,
+  'Machine Learning': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
 
   // Tools & DevOps & Engineering
   Git: () => <GitLogo size={32} />,

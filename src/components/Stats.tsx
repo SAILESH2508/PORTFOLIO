@@ -12,7 +12,7 @@ const stats = [
   },
   {
     icon: Folder,
-    value: '13+',
+    value: '18+',
     label: 'Projects Built',
     color: 'text-purple-500',
     bgColor: 'bg-purple-600/20',

@@ -1,8 +1,21 @@
 export const projects = [
     {
+        title: 'ROAMIQ – TOURIST GUIDE (AI-POWERED WEB APPLICATION)',
+        description: 'AI-powered travel assistant for personalized trips based on user preferences, budget, and mood.',
+        details: '• Built personalized chatbot for the trip planning with AI-driven destination discovery.',
+        tech: ['React', 'Flask', 'SQLite', 'Machine Learning', 'Python'],
+        image: '/roamiq.png',
+        gradient: 'from-orange-500 via-red-500 to-amber-500',
+        role: 'AI & Full Stack Developer',
+        category: 'Full Stack',
+        github: 'https://github.com/SAILESH2508',
+        featured: true,
+        year: '2025'
+    },
+    {
         title: 'WEATHERAI - AI-POWERED WEATHER PREDICTION SYSTEM',
         description: 'Full-stack meteorological prediction system with real-time weather insights and AI-driven forecasts.',
-        details: '• Global city search with live weather status indicators. • Real-time forecasts with hourly breakdowns and 7-day predictions. • AI insights using Random Forest & LSTM models for trend analysis. • Interactive data visualizations with Chart.js. • Production-ready deployment on Vercel.',
+        details: '• Global city search with live weather status indicators.• Production-ready deployment on Vercel.',
         tech: ['Django', 'React', 'Vite', 'Bootstrap', 'Chart.js', 'Python', 'Scikit-Learn', 'LSTM', 'Vercel'],
         image: '/weather-ai.png',
         gradient: 'from-blue-500 via-cyan-500 to-teal-500',
@@ -174,11 +187,11 @@ export const projects = [
         year: '2024'
     },
     {
-        title: 'MINI SOCIAL MEDIA APP',
+        title: 'SOCIALHUB - MINI SOCIAL MEDIA',
         description: 'Interactive social platform allowing users to share updates and connect with others.',
         details: '• Built user authentication and profile management system. • Implemented post creation, like/comment functionality, and social feed. • Developed real-time notifications and friend suggestions. • Optimized database queries for smooth feed rendering.',
         tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-        image: '/social-media.png',
+        image: '/social-hub.png',
         gradient: 'from-pink-500 to-rose-500',
         role: 'Full Stack Developer',
         category: 'Full Stack',
@@ -186,11 +199,11 @@ export const projects = [
         year: '2024'
     },
     {
-        title: 'PREMIUM CHAT APPLICATION',
+        title: 'NEXUS - PREMIUM CHAT APPLICATION',
         description: 'Real-time messaging platform with a modern glassmorphism interface.',
         details: '• Designed premium Glassmorphism 2.0 UI with smooth animations. • Implemented real-time messaging using WebSockets/Django Channels. • Built secure user authentication and online status indicators. • Optimized mobile responsiveness and dark mode support.',
         tech: ['Django', 'Channels', 'HTML', 'CSS', 'JavaScript', 'WebSockets'],
-        image: '/chat-app.png',
+        image: '/nexus.png',
         gradient: 'from-cyan-500 to-blue-500',
         role: 'Full Stack Developer',
         category: 'Full Stack',
@@ -198,11 +211,11 @@ export const projects = [
         featured: true
     },
     {
-        title: 'EMPLOYEE MANAGEMENT SYSTEM',
+        title: 'EMS PRO - EMPLOYEE MANAGEMENT SYSTEM',
         description: 'Centralized platform for managing organizational workforce and payroll.',
         details: '• Built automated attendance tracking and working hours calculation. • Implemented salary management with detailed reporting and analytics. • Developed admin dashboard for employee lifecycle management. • Integrated CSV/PDF export functionality for reports.',
         tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-        image: '/employee-management.png',
+        image: '/ems-pro.png',
         gradient: 'from-emerald-500 to-teal-500',
         role: 'Full Stack Developer',
         category: 'Full Stack',

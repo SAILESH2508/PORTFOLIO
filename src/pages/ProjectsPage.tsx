@@ -12,10 +12,10 @@ export default function ProjectsPage() {
             <h1 className="text-5xl font-bold">My Projects</h1>
             <Folder size={40} className="animate-bounce" />
           </div>
-          <p className="text-xl opacity-90 animate-fade-in" style={{ animationDelay: '0.2s' }}>13 amazing projects showcasing my development skills</p>
+          <p className="text-xl opacity-90 animate-fade-in" style={{ animationDelay: '0.2s' }}>18 amazing projects showcasing my development skills</p>
         </div>
       </div>
-      
+
       <Projects />
     </div>
   );

@@ -44,7 +44,7 @@ export default function ExperiencePage() {
               <p className="text-gray-600 font-medium">Years Coding</p>
             </div>
             <div className="p-6 bg-purple-50 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-bold text-purple-600">10+</h3>
+              <h3 className="text-3xl font-bold text-purple-600">15+</h3>
               <p className="text-gray-600 font-medium">Projects</p>
             </div>
             <div className="p-6 bg-purple-50 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all">
