@@ -3,17 +3,10 @@ import RevealOnScroll from './RevealOnScroll';
 
 const internships = [
   {
-    title: 'AI & Full Stack Developer (Project-Based)',
-    company: 'ROAMIQ – Tourist Guide',
-    period: '2024 – 2025',
-    description: 'AI-driven smart travel assistant for personalized trip planning, destination discovery, and intelligent recommendations based on user preferences, budget, and mood.',
-    skills: ['React', 'Flask', 'Machine Learning', 'SQLite', 'Python']
-  },
-  {
     title: 'Full Stack Web Development Internship',
     company: 'Prodigy InfoTech',
     period: 'Dec 2025 – Jan 2026',
-    description: 'Worked on frontend & backend development, built and explored real-world web applications, improved problem-solving and practical coding skills, and gained hands-on exposure to full-stack workflows.',
+    description: 'Developed full-stack web applications, enhancing problem-solving skills and hands-on workflow exposure.',
     skills: ['Full Stack', 'Problem Solving', 'Web Development']
   },
   {
@@ -34,7 +27,7 @@ const internships = [
     title: 'UI/UX Design Intern',
     company: 'Arttifai Tech',
     period: 'July 2025',
-    description: 'Designed user-centric interfaces and interactive prototypes, focusing on modern design principles and user experience optimization.',
+    description: 'Designed user-centric interfaces and prototypes, optimizing for modern UX principles.',
     skills: ['Figma', 'UI Design', 'Prototyping', 'User Research']
   }
 ];
@@ -42,9 +35,10 @@ const internships = [
 const certifications = [
   {
     title: 'Python for Data Science',
-    issuer: 'NPTEL',
+    issuer: 'NPTEL | IIT Madras',
     period: 'Jan-Feb 2025',
     type: 'Elite Certificate',
+    description: 'Comprehensive course on data analysis, visualization, and machine learning using NumPy, Pandas, and Scikit-learn.',
     location: 'Coimbatore'
   },
   {
