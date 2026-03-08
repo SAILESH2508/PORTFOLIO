@@ -1,6 +1,4 @@
 export default function GitLogo({ size = 28 }: { size?: number }) {
-    // Official Git Red Diamond with Branching Lines (Transparent)
-    // Reverting to the high-quality SVG from Step 824 which perfectly matches the user's logo requirement.
     return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M23.5416 10.9298L13.0694 0.457635C12.4593 -0.152545 11.4697 -0.152545 10.8596 0.457635L0.457635 10.8596C-0.152545 11.4697 -0.152545 12.4594 0.457635 13.0694L10.9298 23.5416C11.5399 24.1517 12.5295 24.1517 13.1396 23.5416L23.5416 13.1396C24.1517 12.5295 24.1517 11.5399 23.5416 10.9298Z" fill="#F05032" />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Code2, Database, Brain, Wrench, ChevronRight } from 'lucide-react';
+import { Code2, Database, Brain, ChevronRight, Layers, Lightbulb, Cloud } from 'lucide-react';
 import { LanguageLogo } from './LanguageLogos';
 import RevealOnScroll from './RevealOnScroll';
 import AnimatedTitle from './AnimatedTitle';
@@ -16,29 +16,24 @@ const skillCategories = [
       { name: 'C++', level: 85 },
       { name: 'C', level: 85 },
       { name: 'Java', level: 80 },
-      { name: 'PHP', level: 80 },
-      { name: 'JavaScript', level: 90 }
+      { name: 'C#', level: 75 }
     ]
   },
   {
     id: 'fullstack',
     title: 'Full Stack Development',
-    icon: Wrench,
+    icon: Layers,
     description: 'End-to-end web and desktop application development.',
     skills: [
       { name: 'Django', level: 90 },
       { name: 'Flask', level: 85 },
-      { name: 'Spring Boot', level: 80 },
-      { name: 'Express.js', level: 85 },
       { name: 'React', level: 90 },
-      { name: 'Node.js', level: 80 },
       { name: 'Tailwind CSS', level: 95 },
       { name: 'HTML', level: 95 },
       { name: 'CSS', level: 90 },
       { name: 'Bootstrap', level: 85 },
-      { name: 'Chart.js', level: 80 },
-      { name: 'Tkinter', level: 75 },
-      { name: 'UI/UX', level: 85 }
+      { name: 'JavaScript', level: 90 },
+      { name: 'PHP', level: 80 }
     ]
   },
   {
@@ -71,28 +66,44 @@ const skillCategories = [
       { name: 'Scikit-image', level: 75 },
       { name: 'Tableau', level: 80 },
       { name: 'Power BI', level: 80 },
-      { name: 'Streamlit', level: 90 }
+      { name: 'Streamlit', level: 90 },
+      { name: 'Tkinter', level: 75 }
     ]
   },
   {
     id: 'engineering',
     title: 'Engineering Principles',
-    icon: Wrench,
-    description: 'DevOps, tools, and professional soft skills.',
+    icon: Lightbulb,
+    description: 'Core principles and professional soft skills.',
     skills: [
       { name: 'Software Engineering', level: 90 },
       { name: 'Data Structures', level: 85 },
       { name: 'Problem Solving', level: 95 },
-      { name: 'Git', level: 90 },
-      { name: 'AWS', level: 75 },
-      { name: 'Vercel', level: 85 },
-      { name: 'Netlify', level: 85 },
-      { name: 'Render', level: 80 },
-      { name: 'Google Cloud', level: 75 },
       { name: 'Communication Skill', level: 95 },
       { name: 'Prompt Engineering', level: 90 },
       { name: 'System Design', level: 85 },
-      { name: 'Agile', level: 90 }
+      { name: 'Agile', level: 90 },
+      { name: 'UI/UX Design', level: 85 },
+      { name: 'Robotics (Arduino UNO)', level: 80 }
+    ]
+  },
+  {
+    id: 'devops',
+    title: 'Cloud Computing & DevOps',
+    icon: Cloud,
+    description: 'Cloud platforms, containerization, orchestration, and tools.',
+    skills: [
+      { name: 'AWS', level: 75 },
+      { name: 'Google Cloud', level: 75 },
+      { name: 'Vercel', level: 85 },
+      { name: 'Netlify', level: 85 },
+      { name: 'Render', level: 80 },
+      { name: 'Docker', level: 85 },
+      { name: 'Kubernetes', level: 80 },
+      { name: 'VirtualBox', level: 75 },
+      { name: 'Git', level: 90 },
+      { name: 'Github', level: 90 },
+      { name: 'Ubuntu', level: 85 }
     ]
   }
 ];

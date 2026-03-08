@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Folder, Calendar, Users, Award, Filter, Github } from 'lucide-react';
+import { Folder, Calendar, Users, Award, Filter, Github, ExternalLink } from 'lucide-react';
 import { LanguageLogo } from './LanguageLogos';
 import AnimatedTitle from './AnimatedTitle';
 import RevealOnScroll from './RevealOnScroll';
@@ -94,7 +94,7 @@ export default function Projects() {
                         className="p-3 bg-primary text-white border border-transparent rounded-full hover:bg-white hover:text-primary transition-all transform hover:scale-110 shadow-lg"
                         title="Live Demo"
                       >
-                        <Calendar size={20} /> {/* Using Calendar as a generic globe/link icon since ExternalLink isn't imported */}
+                        <ExternalLink size={20} />
                       </a>
                     )}
                   </div>

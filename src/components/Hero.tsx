@@ -44,8 +44,8 @@ export default function Hero() {
                 </Link>
 
                 <a
-                  href="/Sailesh_S_Resume.pdf"
-                  download="Sailesh-S-Resume.pdf"
+                  href="/Resume.pdf"
+                  download="Sailesh_S_Resume.pdf"
                   className="group px-8 py-4 bg-blue-600 text-white font-bold rounded-full transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 flex items-center gap-2"
                 >
                   <Download size={20} className="group-hover:translate-y-1 transition-transform" />

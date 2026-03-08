@@ -28,7 +28,7 @@ export const projects = [
         year: '2024'
     },
     {
-        title: 'COLLEGE PLACEMENT DASHBOARD (WEB APPLICATION)',
+        title: 'COLLEGE PLACEMENT DASHBOARD (AI-POWERED WEB APPLICATION)',
         description: 'A web dashboard for managing and tracking the college placement lifecycle.',
         details: '• Built student/company models & views using Django MVT. • Implemented ORM queries & reporting with SQLite. • Created admin interfaces & CSV exports.',
         tech: ['React', 'CSS', 'Django', 'SQLite', 'ML Frameworks'],
@@ -126,26 +126,14 @@ export const projects = [
         award: 'Razorpay'
     },
     {
-        title: 'TO-DO LIST (WEB APPLICATION)',
-        description: 'Task management app with full CRUD and persistent storage.',
-        details: '• Implemented task CRUD with priorities. • Added SQLite persistence & search functionality.',
-        tech: ['HTML', 'CSS', 'JavaScript', 'Django', 'SQLite'],
+        title: 'TO-DO LIST (CONSOLE APPLICATION)',
+        description: 'Terminal-based task management application with full CRUD and persistent storage.',
+        details: '• Implemented task CRUD with priorities via CLI. • Added JSON persistence & search functionality.',
+        tech: ['Python', 'CLI', 'JSON'],
         image: '/todo-list.png',
         gradient: 'from-blue-600 to-cyan-600',
-        role: 'Full Stack Developer',
-        category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508',
-        year: '2024'
-    },
-    {
-        title: 'FOOD DELIVERY UI',
-        description: 'Frontend UI for browsing restaurant menus, adding items to cart and viewing order summaries.',
-        details: '• Designed menu listing & cart interactions. • Implemented client-side cart calculations.',
-        tech: ['HTML', 'CSS', 'JavaScript', 'UI/UX tools'],
-        image: '/food-delivery.png',
-        gradient: 'from-cyan-600 to-green-600',
-        role: 'Frontend Developer',
-        category: 'Frontend',
+        role: 'Python Developer',
+        category: 'Backend',
         github: 'https://github.com/SAILESH2508',
         year: '2024'
     },
@@ -170,55 +158,6 @@ export const projects = [
         gradient: 'from-purple-500 to-indigo-500',
         role: 'ML Engineer',
         category: 'Machine Learning',
-        github: 'https://github.com/SAILESH2508',
-        year: '2024'
-    },
-    {
-        title: 'PROJECT MANAGEMENT SYSTEM',
-        description: 'Comprehensive project tracking platform with Agile methodologies and smart task prioritization.',
-        details: '• Implemented task CRUD with priority levels and progress tracking. • Developed intuitive dashboard with project analytics and status overview. • Integrated Smart Priority logic for efficient task management. • Designed responsive UI using Django templates and modern CSS.',
-        tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-        image: '/project-management.png',
-        gradient: 'from-blue-600 to-indigo-600',
-        role: 'Full Stack Developer',
-        category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508',
-        featured: true,
-        year: '2024'
-    },
-    {
-        title: 'SOCIALHUB - MINI SOCIAL MEDIA',
-        description: 'Interactive social platform allowing users to share updates and connect with others.',
-        details: '• Built user authentication and profile management system. • Implemented post creation, like/comment functionality, and social feed. • Developed real-time notifications and friend suggestions. • Optimized database queries for smooth feed rendering.',
-        tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-        image: '/social-hub.png',
-        gradient: 'from-pink-500 to-rose-500',
-        role: 'Full Stack Developer',
-        category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508',
-        year: '2024'
-    },
-    {
-        title: 'NEXUS - PREMIUM CHAT APPLICATION',
-        description: 'Real-time messaging platform with a modern glassmorphism interface.',
-        details: '• Designed premium Glassmorphism 2.0 UI with smooth animations. • Implemented real-time messaging using WebSockets/Django Channels. • Built secure user authentication and online status indicators. • Optimized mobile responsiveness and dark mode support.',
-        tech: ['Django', 'Channels', 'HTML', 'CSS', 'JavaScript', 'WebSockets'],
-        image: '/nexus.png',
-        gradient: 'from-cyan-500 to-blue-500',
-        role: 'Full Stack Developer',
-        category: 'Full Stack',
-        github: 'https://github.com/SAILESH2508',
-        featured: true
-    },
-    {
-        title: 'EMS PRO - EMPLOYEE MANAGEMENT SYSTEM',
-        description: 'Centralized platform for managing organizational workforce and payroll.',
-        details: '• Built automated attendance tracking and working hours calculation. • Implemented salary management with detailed reporting and analytics. • Developed admin dashboard for employee lifecycle management. • Integrated CSV/PDF export functionality for reports.',
-        tech: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
-        image: '/ems-pro.png',
-        gradient: 'from-emerald-500 to-teal-500',
-        role: 'Full Stack Developer',
-        category: 'Full Stack',
         github: 'https://github.com/SAILESH2508',
         year: '2024'
     },

@@ -41,6 +41,14 @@ import SciPyLogo from './logos/SciPyLogo';
 import NetlifyLogo from './logos/NetlifyLogo';
 import RenderLogo from './logos/RenderLogo';
 import GoogleCloudLogo from './logos/GoogleCloudLogo';
+import GithubLogo from './logos/GithubLogo';
+import KubernetesLogo from './logos/KubernetesLogo';
+import CSharpLogo from './logos/CSharpLogo';
+import DockerLogo from './logos/DockerLogo';
+import VirtualBoxLogo from './logos/VirtualBoxLogo';
+import UbuntuLogo from './logos/UbuntuLogo';
+import ArduinoLogo from './logos/ArduinoLogo';
+import StreamlitLogo from './logos/StreamlitLogo';
 
 // Helper for generic skills using Lucide icons
 const GenericSkillLogo = ({ Icon, color }: { Icon: any; color: string }) => (
@@ -66,7 +74,7 @@ const logos: Record<string, () => JSX.Element> = {
   CSS: () => <CSSLogo size={32} />,
   JavaScript: () => <JavaScriptLogo size={32} />,
   Bootstrap: () => <BootstrapLogo size={32} />,
-  'UI/UX': () => <GenericSkillLogo Icon={Layout} color="bg-[#FF61F6]" />,
+  'UI/UX Design': () => <GenericSkillLogo Icon={Layout} color="bg-[#FF61F6]" />,
 
   // Backend
   Python: () => <PythonLogo size={32} />,
@@ -80,6 +88,7 @@ const logos: Record<string, () => JSX.Element> = {
   'Express.js': () => <ExpressLogo size={32} />,
   PHP: () => <PHPLogo size={32} />,
   'C++': () => <CPPLogo size={32} />,
+  'C#': () => <CSharpLogo size={32} />,
   C: () => <CLogo size={32} />,
   Java: () => <JavaLogo size={32} />,
   Tkinter: () => <GenericSkillLogo Icon={Layout} color="bg-[#00599C]" />, // Using generic layout for Tkinter GUI
@@ -102,12 +111,17 @@ const logos: Record<string, () => JSX.Element> = {
   'Scikit-image': () => <ScikitImageLogo size={32} />,
   'Power BI': () => <PowerBILogo size={32} />,
   Tableau: () => <TableauLogo size={32} />,
-  Streamlit: () => <GenericSkillLogo Icon={Layout} color="bg-[#FF4B4B]" />,
+  Streamlit: () => <StreamlitLogo size={32} />,
   'Machine Learning': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
+  'AI/ML/DS': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
+  'ML Frameworks': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
+  'ML Libraries': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
+  LSTM: () => <GenericSkillLogo Icon={Brain} color="bg-blue-600" />,
+  'Scikit-Learn': () => <ScikitLearnLogo size={32} />,
 
   // Tools & DevOps & Engineering
   Git: () => <GitLogo size={32} />,
-  Github: () => <TextBadge text="Gh" color="bg-[#181717]" />,
+  Github: () => <GithubLogo size={32} />,
   'VS Code': () => <VSCodeLogo size={32} />,
   Postman: () => <PostmanLogo size={32} />,
   Figma: () => <FigmaLogo size={32} />,
@@ -118,6 +132,13 @@ const logos: Record<string, () => JSX.Element> = {
   Netlify: () => <NetlifyLogo size={32} />,
   Render: () => <RenderLogo size={32} />,
   'Google Cloud': () => <GoogleCloudLogo size={32} />,
+  Docker: () => <DockerLogo size={32} />,
+  Kubernetes: () => <KubernetesLogo size={32} />,
+  VirtualBox: () => <VirtualBoxLogo size={32} />,
+  CLI: () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
+  Shell: () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
+  'Shell Scripting': () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
+  Ubuntu: () => <UbuntuLogo size={32} />,
 
   // Soft Skills & Concepts
   'Problem Solving': () => <GenericSkillLogo Icon={Puzzle} color="bg-green-600" />,
@@ -127,7 +148,11 @@ const logos: Record<string, () => JSX.Element> = {
   'Communication Skill': () => <GenericSkillLogo Icon={MessageSquare} color="bg-purple-500" />,
   'System Design': () => <GenericSkillLogo Icon={Layout} color="bg-blue-600" />,
   Agile: () => <GenericSkillLogo Icon={Users} color="bg-orange-500" />,
+  'Robotics (Arduino UNO)': () => <ArduinoLogo size={32} />,
   SIH: () => <GenericSkillLogo Icon={Briefcase} color="bg-[#FF9933]" />, // Using Briefcase for Hackathon/Project
+  'Full Stack': () => <GenericSkillLogo Icon={Layout} color="bg-indigo-600" />,
+  Vite: () => <TextBadge text="Vt" color="bg-[#646CFF]" />,
+  JSON: () => <GenericSkillLogo Icon={Code2} color="bg-gray-500" />,
 };
 
 export function LanguageLogo({ name }: { name: string }) {

@@ -3,6 +3,13 @@ import RevealOnScroll from './RevealOnScroll';
 
 const internships = [
   {
+    title: 'Python Developer',
+    company: 'Overload Ware Labs Ai (Owl Ai)',
+    period: 'February 2026',
+    description: 'Developed Python applications and built scalable backend architectures using the Django framework.',
+    skills: ['Python', 'Django', 'API Development', 'Backend']
+  },
+  {
     title: 'Full Stack Web Development Internship',
     company: 'Prodigy InfoTech',
     period: 'Dec 2025 – Jan 2026',
