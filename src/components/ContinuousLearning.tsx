@@ -34,11 +34,11 @@ export default function ContinuousLearning() {
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-all hover:shadow-md">
                                 <h4 className="font-bold text-gray-900">Malayalam</h4>
-                                <p className="text-sm text-gray-500">Speak, Understand</p>
+                                <p className="text-sm text-gray-500">Conversational</p>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-all hover:shadow-md">
                                 <h4 className="font-bold text-gray-900">Hindi</h4>
-                                <p className="text-sm text-gray-500">Read, Write</p>
+                                <p className="text-sm text-gray-500">Basic (Read/Write)</p>
                             </div>
                         </div>
                     </div>

@@ -49,6 +49,7 @@ import VirtualBoxLogo from './logos/VirtualBoxLogo';
 import UbuntuLogo from './logos/UbuntuLogo';
 import ArduinoLogo from './logos/ArduinoLogo';
 import StreamlitLogo from './logos/StreamlitLogo';
+import VMwareLogo from './logos/VMwareLogo';
 
 // Helper for generic skills using Lucide icons
 const GenericSkillLogo = ({ Icon, color }: { Icon: any; color: string }) => (
@@ -135,10 +136,12 @@ const logos: Record<string, () => JSX.Element> = {
   Docker: () => <DockerLogo size={32} />,
   Kubernetes: () => <KubernetesLogo size={32} />,
   VirtualBox: () => <VirtualBoxLogo size={32} />,
+  VMware: () => <VMwareLogo size={32} />,
   CLI: () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
   Shell: () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
   'Shell Scripting': () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
   Ubuntu: () => <UbuntuLogo size={32} />,
+  YAML: () => <TextBadge text="YML" color="bg-red-500" />,
 
   // Soft Skills & Concepts
   'Problem Solving': () => <GenericSkillLogo Icon={Puzzle} color="bg-green-600" />,
@@ -153,6 +156,11 @@ const logos: Record<string, () => JSX.Element> = {
   'Full Stack': () => <GenericSkillLogo Icon={Layout} color="bg-indigo-600" />,
   Vite: () => <TextBadge text="Vt" color="bg-[#646CFF]" />,
   JSON: () => <GenericSkillLogo Icon={Code2} color="bg-gray-500" />,
+  'Information Technology': () => <GenericSkillLogo Icon={Terminal} color="bg-teal-600" />,
+  Reasoning: () => <GenericSkillLogo Icon={Brain} color="bg-indigo-500" />,
+  Aptitude: () => <GenericSkillLogo Icon={Puzzle} color="bg-pink-600" />,
+  'Building Agents': () => <GenericSkillLogo Icon={Brain} color="bg-fuchsia-600" />,
+  LLMs: () => <GenericSkillLogo Icon={Brain} color="bg-purple-700" />,
 };
 
 export function LanguageLogo({ name }: { name: string }) {

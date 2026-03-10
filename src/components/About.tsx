@@ -15,13 +15,13 @@ export default function About() {
           <div className="glass-card p-8 lg:p-12 hover:shadow-2xl transition-all duration-300">
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                Aspiring <span className="text-primary font-bold">Full Stack Developer</span> and <span className="text-purple-600 font-bold">Machine Learning enthusiast</span> pursuing a B.E. in Computer Science and Engineering.
-                Proficient in Python, Django, React.js and SQlite  with a focus on scalable application architecture. I have experience in building real-world applications and dashboards with clean UI, secure architecture, and optimized database design.
+                Aspiring <span className="text-primary font-bold">Python Full Stack Developer</span> and <span className="text-purple-600 font-bold">Machine Learning enthusiast</span> pursuing a B.E. in Computer Science and Engineering.
+                Proficient in Python, Django, React.js, and SQLite, with a focus on scalable application architecture. I have experience in building real-world applications and dashboards with clean UIs, secure architectures, and optimized database designs.
               </p>
 
               <p>
-                <b>Future Scope & Emerging Tech:</b> I am actively expanding my expertise into advanced domains to build holistic, production-ready systems.
-                My focus is now shifting towards mastering <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">DevOps and MLOps</span> to streamline deployment pipelines, diving deep into <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">Advanced Data Science</span> for uncovering complex insights, and strengthening application integrity through <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">Cybersecurity</span> practices.
+                <b>Exploring Generative AI & DevOps:</b> Gaining experience in building intelligent Agents, leveraging Large Language Models (LLMs), and designing robust DevOps pipelines.
+                My focus is on creating holistic, production-ready systems that integrate cutting-edge <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">Generative AI</span> capabilities with robust <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">DevOps</span> workflows for smooth deployment and scalability.
               </p>
 
               <p>

@@ -1,4 +1,4 @@
-import { Globe, Code2, Palette, Clock } from 'lucide-react';
+import { Globe, Code2, Palette, Clock, Bot, Cloud } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -37,6 +37,30 @@ const services = [
             "Brand-aligned aesthetics"
         ],
         timeline: "1-3 weeks"
+    },
+    {
+        icon: <Bot className="w-8 h-8 text-indigo-600" />,
+        title: "Generative AI Solutions",
+        description: "Intelligent AI Agents and LLM integrations for your business.",
+        deliverables: [
+            "Custom LLM Integrations",
+            "Autonomous AI Agents",
+            "RAG Pipelines Setup",
+            "AI-driven Automation"
+        ],
+        timeline: "3-6 weeks"
+    },
+    {
+        icon: <Cloud className="w-8 h-8 text-teal-600" />,
+        title: "DevOps & Cloud",
+        description: "Robust CI/CD pipelines, containerization, and scalable cloud deployments.",
+        deliverables: [
+            "CI/CD Pipeline Setup",
+            "Docker Containerization",
+            "Kubernetes Orchestration",
+            "Cloud Infrastructure Management"
+        ],
+        timeline: "2-4 weeks"
     }
 ];
 
@@ -50,18 +74,6 @@ export default function Services() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-20">
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <Globe className="w-6 h-6 text-blue-500 animate-pulse" />
-                        <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600">
-                            Services I Offer
-                        </h2>
-                    </div>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-                        Professional solutions tailored to your needs
-                    </p>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {services.map((service, index) => (
                         <div key={index} className="h-full bg-blue-50/90 backdrop-blur-md rounded-2xl p-8 border border-blue-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group flex flex-col relative overflow-hidden">

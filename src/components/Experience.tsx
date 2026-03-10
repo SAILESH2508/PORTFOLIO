@@ -3,6 +3,20 @@ import RevealOnScroll from './RevealOnScroll';
 
 const internships = [
   {
+    title: 'Generative AI Developer',
+    company: 'Independent Projects & Research',
+    period: 'Current',
+    description: 'Building intelligent Agents and leveraging Large Language Models (LLMs) to automate complex tasks and generate insights.',
+    skills: ['LLMs', 'Prompt Engineering', 'Building Agents', 'Python', 'AI/ML']
+  },
+  {
+    title: 'DevOps & Cloud Engineer',
+    company: 'Hands-on Projects',
+    period: 'Current',
+    description: 'Designing and implementing robust CI/CD pipelines, containerization, and automated deployments for scalable applications.',
+    skills: ['Docker', 'Kubernetes', 'AWS', 'VMware', 'CI/CD']
+  },
+  {
     title: 'Python Developer',
     company: 'Overload Ware Labs Ai (Owl Ai)',
     period: 'February 2026',
@@ -13,7 +27,7 @@ const internships = [
     title: 'Full Stack Web Development Internship',
     company: 'Prodigy InfoTech',
     period: 'Dec 2025 – Jan 2026',
-    description: 'Developed full-stack web applications, enhancing problem-solving skills and hands-on workflow exposure.',
+    description: 'Developed full-stack web applications, enhancing problem-solving skills and gaining hands-on workflow exposure.',
     skills: ['Full Stack', 'Problem Solving', 'Web Development']
   },
   {
@@ -27,14 +41,14 @@ const internships = [
     title: 'Full Stack Development Intern',
     company: 'Arttifai Tech',
     period: 'July 2025',
-    description: 'Built end-to-end web applications with focus on scalable architecture and modern development practices.',
+    description: 'Built end-to-end web applications with a focus on scalable architecture and modern development practices.',
     skills: ['Python', 'Flask', 'JavaScript', 'Database Management']
   },
   {
     title: 'UI/UX Design Intern',
     company: 'Arttifai Tech',
     period: 'July 2025',
-    description: 'Designed user-centric interfaces and prototypes, optimizing for modern UX principles.',
+    description: 'Designed user-centric interfaces and prototypes according to modern UX principles.',
     skills: ['Figma', 'UI Design', 'Prototyping', 'User Research']
   }
 ];
@@ -53,7 +67,7 @@ const certifications = [
     issuer: 'Xplore IT Corp',
     period: 'Nov 2024 - Jun 2025',
     type: 'Intensive Training',
-    description: 'Covering Python, Django, and modern web application architecture',
+    description: 'Covering Python, Django, and modern web application architecture.',
     location: 'Coimbatore'
   }
 ];

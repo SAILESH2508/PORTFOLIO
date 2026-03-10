@@ -29,6 +29,7 @@ export default function SkillsProjectsPage() {
   const fullStackProjects = filteredProjects.filter(p => p.category === 'Full Stack');
   const mlProjects = filteredProjects.filter(p => p.category === 'Machine Learning');
   const frontendProjects = filteredProjects.filter(p => p.category === 'Frontend');
+  const backendProjects = filteredProjects.filter(p => p.category === 'Backend');
 
   return (
     <div className="min-h-screen pt-16 pb-16">
@@ -74,7 +75,7 @@ export default function SkillsProjectsPage() {
                 18 Major Projects
               </div>
               <div className="glass px-6 py-3 rounded-full font-semibold text-blue-700 border-blue-500/30 bg-blue-50">
-                Full Stack & ML
+                Full Stack, AI & Cloud
               </div>
             </div>
           </RevealOnScroll>
@@ -124,6 +125,10 @@ export default function SkillsProjectsPage() {
 
             {frontendProjects.length > 0 && (
               <ProjectSection title="Frontend Engineering" projects={frontendProjects} />
+            )}
+
+            {backendProjects.length > 0 && (
+              <ProjectSection title="Backend Development" projects={backendProjects} />
             )}
 
             {filteredProjects.length === 0 && (

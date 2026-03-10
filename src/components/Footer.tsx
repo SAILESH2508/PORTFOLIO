@@ -19,7 +19,7 @@ export default function Footer() {
     setIsSubmitting(true);
 
     await sendEmail(formData);
-    
+
     if (submitStatus === 'success') {
       setFormData({ name: '', email: '', message: '' });
     }
@@ -36,8 +36,8 @@ export default function Footer() {
   ];
 
   const techLogos = [
-    'Python', 'React', 'Django', 'JavaScript', 'Java',
-    'C++', 'HTML', 'CSS', 'SQLite', 'TensorFlow', 'Git'
+    'Python', 'React', 'Django', 'AWS', 'Vercel',
+    'JavaScript', 'C++', 'HTML', 'CSS', 'SQLite', 'TensorFlow', 'Git'
   ];
 
   return (
@@ -58,7 +58,9 @@ export default function Footer() {
               SAILESH S
             </h3>
             <p className="text-white/70 text-xs leading-relaxed">
-              Aspiring Full Stack Developer and ML Engineer passionate about creating innovative solutions.
+              Python Full Stack Developer <br />
+              ML & Gen AI Enthusiast <br />
+              DevOps Learner
             </p>
             <div className="space-y-2 pt-1">
               <div className="flex items-center gap-2 text-white/70 text-xs hover:text-white transition-colors">
@@ -126,7 +128,7 @@ export default function Footer() {
                 Technologies
               </h4>
               <div className="flex flex-wrap gap-1">
-                {techLogos.slice(0, 8).map((tech, idx) => (
+                {techLogos.slice(0, 10).map((tech, idx) => (
                   <div
                     key={idx}
                     className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-white/10 transition-all cursor-pointer group/tech text-white"

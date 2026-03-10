@@ -15,8 +15,7 @@ const skillCategories = [
       { name: 'Python', level: 95 },
       { name: 'C++', level: 85 },
       { name: 'C', level: 85 },
-      { name: 'Java', level: 80 },
-      { name: 'C#', level: 75 }
+      { name: 'Java', level: 80 }
     ]
   },
   {
@@ -33,6 +32,8 @@ const skillCategories = [
       { name: 'CSS', level: 90 },
       { name: 'Bootstrap', level: 85 },
       { name: 'JavaScript', level: 90 },
+      { name: 'TypeScript', level: 85 },
+      { name: 'JSON', level: 90 },
       { name: 'PHP', level: 80 }
     ]
   },
@@ -84,7 +85,12 @@ const skillCategories = [
       { name: 'System Design', level: 85 },
       { name: 'Agile', level: 90 },
       { name: 'UI/UX Design', level: 85 },
-      { name: 'Robotics (Arduino UNO)', level: 80 }
+      { name: 'Robotics (Arduino UNO)', level: 80 },
+      { name: 'Information Technology', level: 85 },
+      { name: 'Reasoning', level: 90 },
+      { name: 'Aptitude', level: 90 },
+      { name: 'Building AI Agents', level: 90 },
+      { name: 'Building LLMs', level: 95 }
     ]
   },
   {
@@ -101,9 +107,11 @@ const skillCategories = [
       { name: 'Docker', level: 85 },
       { name: 'Kubernetes', level: 80 },
       { name: 'VirtualBox', level: 75 },
+      { name: 'VMware', level: 75 },
       { name: 'Git', level: 90 },
       { name: 'Github', level: 90 },
-      { name: 'Ubuntu', level: 85 }
+      { name: 'Ubuntu', level: 85 },
+      { name: 'YAML', level: 85 }
     ]
   }
 ];

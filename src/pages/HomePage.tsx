@@ -7,7 +7,7 @@ import ContinuousLearning from '../components/ContinuousLearning';
 import Stats from '../components/Stats';
 import ConfettiEffect from '../components/ConfettiEffect';
 import ParticleBackground from '../components/ParticleBackground';
-import { ArrowDown, Sparkles, Brain, Code2, Terminal } from 'lucide-react';
+import { ArrowDown, Sparkles } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 
 export default function HomePage() {
@@ -36,43 +36,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Stats Banner */}
-      <RevealOnScroll>
-        <div className="py-12 px-6 relative overflow-hidden bg-transparent">
-          <div className="container mx-auto max-w-7xl relative z-10">
-            <div className="mx-auto max-w-5xl glass p-8 rounded-2xl shadow-xl border border-white/40">
-              <div className="flex justify-center">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-16 text-left md:text-center">
-                  <div className="flex items-center gap-4 group w-full md:w-auto">
-                    <div className="p-4 bg-blue-50/80 rounded-2xl group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40">
-                      <Code2 size={28} className="text-blue-600" />
-                    </div>
-                    <span className="text-xl md:text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">Full Stack Developer</span>
-                  </div>
 
-                  <div className="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-
-                  <div className="flex items-center gap-4 group w-full md:w-auto">
-                    <div className="p-4 bg-purple-50/80 rounded-2xl group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/40">
-                      <Brain size={28} className="text-purple-600" />
-                    </div>
-                    <span className="text-xl md:text-2xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">ML Engineer</span>
-                  </div>
-
-                  <div className="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-
-                  <div className="flex items-center gap-4 group w-full md:w-auto">
-                    <div className="p-4 bg-blue-50/80 rounded-2xl group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40">
-                      <Terminal size={28} className="text-blue-500" />
-                    </div>
-                    <span className="text-xl md:text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">Python Expert</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
 
       <About />
       <Services />
