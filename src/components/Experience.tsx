@@ -3,21 +3,7 @@ import RevealOnScroll from './RevealOnScroll';
 
 const internships = [
   {
-    title: 'Generative AI Developer',
-    company: 'Independent Projects & Research',
-    period: 'Current',
-    description: 'Building intelligent Agents and leveraging Large Language Models (LLMs) to automate complex tasks and generate insights.',
-    skills: ['LLMs', 'Prompt Engineering', 'Building Agents', 'Python', 'AI/ML']
-  },
-  {
-    title: 'DevOps & Cloud Engineer',
-    company: 'Hands-on Projects',
-    period: 'Current',
-    description: 'Designing and implementing robust CI/CD pipelines, containerization, and automated deployments for scalable applications.',
-    skills: ['Docker', 'Kubernetes', 'AWS', 'VMware', 'CI/CD']
-  },
-  {
-    title: 'Python Developer',
+    title: 'Python Developer Intern',
     company: 'Overload Ware Labs Ai (Owl Ai)',
     period: 'February 2026',
     description: 'Developed Python applications and built scalable backend architectures using the Django framework.',
@@ -92,7 +78,7 @@ export default function Experience() {
           <div className="relative">
             <RevealOnScroll>
               <h3 className="text-3xl font-bold text-gray-900 mb-16 text-center flex items-center justify-center gap-3">
-                Experience
+                Internships and Experience
               </h3>
             </RevealOnScroll>
 
