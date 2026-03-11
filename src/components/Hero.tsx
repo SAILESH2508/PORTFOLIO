@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Download, Brain, PartyPopper, Code2, Cloud, GraduationCap } from 'lucide-react';
+import { Download, Brain, PartyPopper, Code2, Cloud } from 'lucide-react';
 import PythonLogo from './logos/PythonLogo';
 import ReactLogo from './logos/ReactLogo';
 import DjangoLogo from './logos/DjangoLogo';
@@ -56,29 +56,18 @@ export default function Hero() {
             <RevealOnScroll delay={0.2}>
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                <div className="glass-card p-5 lg:p-6 hover:scale-[1.01] transition-transform duration-300 bg-white flex flex-col gap-4">
-                  <div className="h-[350px] lg:h-[400px] rounded-2xl overflow-hidden bg-gray-50 relative group-hover:shadow-inner transition-shadow">
+                <div className="glass-card p-5 lg:p-6 hover:scale-[1.01] transition-transform duration-300 bg-slate-200 border-2 border-blue-900/50 shadow-2xl flex flex-col gap-4">
+                  <div className="h-[350px] lg:h-[400px] rounded-2xl overflow-hidden bg-gray-50 border-4 border-blue-900 shadow-xl relative group-hover:shadow-inner transition-shadow">
                     {/* Main Profile/Hero Image - REPLACED with Giant S Logo per request */}
-                    <div className="w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_200%] animate-gradient-xy flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full scale-150 animate-pulse"></div>
-                      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)] animate-pulse-slow"></div>
+                    <div className="w-full h-full relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                      <img src="/profile.jpg" alt="Sailesh S Profile" className="w-full h-full object-cover" />
 
-                      {/* CSE Student Badge */}
-                      <div className="absolute top-6 left-6 z-30 opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
-                        <div className="bg-white/20 backdrop-blur-md border border-white/30 px-4 py-2 rounded-full shadow-xl flex items-center gap-2 hover:bg-white/30 transition-colors cursor-default">
-                          <GraduationCap size={18} className="text-white" />
-                          <span className="text-sm font-bold text-white tracking-widest uppercase text-shadow-sm">CSE Student</span>
-                        </div>
-                      </div>
-                      <span className="text-[250px] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] relative z-10 select-none transform group-hover:rotate-6 transition-transform duration-500 animate-float">S</span>
-                      <div className="absolute bottom-10 left-0 right-0 text-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                        <span className="text-xl font-bold text-white/90 tracking-[0.2em] uppercase drop-shadow-lg">Welcome to my Portfolio</span>
-                      </div>
+                      <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-blue-900/30 transition-colors pointer-events-none"></div>
                     </div>
                   </div>
 
                   {/* Skills Display Block */}
-                  <div className="bg-blue-50/80 rounded-2xl p-4 flex flex-row flex-wrap justify-center items-center gap-3 xl:gap-4 border border-blue-100 shadow-sm relative z-20">
+                  <div className="bg-blue-50/80 rounded-2xl p-4 flex flex-row flex-wrap justify-center items-center gap-3 xl:gap-4 border border-blue-200/50 shadow-sm relative z-20">
                     <div className="flex items-center gap-2 bg-white/50 pr-3 py-1 rounded-xl">
                       <div className="bg-white p-1.5 rounded-lg shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] flex items-center justify-center h-8 w-8">
                         <Code2 size={16} className="text-blue-600" />
@@ -104,7 +93,7 @@ export default function Hero() {
 
                 {/* Floating Elements */}
                 <div className="absolute -top-6 -right-6 animate-float" style={{ animationDelay: '0s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
                     <ReactLogo size={40} />
                   </div>
                 </div>
@@ -112,23 +101,23 @@ export default function Hero() {
                 {/* Personal S Logo Badge - REMOVED (Moved to main container) */}
 
                 <div className="absolute -bottom-8 -left-8 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
                     <PythonLogo size={40} />
                   </div>
                 </div>
                 <div className="absolute bottom-20 -right-12 animate-float" style={{ animationDelay: '2.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
                     <Brain size={32} className="text-primary" />
                   </div>
                 </div>
                 {/* New Logos */}
                 <div className="absolute top-1/2 -left-12 animate-float" style={{ animationDelay: '3.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
                     <DjangoLogo size={40} />
                   </div>
                 </div>
                 <div className="absolute -top-10 left-10 animate-float" style={{ animationDelay: '4.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
                     <SQLiteLogo size={40} />
                   </div>
                 </div>

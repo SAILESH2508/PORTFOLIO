@@ -30,9 +30,9 @@ const stats = [
     icon: Award,
     value: '4+',
     label: 'Hackathons',
-    color: 'text-purple-500',
-    bgColor: 'bg-purple-600/20',
-    borderColor: 'border-purple-600/50'
+    color: 'text-red-500',
+    bgColor: 'bg-red-600/20',
+    borderColor: 'border-red-600/50'
   },
   {
     icon: Users,

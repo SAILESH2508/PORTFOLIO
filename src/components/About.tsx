@@ -28,7 +28,7 @@ export default function About() {
                 Driven by a curiosity for innovation, I am also exploring <span className="text-primary font-bold">Prompt Engineering</span> and <span className="text-primary font-bold">Cloud Computing</span>. My ultimate goal is to leverage this diverse technical stack to create innovative, secure, and intelligent digital solutions that solve real-world problems efficiently.
               </p>
 
-              <div className="pt-6 border-t border-gray-200">
+              <div className="pt-6 border-t border-blue-900/20">
                 <p className="text-xl font-bold text-gray-900">
                   I'm always eager to collaborate on challenging projects and contribute to building the future of technology. 🚀
                 </p>

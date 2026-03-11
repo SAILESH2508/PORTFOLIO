@@ -24,7 +24,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
     return (
         <div
-            className={`group glass-card rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col h-full monitor-card ${project.featured ? 'ring-2 ring-cyan-500/30 shadow-lg shadow-cyan-500/10' : ''}`}
+            className={`group glass-card rounded-2xl overflow-hidden hover:border-blue-900 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/20 flex flex-col h-full monitor-card ${project.featured ? 'ring-2 ring-blue-900/30 shadow-lg shadow-blue-500/10' : ''}`}
         >
             {project.featured && (
                 <div className="absolute top-0 left-0 z-30 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 text-xs font-bold rounded-br-lg">
@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-white/90 backdrop-blur-md rounded-full text-gray-900 hover:bg-cyan-500 hover:text-white transition-colors shadow-sm ring-1 ring-gray-900/10"
+                        className="p-2 bg-white/90 backdrop-blur-md rounded-full text-gray-900 hover:bg-blue-600 hover:text-white transition-colors shadow-sm ring-1 ring-blue-900/10"
                         title="View Code"
                     >
                         <Github size={18} />
@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                             href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 bg-white/90 backdrop-blur-md rounded-full text-gray-900 hover:bg-purple-500 hover:text-white transition-colors shadow-sm ring-1 ring-gray-900/10"
+                            className="p-2 bg-white/90 backdrop-blur-md rounded-full text-gray-900 hover:bg-purple-500 hover:text-white transition-colors shadow-sm ring-1 ring-blue-900/10"
                             title="Live Demo"
                         >
                             <ExternalLink size={18} />
@@ -103,7 +103,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <div className="flex flex-wrap gap-2 pt-4 mt-auto">
                     {project.tech.slice(0, 5).map((tech, techIdx) => (
                         <div key={techIdx} className="group/tech relative">
-                            <div className="p-2 bg-gray-50 border border-gray-100 rounded-lg hover:border-cyan-500/30 transition-all hover:bg-white shadow-sm">
+                            <div className="p-2 bg-gray-50 border border-blue-900/20 rounded-lg hover:border-blue-900/50 transition-all hover:bg-white shadow-sm">
                                 <LanguageLogo name={tech} />
                             </div>
                             <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-[10px] rounded opacity-0 group-hover/tech:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20 shadow-lg">

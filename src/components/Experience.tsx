@@ -96,7 +96,7 @@ export default function Experience() {
                   {/* Content for Desktop Half */}
                   <div className="w-full md:w-1/2 md:px-12 pl-12">
                     <RevealOnScroll className={idx % 2 === 0 ? 'animate-slide-right' : 'animate-slide-left'}>
-                      <div className="glass-card p-6 md:p-8 rounded-2xl border border-blue-100/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
+                      <div className="glass-card p-6 md:p-8 rounded-2xl border border-blue-900/40 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                         <div className="flex flex-col gap-4 relative z-10">
@@ -120,7 +120,7 @@ export default function Experience() {
                             {internship.skills.map((skill, skillIdx) => (
                               <span
                                 key={skillIdx}
-                                className="px-3 py-1 bg-white/60 hover:bg-blue-50 text-xs font-semibold text-gray-600 hover:text-blue-600 border border-gray-200 hover:border-blue-200 rounded-lg transition-all duration-300"
+                                className="px-3 py-1 bg-white/60 hover:bg-blue-50 text-xs font-semibold text-gray-600 hover:text-blue-600 border border-blue-900/20 hover:border-blue-200 rounded-lg transition-all duration-300"
                               >
                                 {skill}
                               </span>
@@ -160,7 +160,7 @@ export default function Experience() {
                   {/* Content for Desktop Half */}
                   <div className="w-full md:w-1/2 md:px-12 pl-12">
                     <RevealOnScroll className={idx % 2 === 0 ? 'animate-slide-right' : 'animate-slide-left'}>
-                      <div className="glass-card p-6 md:p-8 rounded-2xl border border-purple-100/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
+                      <div className="glass-card p-6 md:p-8 rounded-2xl border border-purple-900/40 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                         <div className="flex flex-col gap-4 relative z-10">

@@ -52,7 +52,7 @@ export default function Achievements() {
             return (
               <div
                 key={idx}
-                className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 overflow-hidden transform hover:scale-105 hover:-translate-y-2 animate-fade-in cursor-pointer shadow-xl hover:shadow-2xl"
+                className="group relative bg-white border border-blue-900/20 rounded-2xl p-8 hover:border-blue-900/60 transition-all duration-300 overflow-hidden transform hover:scale-105 hover:-translate-y-2 animate-fade-in cursor-pointer shadow-xl hover:shadow-2xl"
                 style={{ animationDelay: `${idx * 0.15}s` }}
               >
                 {/* Gradient overlay on hover */}

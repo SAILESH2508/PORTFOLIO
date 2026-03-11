@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Services from '../components/Services';
 import ContinuousLearning from '../components/ContinuousLearning';
 import Stats from '../components/Stats';
 import ConfettiEffect from '../components/ConfettiEffect';
@@ -39,7 +38,6 @@ export default function HomePage() {
 
 
       <About />
-      <Services />
       <ContinuousLearning />
       <Stats />
 

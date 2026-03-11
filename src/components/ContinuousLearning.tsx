@@ -10,7 +10,7 @@ export default function ContinuousLearning() {
 
                     <AnimatedTitle title="My Philosophy" icon={BookOpen} />
 
-                    <div className="glass-card p-8 lg:p-12 hover:shadow-2xl transition-all duration-300 bg-gray-50 border border-gray-200">
+                    <div className="glass-card p-8 lg:p-12 hover:shadow-2xl transition-all duration-300 bg-gray-50 border border-blue-900/20">
                         <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-10">
                             <p>
                                 <span className="font-bold text-primary text-xl">Continuous Learner</span>
@@ -24,19 +24,19 @@ export default function ContinuousLearning() {
                             <Star className="text-primary" /> Languages
                         </h3>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div className="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-all hover:shadow-md">
+                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
                                 <h4 className="font-bold text-gray-900">Tamil</h4>
                                 <p className="text-sm text-gray-500">Native</p>
                             </div>
-                            <div className="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-all hover:shadow-md">
+                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
                                 <h4 className="font-bold text-gray-900">English</h4>
                                 <p className="text-sm text-gray-500">Fluent</p>
                             </div>
-                            <div className="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-all hover:shadow-md">
+                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
                                 <h4 className="font-bold text-gray-900">Malayalam</h4>
                                 <p className="text-sm text-gray-500">Conversational</p>
                             </div>
-                            <div className="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-all hover:shadow-md">
+                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
                                 <h4 className="font-bold text-gray-900">Hindi</h4>
                                 <p className="text-sm text-gray-500">Basic (Read/Write)</p>
                             </div>

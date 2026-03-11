@@ -20,7 +20,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     await sendEmail(formData);
-    
+
     if (submitStatus === 'success') {
       setTriggerConfetti(true);
       setTimeout(() => setTriggerConfetti(false), 5000);
@@ -42,25 +42,25 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-transparent">
+    <section id="contact" className="py-10 px-6 bg-transparent">
       <ConfettiEffect trigger={triggerConfetti} />
       <div className="container mx-auto max-w-[95%]">
         <RevealOnScroll>
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <AnimatedTitle
               title="Get In Touch"
               icon={Mail}
             />
-            <p className="text-xl text-gray-600 mt-[-2rem] relative z-10">Let's discuss your next project</p>
+            <p className="text-lg text-gray-600 mt-[-1.5rem] relative z-10">Let's discuss your next project</p>
           </div>
         </RevealOnScroll>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10">
           <RevealOnScroll delay={0.2}>
-            <div className="space-y-8">
-              <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Contact Information</h3>
-                <div className="space-y-6">
+            <div className="space-y-4">
+              <div className="glass-card p-6 lg:p-7 hover:shadow-xl transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">Contact Information</h3>
+                <div className="space-y-3">
                   <div className="flex items-center gap-4 group">
                     <div className="p-4 bg-purple-50 rounded-xl text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
                       <Mail size={24} />
@@ -84,8 +84,8 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-100">
-                  <p className="text-sm text-gray-500 mb-4">Connect with me</p>
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <p className="text-sm text-gray-500 mb-3">Connect with me</p>
                   <div className="flex gap-4">
                     <a
                       href="https://www.linkedin.com/in/sailesh-s-024368257/"
@@ -110,10 +110,10 @@ export default function Contact() {
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.4}>
-            <form onSubmit={handleSubmit} className="glass-card p-8 lg:p-10 hover:shadow-xl transition-all duration-300 relative">
-              <h3 className="text-2xl font-bold mb-8 text-gray-900">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="glass-card p-6 lg:p-7 hover:shadow-xl transition-all duration-300 relative">
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Send a Message</h3>
 
-              <div className="space-y-6">
+              <div className="space-y-3">
                 <div className="group">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2 group-focus-within:text-primary transition-colors">Your Name</label>
                   <input
@@ -123,8 +123,8 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-5 py-4 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 hover:bg-white/80"
-                    placeholder="John Doe"
+                    className="w-full px-4 py-2.5 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 hover:bg-white/80"
+                    placeholder="SAILESH S"
                   />
                 </div>
 
@@ -137,8 +137,8 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-5 py-4 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 hover:bg-white/80"
-                    placeholder="john@example.com"
+                    className="w-full px-4 py-2.5 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 hover:bg-white/80"
+                    placeholder="sailesh@example.com"
                   />
                 </div>
 
@@ -150,8 +150,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    className="w-full px-5 py-4 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 resize-none hover:bg-white/80"
+                    rows={3}
+                    className="w-full px-4 py-2.5 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 resize-none hover:bg-white/80"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
@@ -159,7 +159,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 shadow-lg hover:shadow-purple-600/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full py-2.5 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 shadow-lg hover:shadow-purple-600/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isSubmitting ? (
                     <>

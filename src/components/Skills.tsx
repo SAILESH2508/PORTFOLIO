@@ -146,7 +146,7 @@ export default function Skills() {
                     onClick={() => setActiveCategory(category.id)}
                     className={`group flex items-center justify-between p-6 rounded-2xl transition-all duration-300 text-left relative overflow-hidden ${isActive
                       ? 'glass-card border-l-4 border-l-primary shadow-lg shadow-primary/10'
-                      : 'bg-white/30 border border-gray-200 hover:bg-white/50 hover:border-primary/50'
+                      : 'bg-white/30 border border-blue-900/20 hover:bg-white/50 hover:border-primary/50'
                       }`}
                   >
                     <div className="flex items-center gap-4 relative z-10">
@@ -196,7 +196,7 @@ export default function Skills() {
                         {category.skills.map((skill, idx) => (
                           <div
                             key={idx}
-                            className="group/skill flex items-center gap-3 p-4 bg-white/40 backdrop-blur-sm border border-white/60 rounded-xl hover:bg-white/60 hover:border-primary/30 transition-all duration-300 cursor-default hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
+                            className="group/skill flex items-center gap-3 p-4 bg-white/40 backdrop-blur-sm border border-blue-900/20 rounded-xl hover:bg-white/60 hover:border-primary/30 transition-all duration-300 cursor-default hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
                             style={{ animationDelay: `${idx * 0.05}s` }}
                           >
                             <div className="transform group-hover/skill:scale-110 transition-transform duration-300">
@@ -227,7 +227,7 @@ export default function Skills() {
                     onClick={() => setActiveCategory(isActive ? '' : category.id)}
                     className={`group flex items-center justify-between p-5 rounded-2xl transition-all duration-300 text-left relative overflow-hidden ${isActive
                       ? 'glass-card border-l-4 border-l-primary shadow-lg shadow-primary/10 rounded-b-none'
-                      : 'bg-white/30 border border-gray-200 hover:bg-white/50 hover:border-primary/50'
+                      : 'bg-white/30 border border-blue-900/20 hover:bg-white/50 hover:border-primary/50'
                       }`}
                   >
                     <div className="flex items-center gap-4 relative z-10 media-logo">
@@ -262,7 +262,7 @@ export default function Skills() {
                       {category.skills.map((skill, idx) => (
                         <div
                           key={idx}
-                          className="group/skill flex items-center gap-2.5 p-3 bg-white/40 backdrop-blur-sm border border-white/60 rounded-lg hover:bg-white/60 hover:border-primary/30 transition-all duration-300"
+                          className="group/skill flex items-center gap-2.5 p-3 bg-white/40 backdrop-blur-sm border border-blue-900/20 rounded-lg hover:bg-white/60 hover:border-primary/30 transition-all duration-300"
                         >
                           <div className="transform group-hover/skill:scale-110 transition-transform duration-300 scale-90">
                             <LanguageLogo name={skill.name} />

@@ -158,7 +158,7 @@ export default function SkillsProjectsPage() {
               </Link>
               <Link
                 to="/experience"
-                className="px-8 py-4 glass text-gray-900 font-bold rounded-xl hover:bg-white transition-all border border-gray-200"
+                className="px-8 py-4 glass text-gray-900 font-bold rounded-xl hover:bg-white transition-all border border-blue-900/20"
               >
                 View My Experience
               </Link>

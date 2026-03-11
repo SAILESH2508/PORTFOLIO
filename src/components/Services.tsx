@@ -1,11 +1,11 @@
-import { Globe, Code2, Palette, Clock, Bot, Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Globe, Clock, Bot, Cloud } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const services = [
     {
         icon: <Globe className="w-8 h-8 text-blue-600" />,
-        title: "Web Development",
-        description: "Full-stack web applications built with modern technologies.",
+        title: "Python Full Stack Web Development",
+        description: "Building scalable, robust full-stack web applications and user interfaces.",
         deliverables: [
             "Full-stack web applications",
             "RESTful API development",
@@ -15,56 +15,35 @@ const services = [
         timeline: "2-4 weeks"
     },
     {
-        icon: <Code2 className="w-8 h-8 text-blue-600" />,
-        title: "Python & ML Projects",
-        description: "Intelligent solutions powered by machine learning and automation.",
-        deliverables: [
-            "Machine learning models",
-            "Data analysis & visualization",
-            "Automation scripts",
-            "AI-powered solutions"
-        ],
-        timeline: "3-5 weeks"
-    },
-    {
-        icon: <Palette className="w-8 h-8 text-blue-600" />,
-        title: "UI/UX Design",
-        description: "Beautiful, user-centric designs that drive engagement.",
-        deliverables: [
-            "Modern interface design",
-            "User flow optimization",
-            "Interactive prototypes",
-            "Brand-aligned aesthetics"
-        ],
-        timeline: "1-3 weeks"
-    },
-    {
         icon: <Bot className="w-8 h-8 text-indigo-600" />,
-        title: "Generative AI Solutions",
-        description: "Intelligent AI Agents and LLM integrations for your business.",
+        title: "ML & Gen AI Integration",
+        description: "Intelligent solutions powered by machine learning and Generative AI.",
         deliverables: [
             "Custom LLM Integrations",
+            "Machine learning models",
             "Autonomous AI Agents",
-            "RAG Pipelines Setup",
-            "AI-driven Automation"
+            "RAG Pipelines Setup"
         ],
         timeline: "3-6 weeks"
     },
     {
         icon: <Cloud className="w-8 h-8 text-teal-600" />,
-        title: "DevOps & Cloud",
-        description: "Robust CI/CD pipelines, containerization, and scalable cloud deployments.",
+        title: "Cloud Computing & DevOps Deployment",
+        description: "Designing and implementing CI/CD pipelines and cloud deployments.",
         deliverables: [
             "CI/CD Pipeline Setup",
             "Docker Containerization",
             "Kubernetes Orchestration",
-            "Cloud Infrastructure Management"
+            "Cloud Infrastructure Setup"
         ],
         timeline: "2-4 weeks"
     }
 ];
 
 export default function Services() {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     return (
         <section id="services" className="py-24 relative overflow-hidden bg-slate-50/50">
             {/* Background Decorations */}
@@ -109,12 +88,23 @@ export default function Services() {
                                     </div>
                                 </div>
 
-                                <Link
-                                    to="/contact"
+                                <button
+                                    onClick={() => {
+                                        if (location.pathname === '/contact') {
+                                            const contactEl = document.getElementById('contact');
+                                            if (contactEl) {
+                                                const yOffset = -80; // offset for fixed header
+                                                const y = contactEl.getBoundingClientRect().top + window.scrollY + yOffset;
+                                                window.scrollTo({ top: y, behavior: 'smooth' });
+                                            }
+                                        } else {
+                                            navigate('/contact', { state: { scrollToContact: true } });
+                                        }
+                                    }}
                                     className="w-full block text-center py-3 rounded-xl bg-white border-2 border-gray-100 text-gray-800 font-bold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
                                 >
                                     Work With Me
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     ))}
