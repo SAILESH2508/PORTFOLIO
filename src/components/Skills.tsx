@@ -10,6 +10,9 @@ const skillCategories = [
     id: 'languages',
     title: 'Programming Languages',
     icon: Code2,
+    color: 'bg-blue-600',
+    lightColor: 'bg-blue-100',
+    iconColor: 'text-blue-600',
     description: 'Core languages for systems, applications, and scripting.',
     skills: [
       { name: 'Python', level: 95 },
@@ -22,6 +25,9 @@ const skillCategories = [
     id: 'fullstack',
     title: 'Full Stack Development',
     icon: Layers,
+    color: 'bg-indigo-600',
+    lightColor: 'bg-indigo-100',
+    iconColor: 'text-indigo-600',
     description: 'End-to-end web and desktop application development.',
     skills: [
       { name: 'Django', level: 90 },
@@ -41,6 +47,9 @@ const skillCategories = [
     id: 'database',
     title: 'Databases & Management',
     icon: Database,
+    color: 'bg-cyan-600',
+    lightColor: 'bg-cyan-100',
+    iconColor: 'text-cyan-600',
     description: 'Efficient data storage, retrieval, and schema optimization.',
     skills: [
       { name: 'DBMS', level: 90 },
@@ -53,6 +62,9 @@ const skillCategories = [
     id: 'ai-data',
     title: 'AI/ML/DS',
     icon: Brain,
+    color: 'bg-purple-600',
+    lightColor: 'bg-purple-100',
+    iconColor: 'text-purple-600',
     description: 'Extracting insights and building intelligent models.',
     skills: [
       { name: 'Pandas', level: 90 },
@@ -75,6 +87,9 @@ const skillCategories = [
     id: 'engineering',
     title: 'Engineering Principles',
     icon: Lightbulb,
+    color: 'bg-amber-600',
+    lightColor: 'bg-amber-100',
+    iconColor: 'text-amber-600',
     description: 'Core principles and professional soft skills.',
     skills: [
       { name: 'Software Engineering', level: 90 },
@@ -97,6 +112,9 @@ const skillCategories = [
     id: 'devops',
     title: 'Cloud Computing & DevOps',
     icon: Cloud,
+    color: 'bg-emerald-600',
+    lightColor: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
     description: 'Cloud platforms, containerization, orchestration, and tools.',
     skills: [
       { name: 'AWS', level: 75 },
@@ -150,7 +168,7 @@ export default function Skills() {
                       }`}
                   >
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className={`p-3 rounded-xl transition-all duration-300 ${isActive ? 'bg-primary text-white shadow-lg' : 'bg-gray-100 text-gray-500 group-hover:text-primary'
+                      <div className={`p-3 rounded-xl transition-all duration-300 ${isActive ? `${category.color} text-white shadow-lg` : `${category.lightColor} ${category.iconColor}`
                         }`}>
                         <Icon size={24} />
                       </div>
@@ -231,7 +249,7 @@ export default function Skills() {
                       }`}
                   >
                     <div className="flex items-center gap-4 relative z-10 media-logo">
-                      <div className={`p-2.5 rounded-xl transition-all duration-300 ${isActive ? 'bg-primary text-white shadow-lg' : 'bg-gray-100 text-gray-500 group-hover:text-primary'
+                      <div className={`p-2.5 rounded-xl transition-all duration-300 ${isActive ? `${category.color} text-white shadow-lg` : `${category.lightColor} ${category.iconColor}`
                         }`}>
                         <Icon size={20} />
                       </div>
