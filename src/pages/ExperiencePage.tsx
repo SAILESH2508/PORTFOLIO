@@ -39,21 +39,21 @@ export default function ExperiencePage() {
       <RevealOnScroll>
         <div className="container mx-auto max-w-6xl px-6 mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="p-6 bg-blue-50 rounded-2xl text-center border border-blue-100 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-bold text-blue-600">2+</h3>
-              <p className="text-gray-600 font-medium">Years Coding</p>
+            <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl text-center border-2 border-blue-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all transform hover:-translate-y-1">
+              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">2+</h3>
+              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Years Coding</p>
             </div>
-            <div className="p-6 bg-purple-50 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-bold text-purple-600">15+</h3>
-              <p className="text-gray-600 font-medium">Projects</p>
+            <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl text-center border-2 border-purple-200 hover:shadow-xl hover:shadow-purple-500/10 transition-all transform hover:-translate-y-1">
+              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">15+</h3>
+              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Projects</p>
             </div>
-            <div className="p-6 bg-purple-50 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-bold text-purple-500">5+</h3>
-              <p className="text-gray-600 font-medium">Certificates</p>
+            <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl text-center border-2 border-amber-200 hover:shadow-xl hover:shadow-amber-500/10 transition-all transform hover:-translate-y-1">
+              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-orange-600">5+</h3>
+              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Certificates</p>
             </div>
-            <div className="p-6 bg-purple-50 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-bold text-purple-600">Top 5%</h3>
-              <p className="text-gray-600 font-medium">Class Rank</p>
+            <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl text-center border-2 border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/10 transition-all transform hover:-translate-y-1">
+              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">Top 5%</h3>
+              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Class Rank</p>
             </div>
           </div>
         </div>

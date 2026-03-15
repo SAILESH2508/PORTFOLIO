@@ -120,8 +120,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Tech & Services */}
-          <div className="space-y-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          {/* Tech & Services - Hidden on mobile to shorten footer */}
+          <div className="hidden md:block space-y-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div>
               <h4 className="text-sm font-bold text-white flex items-center gap-2 mb-3">
                 <Code size={16} className="text-accent-light" />
@@ -144,8 +144,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Contact Form */}
-          <div className="space-y-3 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          {/* Quick Contact Form - Hidden on small mobile to shorten footer */}
+          <div className="hidden sm:block space-y-3 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <h4 className="text-sm font-bold text-white flex items-center gap-2 mb-3">
               <Send size={16} className="text-primary-light" />
               Quick Message
@@ -178,7 +178,7 @@ export default function Footer() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-1.5 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white text-xs font-semibold rounded-md transition-colors flex items-center justify-center gap-2 disabled:opacity-50 shadow-lg shadow-cyan-500/20"
+                className="w-full py-2 btn-gradient text-xs font-semibold rounded-md flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />

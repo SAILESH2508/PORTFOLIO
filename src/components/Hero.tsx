@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Download, Brain, PartyPopper, Code2, Cloud } from 'lucide-react';
+import { Brain, Code2, Cloud, Rocket, Download } from 'lucide-react';
 import PythonLogo from './logos/PythonLogo';
 import ReactLogo from './logos/ReactLogo';
 import DjangoLogo from './logos/DjangoLogo';
@@ -14,12 +14,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           <div className="flex-1 text-center lg:text-left">
-            <RevealOnScroll>
-
-
-
-
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
+            <RevealOnScroll>              <h1 className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
                 <AnimatedText text="Hi, I'm" className="text-gray-900" startDelay={500} /> <br />
                 <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-purple-600">
                   <AnimatedText text="SAILESH S" className="inline-block" startDelay={2000} />
@@ -27,32 +22,32 @@ export default function Hero() {
               </h1>
 
               <div className="h-4"></div>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8 sm:mb-10 px-2 sm:px-0">
                 I build end-to-end solutions using Django, Flask, React, and modern machine learning tools. I have solid experience in Python Full Stack Development, and a growing expertise in Machine Learning, Generative AI, and DevOps. I am passionate about turning ideas into scalable, production-ready applications with clean architecture, optimized performance, and user-centric design.
               </p>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <Link
                   to="/contact"
-                  className="group px-8 py-4 bg-primary text-white font-bold rounded-full transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 flex items-center gap-2"
+                  className="group px-8 py-4 btn-gradient font-bold rounded-xl flex items-center gap-2"
                 >
-                  <PartyPopper size={20} className="group-hover:rotate-12 transition-transform" />
-                  HIRE ME NOW
+                  <Rocket size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  Hire Me Now
                 </Link>
 
                 <a
                   href="/Resume.pdf"
                   download="Sailesh_S_Resume.pdf"
-                  className="group px-8 py-4 bg-blue-600 text-white font-bold rounded-full transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 flex items-center gap-2"
+                  className="group px-8 py-4 btn-gradient-cyan font-bold rounded-xl flex items-center gap-2"
                 >
                   <Download size={20} className="group-hover:translate-y-1 transition-transform" />
-                  DOWNLOAD RESUME
+                  Download Resume
                 </a>
               </div>
             </RevealOnScroll>
           </div>
 
-          <div className="flex-1 w-full max-w-md lg:max-w-lg relative hidden lg:block">
+          <div className="flex-1 w-full max-w-md lg:max-w-lg relative mt-12 lg:mt-0">
             <RevealOnScroll delay={0.2}>
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
@@ -86,7 +81,7 @@ export default function Hero() {
                 </div>
 
                 {/* Floating Elements */}
-                <div className="absolute -top-6 -right-6 animate-float" style={{ animationDelay: '0s' }}>
+                <div className="absolute -top-4 -right-2 md:-top-6 md:-right-6 animate-float" style={{ animationDelay: '0s' }}>
                   <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <ReactLogo size={40} />
                   </div>
@@ -94,23 +89,23 @@ export default function Hero() {
 
                 {/* Personal S Logo Badge - REMOVED (Moved to main container) */}
 
-                <div className="absolute -bottom-8 -left-8 animate-float" style={{ animationDelay: '1.5s' }}>
+                <div className="absolute -bottom-6 -left-2 md:-bottom-8 md:-left-8 animate-float" style={{ animationDelay: '1.5s' }}>
                   <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <PythonLogo size={40} />
                   </div>
                 </div>
-                <div className="absolute bottom-20 -right-12 animate-float" style={{ animationDelay: '2.5s' }}>
+                <div className="absolute bottom-20 -right-4 md:-right-12 animate-float" style={{ animationDelay: '2.5s' }}>
                   <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <Brain size={32} className="text-primary" />
                   </div>
                 </div>
                 {/* New Logos */}
-                <div className="absolute top-1/2 -left-12 animate-float" style={{ animationDelay: '3.5s' }}>
+                <div className="absolute top-1/2 -left-4 md:-left-12 animate-float" style={{ animationDelay: '3.5s' }}>
                   <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <DjangoLogo size={40} />
                   </div>
                 </div>
-                <div className="absolute -top-10 left-10 animate-float" style={{ animationDelay: '4.5s' }}>
+                <div className="absolute -top-8 left-6 md:-top-10 md:left-10 animate-float" style={{ animationDelay: '4.5s' }}>
                   <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <SQLiteLogo size={40} />
                   </div>

@@ -29,10 +29,12 @@ export default function FeaturedProjects() {
                     <RevealOnScroll delay={0.2}>
                         <Link
                             to="/skills-projects"
-                            className="group flex items-center gap-2 text-blue-600 font-bold hover:text-blue-700 transition-colors"
+                            className="group flex items-center gap-2 btn-gradient-outline px-6 py-2 rounded-full font-bold"
                         >
-                            View All Projects
-                            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                            <span className="flex items-center gap-2">
+                                View All Projects
+                                <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                            </span>
                         </Link>
                     </RevealOnScroll>
                 </div>

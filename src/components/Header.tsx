@@ -53,7 +53,7 @@ export default function Header() {
 
           <div className="hidden md:flex items-center gap-3 ml-3 pl-3 border-l border-gray-700">
             <a
-              href="https://github.com/Sailesh-24-05"
+              href="https://github.com/SAILESH2508"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -62,7 +62,7 @@ export default function Header() {
               <Github size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/in/sailesh-s-024368257/"
+              href="https://www.linkedin.com/in/sailesh-s-825293276/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-[#0077b5] transition-colors"
@@ -89,17 +89,31 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <nav className="md:hidden pb-4 space-y-1 animate-fade-in bg-blue-950 border-t border-blue-900">
+          <nav className="md:hidden pb-6 pt-2 space-y-2 animate-fade-in bg-gradient-to-b from-blue-950 to-indigo-950 border-t border-white/10 px-4">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-gray-300 hover:text-primary-light hover:bg-gray-800 rounded-lg transition-colors font-medium text-sm"
+                className={`block px-4 py-3 rounded-xl transition-all font-medium text-sm ${location.pathname === link.href 
+                  ? 'bg-white/10 text-primary-light border border-white/10' 
+                  : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
               >
                 {link.label}
               </Link>
             ))}
+            <div className="flex items-center gap-6 pt-4 border-t border-white/5 justify-center">
+              <a href="https://github.com/SAILESH2508" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                <Github size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/sailesh-s-825293276/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400">
+                <Linkedin size={20} />
+              </a>
+              <a href="mailto:sailesh25008@gmail.com" className="text-gray-400 hover:text-purple-400">
+                <Mail size={20} />
+              </a>
+            </div>
           </nav>
         )}
       </div>

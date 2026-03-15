@@ -1,5 +1,6 @@
 import { Mail, Linkedin, Github, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useEmailJS } from '../hooks/useEmailJS';
 import ConfettiEffect from './ConfettiEffect';
 import RevealOnScroll from './RevealOnScroll';
@@ -14,6 +15,17 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [triggerConfetti, setTriggerConfetti] = useState(false);
   const { submitStatus, errorMessage, sendEmail, setSubmitStatus, setErrorMessage } = useEmailJS();
+  const location = useLocation();
+
+  useEffect(() => {
+    const state = location.state as { serviceTitle?: string };
+    if (state?.serviceTitle) {
+      setFormData(prev => ({
+        ...prev,
+        message: `Hi Sailesh, I would like to do a project regarding ${state.serviceTitle}.`
+      }));
+    }
+  }, [location.state]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,12 +58,16 @@ export default function Contact() {
       <ConfettiEffect trigger={triggerConfetti} />
       <div className="container mx-auto max-w-[95%]">
         <RevealOnScroll>
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <AnimatedTitle
               title="Get In Touch"
               icon={Mail}
+              iconColor="text-blue-500"
+              gradient="from-blue-600 via-purple-600 to-pink-600"
             />
-            <p className="text-lg text-gray-600 mt-[-1.5rem] relative z-10">Let's discuss your next project</p>
+            <p className="text-lg font-bold text-gray-600 mt-[-1rem] relative z-10 animate-fade-in">
+              Let's discuss your next project
+            </p>
           </div>
         </RevealOnScroll>
 
@@ -62,24 +78,24 @@ export default function Contact() {
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Contact Information</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-4 group">
-                    <div className="p-4 bg-purple-50 rounded-xl text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                    <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-blue-500/20">
                       <Mail size={24} />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500">Email Me</p>
-                      <a href="mailto:sailesh25008@gmail.com" className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                      <p className="text-sm font-bold text-gray-400 uppercase tracking-wider">Email Me</p>
+                      <a href="mailto:sailesh25008@gmail.com" className="text-lg font-black text-gray-900 group-hover:text-blue-600 transition-colors">
                         sailesh25008@gmail.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4 group">
-                    <div className="p-4 bg-purple-50 rounded-xl text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                    <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl text-white group-hover:-rotate-6 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-purple-500/20">
                       <MapPin size={24} />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500">Location</p>
-                      <p className="text-lg font-semibold text-gray-900">Coimbatore</p>
+                      <p className="text-sm font-bold text-gray-400 uppercase tracking-wider">Location</p>
+                      <p className="text-lg font-black text-gray-900">Coimbatore</p>
                     </div>
                   </div>
                 </div>
@@ -88,7 +104,7 @@ export default function Contact() {
                   <p className="text-sm text-gray-500 mb-3">Connect with me</p>
                   <div className="flex gap-4">
                     <a
-                      href="https://www.linkedin.com/in/sailesh-s-024368257/"
+                      href="https://www.linkedin.com/in/sailesh-s-825293276/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-gray-50 text-gray-600 rounded-lg hover:bg-[#0077b5] hover:text-white transition-all transform hover:scale-110"
@@ -96,7 +112,7 @@ export default function Contact() {
                       <Linkedin size={24} />
                     </a>
                     <a
-                      href="https://github.com/Sailesh-24-05"
+                      href="https://github.com/SAILESH2508"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-gray-50 text-gray-600 rounded-lg hover:bg-black hover:text-white transition-all transform hover:scale-110"
@@ -159,17 +175,15 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-2.5 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 shadow-lg hover:shadow-purple-600/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className={`w-full py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-black rounded-xl shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transform active:scale-95 transition-all flex items-center justify-center gap-3 group/btn ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                    }`}
                 >
                   {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
-                      Sending...
-                    </>
+                    <div className="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin" />
                   ) : (
                     <>
-                      <Send size={20} />
-                      Send Message
+                      <span className="text-lg">Send Message</span>
+                      <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </>
                   )}
                 </button>

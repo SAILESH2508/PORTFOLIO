@@ -20,8 +20,8 @@ export default function ProjectFilter({ technologies, selectedTech, onSelect }: 
                 <button
                     key={tech}
                     onClick={() => onSelect(tech)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all transform hover:scale-105 flex items-center gap-2 ${selectedTech === tech
-                        ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/30'
+                    className={`px-4 py-2 rounded-lg font-medium transition-all transform hover:scale-105 flex items-center gap-2 border ${selectedTech === tech
+                        ? 'btn-gradient border-transparent text-white shadow-lg'
                         : 'bg-white border border-blue-900/20 text-gray-600 hover:bg-gray-50 hover:text-gray-900 shadow-sm'
                         }`}
                 >

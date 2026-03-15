@@ -152,13 +152,14 @@ export default function SkillsProjectsPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg shadow-cyan-500/30"
+                className="group px-8 py-4 btn-gradient font-bold rounded-xl flex items-center gap-2"
               >
-                🚀 Hire Me Now
+                <Rocket size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                Hire Me Now
               </Link>
               <Link
                 to="/experience"
-                className="px-8 py-4 glass text-gray-900 font-bold rounded-xl hover:bg-white transition-all border border-blue-900/20"
+                className="group px-8 py-4 btn-gradient-purple font-bold rounded-xl flex items-center gap-2"
               >
                 View My Experience
               </Link>

@@ -6,49 +6,49 @@ const stats = [
     icon: Code,
     value: '10,000+',
     label: 'Lines of Code',
-    color: 'text-blue-500',
-    bgColor: 'bg-blue-600/20',
-    borderColor: 'border-blue-600/50'
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100/50',
+    borderColor: 'border-blue-300'
   },
   {
     icon: Folder,
     value: '18+',
     label: 'Projects Built',
-    color: 'text-purple-500',
-    bgColor: 'bg-purple-600/20',
-    borderColor: 'border-purple-600/50'
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-100/50',
+    borderColor: 'border-purple-300'
   },
   {
     icon: GitBranch,
     value: '50+',
     label: 'Git Commits',
-    color: 'text-cyan-500',
-    bgColor: 'bg-cyan-600/20',
-    borderColor: 'border-cyan-600/50'
+    color: 'text-cyan-600',
+    bgColor: 'bg-cyan-100/50',
+    borderColor: 'border-cyan-300'
   },
   {
     icon: Award,
     value: '4+',
     label: 'Hackathons',
     color: 'text-red-500',
-    bgColor: 'bg-red-600/20',
-    borderColor: 'border-red-600/50'
+    bgColor: 'bg-red-100/50',
+    borderColor: 'border-red-300'
   },
   {
     icon: Users,
     value: '3+',
     label: 'Internships',
     color: 'text-orange-500',
-    bgColor: 'bg-orange-600/20',
-    borderColor: 'border-orange-600/50'
+    bgColor: 'bg-orange-100/50',
+    borderColor: 'border-orange-300'
   },
   {
     icon: Trophy,
     value: '40+',
     label: 'Technologies',
-    color: 'text-green-500',
-    bgColor: 'bg-green-600/20',
-    borderColor: 'border-green-600/50'
+    color: 'text-green-600',
+    bgColor: 'bg-green-100/50',
+    borderColor: 'border-green-300'
   }
 ];
 
@@ -66,26 +66,28 @@ export default function Stats() {
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
-              <RevealOnScroll key={idx} delay={idx * 0.2}>
+              <RevealOnScroll key={idx} delay={idx * 0.1}>
                 <div
-                  className={`group relative bg-white/80 backdrop-blur-lg border-2 ${stat.borderColor} rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-${stat.color}/20 cursor-pointer`}
+                  className={`group relative bg-white/40 backdrop-blur-md border ${stat.borderColor} rounded-2xl p-10 text-center hover:scale-[1.03] transition-all duration-500 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer overflow-hidden`}
                 >
-                  <div className={`w-20 h-20 ${stat.bgColor} border ${stat.borderColor} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 transition-all animate-float`}>
-                    <Icon className={stat.color} size={32} />
-                  </div>
-                  <div className={`text-4xl font-bold ${stat.color} mb-2 group-hover:scale-110 transition-transform`}>
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-700 font-bold group-hover:text-gray-900 transition-colors">
-                    {stat.label}
-                  </div>
+                  {/* Subtle background gradient on hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${stat.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-                  {/* Animated background glow */}
-                  <div className={`absolute inset-0 ${stat.bgColor} rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity -z-10`}></div>
+                  <div className="relative z-10">
+                    <div className={`w-16 h-16 ${stat.bgColor} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                      <Icon className={stat.color} size={28} />
+                    </div>
+                    <div className={`text-5xl font-black ${stat.color} mb-3 tracking-tight group-hover:scale-110 transition-transform duration-500`}>
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-gray-900 font-black uppercase tracking-widest">
+                      {stat.label}
+                    </div>
+                  </div>
 
                   {/* Sparkle effect on hover */}
-                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className={`w-2 h-2 ${stat.color.replace('text-', 'bg-')} rounded-full animate-ping`}></div>
                   </div>
                 </div>
               </RevealOnScroll>

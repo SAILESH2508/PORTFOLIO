@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-white/90 backdrop-blur-md rounded-full text-gray-900 hover:bg-blue-600 hover:text-white transition-colors shadow-sm ring-1 ring-blue-900/10"
+                        className="p-2 bg-gradient-to-br from-indigo-500 to-blue-600 text-white rounded-full transition-all shadow-lg hover:scale-110 active:scale-95 ring-1 ring-white/20"
                         title="View Code"
                     >
                         <Github size={18} />
@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                             href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 bg-white/90 backdrop-blur-md rounded-full text-gray-900 hover:bg-purple-500 hover:text-white transition-colors shadow-sm ring-1 ring-blue-900/10"
+                            className="p-2 bg-gradient-to-br from-purple-500 to-violet-600 text-white rounded-full transition-all shadow-lg hover:scale-110 active:scale-95 ring-1 ring-white/20"
                             title="Live Demo"
                         >
                             <ExternalLink size={18} />

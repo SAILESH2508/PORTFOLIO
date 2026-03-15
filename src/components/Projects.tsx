@@ -42,8 +42,8 @@ export default function Projects() {
               key={tech}
               onClick={() => setSelectedTech(tech)}
               className={`px-4 py-2 rounded-lg font-medium transition-all transform hover:scale-105 flex items-center gap-2 border ${selectedTech === tech
-                ? 'bg-primary text-white border-primary shadow-lg shadow-primary/30'
-                : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:text-primary hover:border-primary/50'
+                ? 'btn-gradient border-transparent'
+                : 'bg-blue-50/50 text-blue-700 border-blue-200 hover:bg-blue-100 hover:border-blue-300'
                 }`}
             >
               {tech !== 'All' && <LanguageLogo name={tech} />}
@@ -76,28 +76,28 @@ export default function Projects() {
                   />
 
                   {/* Actions Overlay */}
-                  <div className={`absolute inset-0 z-20 flex items-center justify-center gap-4 bg-white/60 backdrop-blur-sm transition-opacity duration-300 ${hoveredProject === idx ? 'opacity-100' : 'opacity-0'}`}>
+                  <div className={`absolute inset-0 z-20 flex items-center justify-center gap-4 bg-blue-950/40 backdrop-blur-sm transition-opacity duration-300 ${hoveredProject === idx ? 'opacity-100' : 'opacity-0'}`}>
                     <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white text-gray-900 border border-gray-200 rounded-full hover:bg-primary hover:text-white transition-all transform hover:scale-110 shadow-lg"
-                      title="View Code"
-                    >
-                      <Github size={20} />
-                    </a>
-                    {project.demo && (
-                      <a
-                        href={project.demo}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 bg-primary text-white border border-transparent rounded-full hover:bg-white hover:text-primary transition-all transform hover:scale-110 shadow-lg"
-                        title="Live Demo"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
+                        className="p-2 bg-gradient-to-br from-indigo-500 to-blue-600 text-white rounded-full transition-all shadow-lg hover:scale-110 active:scale-95 ring-1 ring-white/20"
+                        title="View Code"
+                    >
+                        <Github size={18} />
+                    </a>
+                    {project.demo && (
+                        <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 bg-gradient-to-br from-purple-500 to-violet-600 text-white rounded-full transition-all shadow-lg hover:scale-110 active:scale-95 ring-1 ring-white/20"
+                            title="Live Demo"
+                        >
+                            <ExternalLink size={18} />
+                        </a>
                     )}
-                  </div>
+                </div>
                 </div>
 
                 <div className={`h-1 bg-gradient-to-r ${project.gradient}`}></div>
