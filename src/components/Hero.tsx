@@ -68,24 +68,18 @@ export default function Hero() {
 
                   {/* Skills Display Block */}
                   <div className="bg-blue-50/80 rounded-2xl p-4 flex flex-row flex-wrap justify-center items-center gap-3 xl:gap-4 border border-blue-200/50 shadow-sm relative z-20">
-                    <div className="flex items-center gap-2 bg-white/50 pr-3 py-1 rounded-xl">
-                      <div className="bg-white p-1.5 rounded-lg shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] flex items-center justify-center h-8 w-8">
-                        <Code2 size={16} className="text-blue-600" />
-                      </div>
+                    <div className="flex items-center gap-2 bg-white/50 pl-2 pr-3 py-1 rounded-xl">
+                      <Code2 size={18} className="text-blue-600" />
                       <span className="font-bold text-slate-800 text-[13px] md:text-sm whitespace-nowrap">Python Full Stack Developer</span>
                     </div>
 
-                    <div className="flex items-center gap-2 bg-white/50 pr-3 py-1 rounded-xl">
-                      <div className="bg-white p-1.5 rounded-lg shadow-[0_2px_10px_-3px_rgba(147,51,234,0.3)] flex items-center justify-center h-8 w-8">
-                        <Brain size={16} className="text-purple-600" />
-                      </div>
+                    <div className="flex items-center gap-2 bg-white/50 pl-2 pr-3 py-1 rounded-xl">
+                      <Brain size={18} className="text-purple-600" />
                       <span className="font-bold text-slate-800 text-[13px] md:text-sm whitespace-nowrap">ML & Gen AI Enthusiast</span>
                     </div>
 
-                    <div className="flex items-center gap-2 bg-white/50 pr-3 py-1 rounded-xl">
-                      <div className="bg-white p-1.5 rounded-lg shadow-[0_2px_10px_-3px_rgba(13,148,136,0.3)] flex items-center justify-center h-8 w-8">
-                        <Cloud size={16} className="text-teal-600" />
-                      </div>
+                    <div className="flex items-center gap-2 bg-white/50 pl-2 pr-3 py-1 rounded-xl">
+                      <Cloud size={18} className="text-teal-600" />
                       <span className="font-bold text-slate-800 text-[13px] md:text-sm whitespace-nowrap">DevOps Learner</span>
                     </div>
                   </div>
@@ -93,7 +87,7 @@ export default function Hero() {
 
                 {/* Floating Elements */}
                 <div className="absolute -top-6 -right-6 animate-float" style={{ animationDelay: '0s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
+                  <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <ReactLogo size={40} />
                   </div>
                 </div>
@@ -101,23 +95,23 @@ export default function Hero() {
                 {/* Personal S Logo Badge - REMOVED (Moved to main container) */}
 
                 <div className="absolute -bottom-8 -left-8 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
+                  <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <PythonLogo size={40} />
                   </div>
                 </div>
                 <div className="absolute bottom-20 -right-12 animate-float" style={{ animationDelay: '2.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
+                  <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <Brain size={32} className="text-primary" />
                   </div>
                 </div>
                 {/* New Logos */}
                 <div className="absolute top-1/2 -left-12 animate-float" style={{ animationDelay: '3.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
+                  <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <DjangoLogo size={40} />
                   </div>
                 </div>
                 <div className="absolute -top-10 left-10 animate-float" style={{ animationDelay: '4.5s' }}>
-                  <div className="bg-white p-3 rounded-xl shadow-lg border border-blue-900/30">
+                  <div className="bg-white p-3 rounded-2xl shadow-lg border border-blue-900/30">
                     <SQLiteLogo size={40} />
                   </div>
                 </div>
