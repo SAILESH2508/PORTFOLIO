@@ -38,10 +38,10 @@ const services = [
         title: "Cloud Computing & DevOps Deployment",
         description: "Designing and implementing CI/CD pipelines and cloud deployments.",
         deliverables: [
-            "CI/CD Pipeline Setup",
-            "Docker Containerization",
-            "Kubernetes Orchestration",
-            "Cloud Infrastructure Setup"
+            "CI/CD with Jenkins",
+            "IaC using Terraform",
+            "Docker & Kubernetes",
+            "Cloud Infrastructure (AWS/GCP)"
         ],
         timeline: "2-4 weeks",
         color: "from-emerald-600 to-teal-600",

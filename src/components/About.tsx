@@ -20,7 +20,7 @@ export default function About() {
               </p>
 
               <p>
-                <b>Exploring Generative AI & DevOps:</b> Gaining experience in building intelligent Agents, leveraging Large Language Models (LLMs), and designing robust DevOps pipelines.
+                <b>Exploring Generative AI & DevOps:</b> Gaining experience in building intelligent Agents, leveraging Large Language Models (LLMs), and designing robust DevOps pipelines using tools like <span className="font-semibold text-primary">Terraform</span> and <span className="font-semibold text-primary">Jenkins</span>.
                 My focus is on creating holistic, production-ready systems that integrate cutting-edge <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">Generative AI</span> capabilities with robust <span className="bg-gradient-to-r from-primary via-blue-700 to-blue-900 bg-clip-text text-transparent font-bold">DevOps</span> workflows for smooth deployment and scalability.
               </p>
 

@@ -129,7 +129,11 @@ const skillCategories = [
       { name: 'Git', level: 90 },
       { name: 'Github', level: 90 },
       { name: 'Ubuntu', level: 85 },
-      { name: 'YAML', level: 85 }
+      { name: 'YAML', level: 85 },
+      { name: 'Terraform', level: 80 },
+      { name: 'Jenkins', level: 80 },
+      { name: 'Prometheus', level: 75 },
+      { name: 'Grafana', level: 75 }
     ]
   }
 ];

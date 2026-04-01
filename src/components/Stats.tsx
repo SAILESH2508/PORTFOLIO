@@ -36,11 +36,11 @@ const stats = [
   },
   {
     icon: Users,
-    value: '3+',
+    value: '6+',
     label: 'Internships',
-    color: 'text-orange-500',
-    bgColor: 'bg-orange-100/50',
-    borderColor: 'border-orange-300'
+    color: 'text-blue-700',
+    bgColor: 'bg-blue-100/50',
+    borderColor: 'border-blue-300'
   },
   {
     icon: Trophy,

@@ -1,4 +1,4 @@
-import { Database, Code2, Terminal, Users, Cpu, Layout, MessageSquare, Briefcase, Puzzle, Brain } from 'lucide-react';
+import { Database, Code2, Terminal, Users, Cpu, Layout, MessageSquare, Briefcase, Puzzle, Brain, Globe, GraduationCap, Building2, Zap, Cloud, GitMerge } from 'lucide-react';
 import CLogo from './logos/CLogo';
 import CPPLogo from './logos/CPPLogo';
 import PHPLogo from './logos/PHPLogo';
@@ -50,6 +50,11 @@ import UbuntuLogo from './logos/UbuntuLogo';
 import ArduinoLogo from './logos/ArduinoLogo';
 import StreamlitLogo from './logos/StreamlitLogo';
 import VMwareLogo from './logos/VMwareLogo';
+import JenkinsLogo from './logos/JenkinsLogo';
+import GrafanaLogo from './logos/GrafanaLogo';
+import PrometheusLogo from './logos/PrometheusLogo';
+
+import TerraformLogo from './logos/TerraformLogo';
 
 // Helper for generic skills using Lucide icons
 const GenericSkillLogo = ({ Icon, color }: { Icon: any; color: string }) => (
@@ -120,13 +125,13 @@ const logos: Record<string, () => JSX.Element> = {
   LSTM: () => <GenericSkillLogo Icon={Brain} color="bg-blue-600" />,
   'Scikit-Learn': () => <ScikitLearnLogo size={32} />,
 
-  // Tools & DevOps & Engineering
+  // DevOps & Tools
   Git: () => <GitLogo size={32} />,
   Github: () => <GithubLogo size={32} />,
   'VS Code': () => <VSCodeLogo size={32} />,
   Postman: () => <PostmanLogo size={32} />,
   Figma: () => <FigmaLogo size={32} />,
-  AWS: () => <AWSLogo size={32} />,
+  AWS: () => <AWSLogo size={14} />,
   Razorpay: () => <RazorpayLogo size={32} />,
   'Chart.js': () => <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">C</div>,
   Vercel: () => <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold text-xs">▲</div>,
@@ -141,7 +146,14 @@ const logos: Record<string, () => JSX.Element> = {
   Shell: () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
   'Shell Scripting': () => <GenericSkillLogo Icon={Terminal} color="bg-gray-800" />,
   Ubuntu: () => <UbuntuLogo size={32} />,
-  YAML: () => <TextBadge text="YML" color="bg-red-500" />,
+  YAML: () => <TextBadge text="YML" color="bg-[#E94E32]" />,
+  Terraform: () => <TerraformLogo size={32} />,
+  Jenkins: () => <JenkinsLogo size={32} />,
+  Prometheus: () => <PrometheusLogo size={32} />,
+  Grafana: () => <GrafanaLogo size={32} />,
+  'CI/CD': () => <GenericSkillLogo Icon={GitMerge} color="bg-red-600" />,
+  Automation: () => <GenericSkillLogo Icon={Zap} color="bg-yellow-600" />,
+  'Cloud Workflows': () => <GenericSkillLogo Icon={Cloud} color="bg-blue-600" />,
 
   // Soft Skills & Concepts
   'Problem Solving': () => <GenericSkillLogo Icon={Puzzle} color="bg-green-600" />,
@@ -154,6 +166,12 @@ const logos: Record<string, () => JSX.Element> = {
   'Robotics (Arduino UNO)': () => <ArduinoLogo size={32} />,
   SIH: () => <GenericSkillLogo Icon={Briefcase} color="bg-[#FF9933]" />, // Using Briefcase for Hackathon/Project
   'Full Stack': () => <GenericSkillLogo Icon={Layout} color="bg-indigo-600" />,
+  'API Development': () => <GenericSkillLogo Icon={Terminal} color="bg-gray-700" />,
+  Backend: () => <GenericSkillLogo Icon={Database} color="bg-blue-800" />,
+  'REST APIs': () => <GenericSkillLogo Icon={Terminal} color="bg-gray-700" />,
+  'UI Design': () => <GenericSkillLogo Icon={Layout} color="bg-pink-500" />,
+  Prototyping: () => <GenericSkillLogo Icon={Layout} color="bg-purple-500" />,
+  'User Research': () => <GenericSkillLogo Icon={Users} color="bg-blue-500" />,
   Vite: () => <TextBadge text="Vt" color="bg-[#646CFF]" />,
   JSON: () => <GenericSkillLogo Icon={Code2} color="bg-gray-500" />,
   'Information Technology': () => <GenericSkillLogo Icon={Terminal} color="bg-teal-600" />,
@@ -161,6 +179,31 @@ const logos: Record<string, () => JSX.Element> = {
   Aptitude: () => <GenericSkillLogo Icon={Puzzle} color="bg-pink-600" />,
   'Building Agents': () => <GenericSkillLogo Icon={Brain} color="bg-fuchsia-600" />,
   LLMs: () => <GenericSkillLogo Icon={Brain} color="bg-purple-700" />,
+  
+  // Companies & Issuers
+  'RAMPex Technologies': () => <GenericSkillLogo Icon={Zap} color="bg-cyan-600 shadow-cyan-500/20" />,
+  'Overload Ware Labs Ai (Owl Ai)': () => <GenericSkillLogo Icon={Cpu} color="bg-blue-600" />,
+  'Prodigy InfoTech': () => <GenericSkillLogo Icon={Zap} color="bg-yellow-500" />,
+  'Code Alpha': () => <GenericSkillLogo Icon={Code2} color="bg-indigo-600" />,
+  'Arttifai Tech': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
+  'Forage | AWS': () => <AWSLogo size={32} />,
+  'Forage | TATA': () => <GenericSkillLogo Icon={Building2} color="bg-blue-800" />,
+  'Udemy': () => <div className="w-8 h-8 bg-[#A435F0] rounded-lg flex items-center justify-center text-white font-bold text-xs shadow-md">U</div>,
+  'NPTEL | IIT Madras': () => <GenericSkillLogo Icon={GraduationCap} color="bg-green-700" />,
+  'Xplore IT Corp': () => <GenericSkillLogo Icon={Globe} color="bg-cyan-600" />,
+
+  // Titles mapping (to existing icons)
+  'Cloud & DevOps Engineering Trainee': () => <GenericSkillLogo Icon={Cloud} color="bg-blue-600" />,
+  'Python Developer Intern': () => <PythonLogo size={32} />,
+  'Full Stack Web Development Internship': () => <GenericSkillLogo Icon={Layout} color="bg-indigo-600" />,
+  'Full Stack Development Intern': () => <GenericSkillLogo Icon={Layout} color="bg-indigo-600" />,
+  'UI/UX Design Intern': () => <GenericSkillLogo Icon={Layout} color="bg-[#FF61F6]" />,
+  'Solutions Architecture Job Simulation': () => <GenericSkillLogo Icon={Cloud} color="bg-blue-600" />,
+  'GenAI Powered Data Analytics Job Simulation': () => <GenericSkillLogo Icon={Brain} color="bg-purple-600" />,
+  'Python Machine Learning: From Beginner to Pro': () => <PythonLogo size={32} />,
+  'Python for Data Science': () => <PythonLogo size={32} />,
+  'ChatGPT + Bing (Copilot): Prompt Engineering Masterclass': () => <GenericSkillLogo Icon={Terminal} color="bg-purple-600" />,
+  'Full Stack Development with Python': () => <GenericSkillLogo Icon={Layout} color="bg-indigo-600" />,
 };
 
 export function LanguageLogo({ name }: { name: string }) {
