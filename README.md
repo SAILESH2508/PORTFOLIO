@@ -127,8 +127,8 @@ project/
 - ✅ Statistics showcase
 - ✅ 6 Featured projects
 - ✅ 4 Hackathon achievements
-- ✅ 3 Internship experiences
-- ✅ 2 Certifications
+- ✅ 7 Internship experiences
+- ✅ 6 Certifications
 - ✅ 3 Service offerings
 - ✅ Contact information
 - ✅ Enhanced footer

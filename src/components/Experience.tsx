@@ -4,6 +4,27 @@ import { LanguageLogo } from './LanguageLogos';
 
 const internships = [
   {
+    title: 'Prompt Engineering Research Intern',
+    company: 'Excelerate – Supported by RIT',
+    period: 'June 2026 – July 2026',
+    type: 'Remote Internship',
+    description: 'Conducted research on AI prompting strategies to enhance personalized digital education. Evaluated and structured a framework of 5 key prompting methods (Role-Based, Socratic, Chain-of-Thought, Few-Shot, and Content Scaffolding) to optimize LLM interactions and resolve online learning barriers.',
+    skills: ['Prompt Engineering', 'LLMs', 'Generative AI', 'Research', 'NLP'],
+    color: {
+      primary: 'text-blue-700',
+      bgColor: 'bg-blue-50',
+      bgGradient: 'from-blue-50/90 via-indigo-50/70 to-purple-50/50',
+      border: 'border-blue-200/60',
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600',
+      glow: 'shadow-blue-400/20',
+      blob: 'bg-blue-200/10'
+    },
+    boxTheme: {
+      border: 'border-amber-400/50',
+      glow: 'shadow-amber-500/20'
+    }
+  },
+  {
     title: 'Cloud & DevOps Engineering Trainee',
     company: 'RAMPex Technologies',
     period: 'Feb 2026 - Mar 2026',

@@ -4,7 +4,7 @@ const achievements = [
   {
     icon: Trophy,
     title: 'Smart India Hackathon 2024',
-    description: 'Qualified for national-level hackathon with innovative alumni management solution',
+    description: 'Qualified for national-level hackathon with an innovative software solution addressing critical real-world challenges',
     color: 'from-blue-600 to-indigo-600',
     lightColor: 'from-blue-50 to-indigo-50',
     borderColor: 'border-blue-200'

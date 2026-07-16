@@ -47,7 +47,7 @@ export const projects = [
         image: '/attendance-tracker.png',
         gradient: 'from-orange-600 to-yellow-600',
         role: 'Python Developer',
-        category: 'Backend',
+        category: 'Desktop & CLI',
         github: 'https://github.com/SAILESH2508',
         year: '2024'
     },
@@ -65,16 +65,29 @@ export const projects = [
         award: 'Razorpay'
     },
     {
-        title: 'ALUMNI DATA MANAGEMENT – SIH',
-        description: 'Scalable microservices platform for centralized alumni data and engagement.',
-        details: '• Designed microservices (auth, profiles) with Spring Boot. • Developed REST APIs & React frontend. • Deployed to Kubernetes with CI/CD.',
-        tech: ['Java', 'Spring Boot', 'React', 'Kubernetes', 'MySQL', 'SIH'],
-        image: '/alumni-management.png',
-        gradient: 'from-green-600 to-blue-600',
-        role: 'Full Stack Developer',
+        title: 'MEDFUSION AI (AI-POWERED CLINICAL PLATFORM)',
+        description: 'AI-powered platform for automated diagnosis and real-time patient data management.',
+        details: '• Implemented ML-based symptom analysis achieving ~88% prediction accuracy for early disease detection. • Built secure REST APIs with RBAC and encrypted data handling, improving data security reliability by ~90%.',
+        tech: ['Django', 'React', 'SQLite', 'Machine Learning', 'REST APIs'],
+        image: '/medfusion-ai.png',
+        gradient: 'from-teal-500 via-emerald-500 to-green-500',
+        role: 'Full Stack Developer & ML Engineer',
         category: 'Full Stack',
         github: 'https://github.com/SAILESH2508',
-        award: 'SIH 2025'
+        featured: true,
+        year: '2025'
+    },
+    {
+        title: 'PLACEMENT PREPARATION & QUIZ MANAGEMENT SYSTEM',
+        description: 'Terminal-based quiz platform to help students practice aptitude and coding questions for campus placements.',
+        details: '• Implemented interactive student dashboards and administrator control panels. • Engineered timed quiz modes and progress tracking modules. • Designed database schemas and query APIs using SQLite.',
+        tech: ['Python', 'SQLite', 'CLI', 'JSON'],
+        image: '/quiz-management.png',
+        gradient: 'from-cyan-600 to-indigo-600',
+        role: 'Python & Database Developer',
+        category: 'Desktop & CLI',
+        github: 'https://github.com/SAILESH2508',
+        year: '2024'
     },
     {
         title: 'MUSIC PLAYER WITH DJ MIXER',
@@ -133,7 +146,7 @@ export const projects = [
         image: '/todo-list.png',
         gradient: 'from-blue-600 to-cyan-600',
         role: 'Python Developer',
-        category: 'Backend',
+        category: 'Desktop & CLI',
         github: 'https://github.com/SAILESH2508',
         year: '2024'
     },

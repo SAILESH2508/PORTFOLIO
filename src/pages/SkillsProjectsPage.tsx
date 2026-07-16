@@ -29,7 +29,7 @@ export default function SkillsProjectsPage() {
   const fullStackProjects = filteredProjects.filter(p => p.category === 'Full Stack');
   const mlProjects = filteredProjects.filter(p => p.category === 'Machine Learning');
   const frontendProjects = filteredProjects.filter(p => p.category === 'Frontend');
-  const backendProjects = filteredProjects.filter(p => p.category === 'Backend');
+  const desktopCliProjects = filteredProjects.filter(p => p.category === 'Desktop & CLI');
 
   return (
     <div className="min-h-screen pt-16 pb-16">
@@ -127,8 +127,8 @@ export default function SkillsProjectsPage() {
               <ProjectSection title="Frontend Engineering" projects={frontendProjects} />
             )}
 
-            {backendProjects.length > 0 && (
-              <ProjectSection title="Backend Development" projects={backendProjects} />
+            {desktopCliProjects.length > 0 && (
+              <ProjectSection title="Desktop & CLI Applications" projects={desktopCliProjects} />
             )}
 
             {filteredProjects.length === 0 && (
