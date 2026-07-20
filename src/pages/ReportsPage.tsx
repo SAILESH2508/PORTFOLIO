@@ -229,7 +229,7 @@ export default function ReportsPage() {
       {/* Interactive Report Document Reader Modal */}
       {activeReport && activeReport.sections && activeReport.sections.length > 0 && createPortal(
         <div className="fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-6 transition-all duration-300 animate-fade-in">
-          <div className="bg-white rounded-3xl w-full max-w-4xl max-h-[85vh] overflow-hidden border border-slate-200 shadow-2xl flex flex-col relative animate-scale-in">
+          <div className="bg-white rounded-3xl w-full max-w-4xl h-[85vh] max-h-[85vh] overflow-hidden border border-slate-200 shadow-2xl flex flex-col relative animate-scale-in">
             {/* Modal Header */}
             <div className="bg-gradient-to-r from-blue-950 to-indigo-950 text-white px-6 py-5 flex items-start justify-between relative border-b border-white/10">
               <div className="pr-8">
