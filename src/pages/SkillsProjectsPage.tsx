@@ -12,7 +12,7 @@ export default function SkillsProjectsPage() {
   const [selectedTech, setSelectedTech] = useState('All');
 
   // Curated list of technologies and categories for filtering
-  const technologies = ['All', 'Full Stack', 'Django', 'Flask', 'PHP', 'React', 'AI/ML/DS'];
+  const technologies = ['All', 'Full Stack', 'Django', 'Flask', 'PHP', 'React', 'AI/ML/DS', 'DevOps'];
 
   // Filter projects based on selection
   const filteredProjects = useMemo(() => {
@@ -21,6 +21,7 @@ export default function SkillsProjectsPage() {
     return projects.filter(p => {
       if (selectedTech === 'Full Stack') return p.category === 'Full Stack';
       if (selectedTech === 'AI/ML/DS') return p.category === 'Machine Learning';
+      if (selectedTech === 'DevOps') return p.category === 'Cloud & DevOps' || p.tech.includes('DevOps') || p.tech.includes('Docker') || p.tech.includes('Jenkins') || p.tech.includes('AWS');
       return p.tech.includes(selectedTech);
     });
   }, [selectedTech]);
@@ -28,6 +29,7 @@ export default function SkillsProjectsPage() {
   // Group projects by category
   const fullStackProjects = filteredProjects.filter(p => p.category === 'Full Stack');
   const mlProjects = filteredProjects.filter(p => p.category === 'Machine Learning');
+  const devopsProjects = filteredProjects.filter(p => p.category === 'Cloud & DevOps');
   const frontendProjects = filteredProjects.filter(p => p.category === 'Frontend');
   const desktopCliProjects = filteredProjects.filter(p => p.category === 'Desktop & CLI');
 
@@ -121,6 +123,10 @@ export default function SkillsProjectsPage() {
 
             {mlProjects.length > 0 && (
               <ProjectSection title="Machine Learning & AI" projects={mlProjects} />
+            )}
+
+            {devopsProjects.length > 0 && (
+              <ProjectSection title="Cloud & DevOps Engineering" projects={devopsProjects} />
             )}
 
             {frontendProjects.length > 0 && (

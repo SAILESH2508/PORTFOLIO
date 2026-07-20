@@ -11,13 +11,14 @@ export default function Projects() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   // Curated list of technologies and categories for filtering
-  const technologies = ['All', 'Full Stack', 'Django', 'Flask', 'PHP', 'React', 'AI/ML/DS'];
+  const technologies = ['All', 'Full Stack', 'Django', 'Flask', 'PHP', 'React', 'AI/ML/DS', 'DevOps'];
 
   const filteredProjects = selectedTech === 'All'
     ? projects
     : projects.filter(p => {
       if (selectedTech === 'Full Stack') return p.category === 'Full Stack';
       if (selectedTech === 'AI/ML/DS') return p.category === 'Machine Learning';
+      if (selectedTech === 'DevOps') return p.category === 'Cloud & DevOps' || p.tech.includes('DevOps') || p.tech.includes('Docker') || p.tech.includes('Jenkins') || p.tech.includes('AWS');
       return p.tech.includes(selectedTech);
     });
 
