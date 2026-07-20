@@ -70,7 +70,7 @@ export default function ReportsPage() {
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="flex items-center justify-center gap-3 mb-4 animate-bounce-in">
             <FileText size={36} className="text-blue-600 animate-pulse" />
-            <h1 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 drop-shadow-sm">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 drop-shadow-sm">
               Case Studies
             </h1>
           </div>
@@ -278,7 +278,7 @@ export default function ReportsPage() {
               {/* Report Main Content Area */}
               <div
                 ref={contentRef}
-                className="flex-grow p-6 overflow-y-auto h-[45vh] md:h-full bg-white relative scroll-smooth"
+                className="flex-grow p-6 overflow-y-auto h-[45vh] md:h-full bg-white relative scroll-smooth min-h-0 flex-1"
               >
                 <div className="max-w-2xl mx-auto">
                   <h3 className="text-xl font-extrabold text-slate-900 pb-3 border-b border-slate-100 mb-6">
