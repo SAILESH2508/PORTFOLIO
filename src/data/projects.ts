@@ -14,9 +14,9 @@ export const projects = [
     },
     {
         title: 'WEATHERAI - DEVOPS & DEPLOYMENT ARCHITECTURE',
-        description: 'Production-grade cloud deployment, monitoring, and CI/CD pipelines for a meteorological forecasting system.',
-        details: '• Containerized with Docker and deployed on AWS. • Engineered automated CI/CD pipelines using GitHub Actions. • Configured Nginx reverse proxy and secure SSL endpoints.',
-        tech: ['Docker', 'AWS', 'GitHub Actions', 'Nginx', 'Django', 'React', 'Vite', 'Vercel'],
+        description: 'Production-grade cloud deployment, hosting configuration, and deployment pipelines for a meteorological forecasting system.',
+        details: '• Configured automated hosting setups on Render and Vercel. • Implemented Git-triggered deployment pipelines on GitHub. • Managed Django backend APIs and React frontend endpoints.',
+        tech: ['GitHub', 'Render', 'Vercel', 'Python', 'Django', 'React.js', 'ML Frameworks'],
         image: '/weather-ai.png',
         gradient: 'from-blue-500 via-cyan-500 to-teal-500',
         role: 'DevOps & Cloud Engineer',
