@@ -19,19 +19,23 @@ export default function SkillsProjectsPage() {
     if (selectedTech === 'All') return projects;
 
     return projects.filter(p => {
-      if (selectedTech === 'Full Stack') return p.category === 'Full Stack';
-      if (selectedTech === 'AI/ML/DS') return p.category === 'Machine Learning';
-      if (selectedTech === 'DevOps') return p.category === 'Cloud & DevOps' || p.tech.includes('DevOps') || p.tech.includes('Docker') || p.tech.includes('Jenkins') || p.tech.includes('AWS');
+      const isFullStack = p.category === 'Full Stack' || (Array.isArray(p.category) && p.category.includes('Full Stack'));
+      const isML = p.category === 'Machine Learning' || (Array.isArray(p.category) && p.category.includes('Machine Learning'));
+      const isDevOps = p.category === 'Cloud & DevOps' || (Array.isArray(p.category) && p.category.includes('Cloud & DevOps'));
+
+      if (selectedTech === 'Full Stack') return isFullStack;
+      if (selectedTech === 'AI/ML/DS') return isML;
+      if (selectedTech === 'DevOps') return isDevOps || p.tech.includes('DevOps') || p.tech.includes('Docker') || p.tech.includes('Jenkins') || p.tech.includes('AWS');
       return p.tech.includes(selectedTech);
     });
   }, [selectedTech]);
 
   // Group projects by category
-  const fullStackProjects = filteredProjects.filter(p => p.category === 'Full Stack');
-  const mlProjects = filteredProjects.filter(p => p.category === 'Machine Learning');
-  const devopsProjects = filteredProjects.filter(p => p.category === 'Cloud & DevOps');
-  const frontendProjects = filteredProjects.filter(p => p.category === 'Frontend');
-  const desktopCliProjects = filteredProjects.filter(p => p.category === 'Desktop & CLI');
+  const fullStackProjects = filteredProjects.filter(p => p.category === 'Full Stack' || (Array.isArray(p.category) && p.category.includes('Full Stack')));
+  const mlProjects = filteredProjects.filter(p => p.category === 'Machine Learning' || (Array.isArray(p.category) && p.category.includes('Machine Learning')));
+  const devopsProjects = filteredProjects.filter(p => p.category === 'Cloud & DevOps' || (Array.isArray(p.category) && p.category.includes('Cloud & DevOps')));
+  const frontendProjects = filteredProjects.filter(p => p.category === 'Frontend' || (Array.isArray(p.category) && p.category.includes('Frontend')));
+  const desktopCliProjects = filteredProjects.filter(p => p.category === 'Desktop & CLI' || (Array.isArray(p.category) && p.category.includes('Desktop & CLI')));
 
   return (
     <div className="min-h-screen pt-16 pb-16">

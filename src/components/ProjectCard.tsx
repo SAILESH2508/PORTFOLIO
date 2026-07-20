@@ -10,7 +10,7 @@ export interface Project {
     image: string;
     gradient: string;
     role: string;
-    category: string;
+    category: string | string[];
     github: string;
     demo?: string;
     award?: string;

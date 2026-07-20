@@ -7,7 +7,7 @@ export const projects = [
         image: '/roamiq.png',
         gradient: 'from-orange-500 via-red-500 to-amber-500',
         role: 'AI & Full Stack Developer',
-        category: 'Full Stack',
+        category: ['Full Stack', 'Machine Learning'],
         github: 'https://github.com/SAILESH2508',
         featured: true,
         year: '2025'
@@ -20,7 +20,7 @@ export const projects = [
         image: '/weather-ai.png',
         gradient: 'from-blue-500 via-cyan-500 to-teal-500',
         role: 'DevOps & Cloud Engineer',
-        category: 'Cloud & DevOps',
+        category: ['Cloud & DevOps', 'Machine Learning'],
         github: 'https://github.com/SAILESH2508',
         demo: 'https://lnkd.in/ght3y7jm',
         award: 'Production Deployed',
@@ -35,7 +35,7 @@ export const projects = [
         image: '/placement-dashboard.png',
         gradient: 'from-purple-600 to-orange-600',
         role: 'Full Stack Developer',
-        category: 'Full Stack',
+        category: ['Full Stack', 'Machine Learning'],
         github: 'https://github.com/SAILESH2508',
         year: '2024'
     },
@@ -72,7 +72,7 @@ export const projects = [
         image: '/medfusion-ai.png',
         gradient: 'from-teal-500 via-emerald-500 to-green-500',
         role: 'Full Stack Developer & ML Engineer',
-        category: 'Full Stack',
+        category: ['Full Stack', 'Machine Learning'],
         github: 'https://github.com/SAILESH2508',
         featured: true,
         year: '2025'
@@ -158,7 +158,7 @@ export const projects = [
         image: '/sentiment-analyser.png',
         gradient: 'from-green-500 to-teal-500',
         role: 'DevOps & Cloud Engineer',
-        category: 'Cloud & DevOps',
+        category: ['Cloud & DevOps', 'Machine Learning'],
         github: 'https://github.com/SAILESH2508',
         year: '2024'
     },

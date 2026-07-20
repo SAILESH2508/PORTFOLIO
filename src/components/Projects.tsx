@@ -16,9 +16,13 @@ export default function Projects() {
   const filteredProjects = selectedTech === 'All'
     ? projects
     : projects.filter(p => {
-      if (selectedTech === 'Full Stack') return p.category === 'Full Stack';
-      if (selectedTech === 'AI/ML/DS') return p.category === 'Machine Learning';
-      if (selectedTech === 'DevOps') return p.category === 'Cloud & DevOps' || p.tech.includes('DevOps') || p.tech.includes('Docker') || p.tech.includes('Jenkins') || p.tech.includes('AWS');
+      const isFullStack = p.category === 'Full Stack' || (Array.isArray(p.category) && p.category.includes('Full Stack'));
+      const isML = p.category === 'Machine Learning' || (Array.isArray(p.category) && p.category.includes('Machine Learning'));
+      const isDevOps = p.category === 'Cloud & DevOps' || (Array.isArray(p.category) && p.category.includes('Cloud & DevOps'));
+
+      if (selectedTech === 'Full Stack') return isFullStack;
+      if (selectedTech === 'AI/ML/DS') return isML;
+      if (selectedTech === 'DevOps') return isDevOps || p.tech.includes('DevOps') || p.tech.includes('Docker') || p.tech.includes('Jenkins') || p.tech.includes('AWS');
       return p.tech.includes(selectedTech);
     });
 
