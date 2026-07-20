@@ -134,8 +134,9 @@ export default function ReportsPage() {
                     <h3 className="text-lg font-bold text-gray-900 leading-snug group-hover:text-cyan-700 transition-colors mb-2">
                       {report.title}
                     </h3>
-                    <p className="text-xs font-semibold text-gray-500 mb-4 tracking-wide">
-                      {report.company} <span className="text-gray-400 mx-1.5">•</span> <span className="text-gray-600 font-medium italic">{report.role}</span>
+                    <p className="text-xs font-semibold text-gray-500 mb-4 tracking-wide flex flex-col gap-1">
+                      <span>{report.company}</span>
+                      <span className="text-gray-600 font-medium italic text-[11px]">{report.role}</span>
                     </p>
                     <p className="text-xs text-gray-600 line-clamp-3 mb-4 leading-relaxed font-medium">
                       {report.summary}
