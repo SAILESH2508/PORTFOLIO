@@ -120,12 +120,12 @@ export default function ReportsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredReports.map((report, idx) => (
               <RevealOnScroll key={report.id} delay={idx * 0.1} animation="scale-in">
-                <div className="group glass-card rounded-2xl p-6 border border-blue-900/20 hover:border-blue-900 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full monitor-card relative bg-white/70 backdrop-blur-md">
+                <div className="group glass-card rounded-2xl p-6 border border-blue-900/20 hover:border-blue-900 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full monitor-card relative bg-white">
                   
                   {/* Card Header: Date and Category Badge */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs text-indigo-600 font-bold">{report.period}</span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-100/50 text-blue-900 border border-blue-900/20 backdrop-blur-sm">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-900 border border-blue-900/20">
                       {report.category}
                     </span>
                   </div>
@@ -144,12 +144,12 @@ export default function ReportsPage() {
 
                   <div className="flex flex-wrap gap-1.5 mb-6">
                     {report.tags.slice(0, 4).map((tag) => (
-                      <span key={tag} className="text-[10px] font-bold bg-white/60 text-indigo-900 px-2.5 py-1 rounded-full border border-blue-900/10">
+                      <span key={tag} className="text-[10px] font-bold bg-slate-50 text-indigo-900 px-2.5 py-1 rounded-full border border-blue-900/10">
                         {tag}
                       </span>
                     ))}
                     {report.tags.length > 4 && (
-                      <span className="text-[10px] font-black text-purple-700 bg-purple-50/60 px-2 py-1 rounded-full border border-purple-900/10">
+                      <span className="text-[10px] font-black text-purple-700 bg-purple-50 px-2 py-1 rounded-full border border-purple-900/10">
                         +{report.tags.length - 4} more
                       </span>
                     )}
