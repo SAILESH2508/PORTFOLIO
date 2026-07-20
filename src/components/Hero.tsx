@@ -15,9 +15,9 @@ export default function Hero() {
 
           <div className="flex-1 text-center lg:text-left">
             <RevealOnScroll>              <h1 className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
-                <AnimatedText text="Hi, I'm" className="text-gray-900" startDelay={500} /> <br />
+                <AnimatedText text="Hi, I'm" className="text-gray-900" startDelay={3000} loop={false} /> <br />
                 <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-purple-600">
-                  <AnimatedText text="SAILESH S" className="inline-block" startDelay={2000} />
+                  <AnimatedText text="SAILESH S" className="inline-block" startDelay={4000} loop={false} />
                 </span>
               </h1>
 

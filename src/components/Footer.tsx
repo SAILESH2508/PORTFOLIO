@@ -32,6 +32,7 @@ export default function Footer() {
     { name: 'Home', href: '/' },
     { name: 'Skills & Projects', href: '/skills-projects' },
     { name: 'Experience', href: '/experience' },
+    { name: 'Case Studies', href: '/reports' },
     { name: 'Contact', href: '/contact' }
   ];
 

@@ -5,9 +5,10 @@ interface AnimatedTextProps {
   className?: string;
   delay?: number;
   startDelay?: number;
+  loop?: boolean;
 }
 
-export default function AnimatedText({ text, className = "", delay = 100, startDelay = 0 }: AnimatedTextProps) {
+export default function AnimatedText({ text, className = "", delay = 100, startDelay = 0, loop = false }: AnimatedTextProps) {
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(false); // Start false if there's a delay
 
@@ -26,10 +27,12 @@ export default function AnimatedText({ text, className = "", delay = 100, startD
         } else {
           clearInterval(intervalId);
           setIsTyping(false);
-          // Loop
-          timeoutId = setTimeout(() => {
-            startTyping();
-          }, 5000);
+          // Loop only if loop prop is true
+          if (loop) {
+            timeoutId = setTimeout(() => {
+              startTyping();
+            }, 5000);
+          }
         }
       }, delay);
     };
@@ -44,7 +47,7 @@ export default function AnimatedText({ text, className = "", delay = 100, startD
       if (timeoutId) clearTimeout(timeoutId);
       if (intervalId) clearInterval(intervalId);
     };
-  }, [text, delay, startDelay]);
+  }, [text, delay, startDelay, loop]);
 
   return (
     <span className={`${className}`}>
