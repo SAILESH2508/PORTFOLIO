@@ -151,25 +151,26 @@ export default function SkillsProjectsPage() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-100 to-transparent"></div>
-        <div className="container mx-auto max-w-4xl relative z-10 text-center">
+      <div className="py-16 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div className="absolute top-0 left-1/4 w-48 h-48 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="container mx-auto max-w-2xl relative z-10 text-center">
           <RevealOnScroll>
-            <h2 className="text-4xl font-bold mb-6 text-gray-900">Impressed? Let's Work Together!</h2>
-            <p className="text-xl mb-10 text-gray-600">I'm ready to bring your ideas to life with these skills and experience</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Impressed? Let's Work Together!</h2>
+            <p className="text-base mb-8 text-gray-500 max-w-md mx-auto leading-relaxed">I'm ready to bring your ideas to life with these skills and experience</p>
           </RevealOnScroll>
           <RevealOnScroll delay={0.2}>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 to="/contact"
-                className="group px-8 py-4 btn-gradient font-bold rounded-xl flex items-center gap-2"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
               >
-                <Rocket size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <Rocket size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 Hire Me Now
               </Link>
               <Link
                 to="/experience"
-                className="group px-8 py-4 btn-gradient-purple font-bold rounded-xl flex items-center gap-2"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
               >
                 View My Experience
               </Link>

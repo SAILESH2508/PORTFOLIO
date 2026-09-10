@@ -4,7 +4,11 @@ import AnimatedTitle from './AnimatedTitle';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-transparent">
+    <section id="about" className="pt-6 pb-12 px-6 relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/40 to-indigo-50/60">
+      {/* Decorative blobs */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-56 h-56 bg-indigo-200/20 rounded-full blur-3xl pointer-events-none" />
+
       <RevealOnScroll>
         <div className="container mx-auto max-w-[95%]">
           <AnimatedTitle

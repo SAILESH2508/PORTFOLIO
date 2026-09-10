@@ -1,61 +1,94 @@
-import { Mail, Linkedin, Github, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, ExternalLink, Clock, Sparkles, MessageCircle, ArrowRight, Copy, Check } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useEmailJS } from '../hooks/useEmailJS';
-import ConfettiEffect from './ConfettiEffect';
 import RevealOnScroll from './RevealOnScroll';
 import AnimatedTitle from './AnimatedTitle';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [triggerConfetti, setTriggerConfetti] = useState(false);
-  const { submitStatus, errorMessage, sendEmail, setSubmitStatus, setErrorMessage } = useEmailJS();
-  const location = useLocation();
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    const state = location.state as { serviceTitle?: string };
-    if (state?.serviceTitle) {
-      setFormData(prev => ({
-        ...prev,
-        message: `Hi Sailesh, I would like to do a project regarding ${state.serviceTitle}.`
-      }));
+    const timer = setInterval(() => setCurrentTime(new Date()), 60000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('sailesh25008@gmail.com');
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = 'sailesh25008@gmail.com';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
     }
-  }, [location.state]);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    await sendEmail(formData);
-
-    if (submitStatus === 'success') {
-      setTriggerConfetti(true);
-      setTimeout(() => setTriggerConfetti(false), 5000);
-      setFormData({ name: '', email: '', message: '' });
-    }
-
-    setIsSubmitting(false);
-    setTimeout(() => {
-      setSubmitStatus('idle');
-      setErrorMessage('');
-    }, 5000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // IST timezone
+  const istTime = new Date(currentTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+  const hours = istTime.getHours();
+  const isAvailable = hours >= 9 && hours < 22;
+
+  const contactMethods = [
+    {
+      icon: Mail,
+      title: 'Email Me',
+      subtitle: 'sailesh25008@gmail.com',
+      description: 'Best for project inquiries & collaborations',
+      href: 'mailto:sailesh25008@gmail.com?subject=Hello%20Sailesh%20-%20Project%20Inquiry&body=Hi%20Sailesh%2C%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%0A%0A',
+      gradient: 'from-blue-500 to-indigo-600',
+      shadowColor: 'shadow-blue-500/20',
+      hoverShadow: 'hover:shadow-blue-500/40',
+      bgLight: 'bg-blue-50',
+      borderColor: 'border-blue-200',
+      delay: 0
+    },
+    {
+      icon: Linkedin,
+      title: 'LinkedIn',
+      subtitle: 'Let\'s Connect',
+      description: 'Follow my professional journey & updates',
+      href: 'https://www.linkedin.com/in/sailesh-s-825293276/',
+      gradient: 'from-sky-500 to-blue-600',
+      shadowColor: 'shadow-sky-500/20',
+      hoverShadow: 'hover:shadow-sky-500/40',
+      bgLight: 'bg-sky-50',
+      borderColor: 'border-sky-200',
+      delay: 0.1
+    },
+    {
+      icon: Github,
+      title: 'GitHub',
+      subtitle: 'View My Code',
+      description: 'Explore my open source projects & contributions',
+      href: 'https://github.com/SAILESH2508',
+      gradient: 'from-gray-700 to-gray-900',
+      shadowColor: 'shadow-gray-500/20',
+      hoverShadow: 'hover:shadow-gray-500/40',
+      bgLight: 'bg-gray-50',
+      borderColor: 'border-gray-200',
+      delay: 0.2
+    }
+  ];
+
+  const quickTopics = [
+    { emoji: '🌐', label: 'Full Stack Web App', subject: 'Full Stack Web Development Project' },
+    { emoji: '🤖', label: 'ML / AI Project', subject: 'ML & AI Project Inquiry' },
+    { emoji: '☁️', label: 'Cloud & DevOps', subject: 'Cloud & DevOps Consultation' },
+    { emoji: '💼', label: 'Freelance Work', subject: 'Freelance Opportunity' },
+    { emoji: '🤝', label: 'Collaboration', subject: 'Collaboration Proposal' },
+    { emoji: '💬', label: 'Just Say Hi', subject: 'Hello from your portfolio!' },
+  ];
 
   return (
     <section id="contact" className="py-10 px-6 bg-transparent">
-      <ConfettiEffect trigger={triggerConfetti} />
       <div className="container mx-auto max-w-[95%]">
         <RevealOnScroll>
           <div className="text-center mb-12">
@@ -71,144 +104,122 @@ export default function Contact() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10">
-          <RevealOnScroll delay={0.2}>
-            <div className="space-y-4">
-              <div className="glass-card p-6 lg:p-7 hover:shadow-xl transition-all duration-300">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Contact Information</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-4 group">
-                    <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-blue-500/20">
-                      <Mail size={24} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-gray-400 uppercase tracking-wider">Email Me</p>
-                      <a href="mailto:sailesh25008@gmail.com" className="text-lg font-black text-gray-900 group-hover:text-blue-600 transition-colors">
-                        sailesh25008@gmail.com
-                      </a>
-                    </div>
-                  </div>
+        {/* Availability Status */}
+        <RevealOnScroll delay={0.1}>
+          <div className="flex justify-center mb-10">
+            <div className="glass-card inline-flex items-center gap-3 px-6 py-3 rounded-full">
+              <div className="relative">
+                <div className={`w-3 h-3 rounded-full ${isAvailable ? 'bg-emerald-500' : 'bg-amber-500'}`} />
+                <div className={`absolute inset-0 w-3 h-3 rounded-full ${isAvailable ? 'bg-emerald-500' : 'bg-amber-500'} animate-ping opacity-75`} />
+              </div>
+              <span className="text-sm font-bold text-gray-700">
+                {isAvailable ? '🟢 Available to chat' : '🌙 Away — will reply soon'}
+              </span>
+              <div className="flex items-center gap-1 text-xs text-gray-500 border-l border-gray-200 pl-3">
+                <Clock size={12} />
+                <span>{istTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })} IST</span>
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
 
-                  <div className="flex items-center gap-4 group">
-                    <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl text-white group-hover:-rotate-6 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-purple-500/20">
-                      <MapPin size={24} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-gray-400 uppercase tracking-wider">Location</p>
-                      <p className="text-lg font-black text-gray-900">Coimbatore</p>
-                    </div>
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-3 gap-5 mb-10">
+          {contactMethods.map((method, index) => (
+            <RevealOnScroll key={index} delay={method.delay + 0.2}>
+              <a
+                href={method.href}
+                target={method.icon !== Mail ? '_blank' : undefined}
+                rel={method.icon !== Mail ? 'noopener noreferrer' : undefined}
+                className={`glass-card p-6 block group cursor-pointer transition-all duration-500 hover:shadow-xl hover:-translate-y-2 ${activeCard === index ? 'ring-2 ring-blue-500/30' : ''}`}
+                onMouseEnter={() => setActiveCard(index)}
+                onMouseLeave={() => setActiveCard(null)}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`p-3 bg-gradient-to-br ${method.gradient} rounded-xl text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 shadow-lg ${method.shadowColor}`}>
+                    <method.icon size={24} />
                   </div>
+                  <ExternalLink size={16} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                 </div>
+                <h3 className="text-lg font-black text-gray-900 mb-1">{method.title}</h3>
+                <p className="text-sm font-bold text-gray-500 mb-2">{method.subtitle}</p>
+                <p className="text-xs text-gray-400">{method.description}</p>
+                <div className={`mt-4 flex items-center gap-2 text-sm font-bold bg-clip-text text-transparent bg-gradient-to-r ${method.gradient} opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300`}>
+                  <span>Open</span>
+                  <ArrowRight size={14} className="text-gray-500" />
+                </div>
+              </a>
+            </RevealOnScroll>
+          ))}
+        </div>
 
-                <div className="mt-6 pt-6 border-t border-gray-100">
-                  <p className="text-sm text-gray-500 mb-3">Connect with me</p>
-                  <div className="flex gap-4">
-                    <a
-                      href="https://www.linkedin.com/in/sailesh-s-825293276/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-gray-50 text-gray-600 rounded-lg hover:bg-[#0077b5] hover:text-white transition-all transform hover:scale-110"
-                    >
-                      <Linkedin size={24} />
-                    </a>
-                    <a
-                      href="https://github.com/SAILESH2508"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-gray-50 text-gray-600 rounded-lg hover:bg-black hover:text-white transition-all transform hover:scale-110"
-                    >
-                      <Github size={24} />
-                    </a>
+        {/* Quick Copy Email + Quick Topics */}
+        <div className="grid lg:grid-cols-2 gap-6">
+          {/* Copy Email Card */}
+          <RevealOnScroll delay={0.3}>
+            <div className="glass-card p-6 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <Sparkles size={20} className="text-amber-500" />
+                <h3 className="text-lg font-black text-gray-900">Quick Copy</h3>
+              </div>
+              <p className="text-sm text-gray-500 mb-4">Click to copy my email address to your clipboard</p>
+              <button
+                onClick={handleCopyEmail}
+                className={`w-full flex items-center justify-between px-5 py-4 rounded-xl border-2 transition-all duration-300 group ${
+                  copiedEmail
+                    ? 'border-emerald-300 bg-emerald-50 text-emerald-700'
+                    : 'border-blue-100 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 hover:border-blue-300 hover:from-blue-100 hover:via-indigo-100 hover:to-purple-100 text-gray-700'
+                }`}
+              >
+                <span className="font-mono font-bold text-sm">sailesh25008@gmail.com</span>
+                <div className={`p-2 rounded-lg transition-all duration-300 ${
+                  copiedEmail ? 'bg-emerald-200' : 'bg-gray-200 group-hover:bg-blue-200'
+                }`}>
+                  {copiedEmail ? <Check size={16} className="text-emerald-600" /> : <Copy size={16} className="text-gray-500 group-hover:text-blue-600" />}
+                </div>
+              </button>
+              {copiedEmail && (
+                <p className="text-xs text-emerald-600 font-bold mt-2 animate-fade-in text-center">
+                  ✅ Copied to clipboard!
+                </p>
+              )}
+
+              {/* Location */}
+              <div className="mt-5 pt-5 border-t border-gray-100">
+                <div className="flex items-center gap-3 text-gray-500 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-3">
+                  <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg text-white">
+                    <MapPin size={16} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Location</p>
+                    <p className="text-sm font-black text-gray-900">Coimbatore, India</p>
                   </div>
                 </div>
               </div>
             </div>
           </RevealOnScroll>
 
+          {/* Quick Topic Selector */}
           <RevealOnScroll delay={0.4}>
-            <form onSubmit={handleSubmit} className="glass-card p-6 lg:p-7 hover:shadow-xl transition-all duration-300 relative">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Send a Message</h3>
-
-              <div className="space-y-3">
-                <div className="group">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2 group-focus-within:text-primary transition-colors">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2.5 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 hover:bg-white/80"
-                    placeholder="SAILESH S"
-                  />
-                </div>
-
-                <div className="group">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2 group-focus-within:text-primary transition-colors">Your Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2.5 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 hover:bg-white/80"
-                    placeholder="sailesh@example.com"
-                  />
-                </div>
-
-                <div className="group">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2 group-focus-within:text-primary transition-colors">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={3}
-                    className="w-full px-4 py-2.5 bg-white/50 border border-gray-200 rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary/50 text-gray-900 placeholder-gray-400 outline-none transition-all duration-300 resize-none hover:bg-white/80"
-                    placeholder="Tell me about your project..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-black rounded-xl shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transform active:scale-95 transition-all flex items-center justify-center gap-3 group/btn ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                    }`}
-                >
-                  {isSubmitting ? (
-                    <div className="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin" />
-                  ) : (
-                    <>
-                      <span className="text-lg">Send Message</span>
-                      <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </>
-                  )}
-                </button>
+            <div className="glass-card p-6 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <MessageCircle size={20} className="text-purple-500" />
+                <h3 className="text-lg font-black text-gray-900">Quick Reach Out</h3>
               </div>
-
-              {/* Status Messages */}
-              {submitStatus === 'success' && (
-                <div className="absolute inset-0 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-2xl z-20 animate-fade-in">
-                  <div className="text-center p-8">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
-                      <CheckCircle className="text-green-600" size={32} />
-                    </div>
-                    <h4 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h4>
-                    <p className="text-gray-600">I'll get back to you as soon as possible.</p>
-                  </div>
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="mt-4 p-4 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl flex items-center gap-3 animate-shake">
-                  <AlertCircle size={20} />
-                  <p>{errorMessage}</p>
-                </div>
-              )}
-            </form>
+              <p className="text-sm text-gray-500 mb-4">Click a topic to open a pre-filled email</p>
+              <div className="grid grid-cols-2 gap-2.5">
+                {quickTopics.map((topic, index) => (
+                  <a
+                    key={index}
+                    href={`mailto:sailesh25008@gmail.com?subject=${encodeURIComponent(topic.subject)}&body=${encodeURIComponent(`Hi Sailesh,\n\nI'm reaching out regarding: ${topic.label}\n\n`)}`}
+                    className="flex items-center gap-2.5 px-4 py-3 rounded-xl border border-gray-100 bg-gray-50/50 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:border-blue-200 transition-all duration-300 group hover:shadow-md hover:-translate-y-0.5"
+                  >
+                    <span className="text-lg group-hover:scale-125 transition-transform duration-300">{topic.emoji}</span>
+                    <span className="text-xs font-bold text-gray-700 group-hover:text-gray-900">{topic.label}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </RevealOnScroll>
         </div>
       </div>

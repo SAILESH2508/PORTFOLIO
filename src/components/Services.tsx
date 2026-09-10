@@ -1,5 +1,4 @@
-import { Globe, Clock, Bot, Cloud, ChevronRight, Briefcase } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Globe, Clock, Bot, Cloud, ChevronRight, Briefcase, Mail } from 'lucide-react';
 import AnimatedTitle from './AnimatedTitle';
 
 const services = [
@@ -34,7 +33,7 @@ const services = [
         borderColor: "border-purple-200"
     },
     {
-        icon: <Cloud className="w-8 h-8 text-emerald-600" />,
+        icon: <Cloud className="w-8 h-8 text-orange-500" />,
         title: "Cloud Computing & DevOps Deployment",
         description: "Designing and implementing CI/CD pipelines and cloud deployments.",
         deliverables: [
@@ -44,16 +43,13 @@ const services = [
             "Cloud Infrastructure (AWS/GCP)"
         ],
         timeline: "2-4 weeks",
-        color: "from-emerald-600 to-teal-600",
-        lightColor: "from-emerald-50 to-teal-50",
-        borderColor: "border-emerald-200"
+        color: "from-orange-500 to-amber-500",
+        lightColor: "from-orange-50 to-amber-50",
+        borderColor: "border-orange-200"
     }
 ];
 
 export default function Services() {
-    const navigate = useNavigate();
-    const location = useLocation();
-
     return (
         <section id="services" className="py-24 relative overflow-hidden bg-slate-50/50">
             {/* Background Decorations */}
@@ -109,33 +105,14 @@ export default function Services() {
                                     </div>
                                 </div>
 
-                                <button
-                                    onClick={() => {
-                                        navigate('/contact', { 
-                                            state: { 
-                                                scrollToContact: true, 
-                                                serviceTitle: service.title,
-                                                timestamp: Date.now() 
-                                            } 
-                                        });
-                                        
-                                        // If already on contact page, manually scroll as well
-                                        if (location.pathname === '/contact') {
-                                            const contactEl = document.getElementById('contact');
-                                            if (contactEl) {
-                                                const yOffset = -80;
-                                                const y = contactEl.getBoundingClientRect().top + window.scrollY + yOffset;
-                                                window.scrollTo({ top: y, behavior: 'smooth' });
-                                            }
-                                        }
-                                    }}
-                                    className={`w-full py-4 bg-gradient-to-r ${service.color} text-white font-black rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transform active:scale-95 transition-all group`}
+                                <a
+                                    href={`mailto:sailesh25008@gmail.com?subject=${encodeURIComponent(`Project Inquiry: ${service.title}`)}&body=${encodeURIComponent(`Hi Sailesh,\n\nI would like to discuss a project regarding ${service.title}.\n\nProject Details:\n\n`)}`}
+                                    className={`w-full py-4 bg-gradient-to-r ${service.color} text-white font-black rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transform active:scale-95 transition-all group flex items-center justify-center gap-2`}
                                 >
-                                    <span className="flex items-center justify-center gap-2">
-                                        Work With Me
-                                        <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                                    </span>
-                                </button>
+                                    <Mail size={18} />
+                                    <span>Work With Me</span>
+                                    <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                </a>
                             </div>
                         </div>
                     ))}

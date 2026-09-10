@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import ContinuousLearning from '../components/ContinuousLearning';
-import Stats from '../components/Stats';
 import ConfettiEffect from '../components/ConfettiEffect';
 import ParticleBackground from '../components/ParticleBackground';
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { Sparkles, ChevronDown } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 
 export default function HomePage() {
@@ -23,34 +22,34 @@ export default function HomePage() {
       <ConfettiEffect trigger={triggerConfetti} />
       <section id="home">
         <Hero />
-
-        {/* Scroll Indicator */}
-        <div className="flex justify-center -mt-10 relative z-20 animate-bounce">
-          <div
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            className="glass p-4 rounded-full shadow-lg border border-gray-200 hover:scale-110 transition-transform cursor-pointer bg-white text-primary"
-          >
-            <ArrowDown size={32} />
-          </div>
-        </div>
       </section>
 
-
-
+      {/* Down arrow separator */}
+      <div className="flex justify-center items-center py-3 bg-transparent">
+        <a href="#about" className="group flex flex-col items-center gap-1 text-blue-400/60 hover:text-blue-500 transition-colors duration-300">
+          <ChevronDown
+            size={28}
+            className="animate-bounce"
+          />
+        </a>
+      </div>
       <About />
       <ContinuousLearning />
-      <Stats />
 
       {/* CTA Section */}
-      <div className="py-24 px-6 relative overflow-hidden bg-white">
-        <div className="container mx-auto max-w-4xl relative z-10 text-center">
+      <div className="py-16 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Subtle decorative blobs */}
+        <div className="absolute top-0 left-1/4 w-48 h-48 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto max-w-2xl relative z-10 text-center">
           <RevealOnScroll>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900 drop-shadow-sm">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Ready to See My Work?
             </h2>
           </RevealOnScroll>
           <RevealOnScroll delay={0.2}>
-            <p className="text-xl mb-12 text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base mb-8 text-gray-500 max-w-md mx-auto leading-relaxed">
               Explore my portfolio of Full Stack applications and Machine Learning models.
             </p>
           </RevealOnScroll>
@@ -58,9 +57,9 @@ export default function HomePage() {
             <Link
               to="/skills-projects"
               onClick={handleConfetti}
-              className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary to-blue-600 text-white font-bold text-xl rounded-full hover:scale-105 transition-all shadow-xl shadow-primary/30 hover:shadow-primary/50 group"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
             >
-              <Sparkles size={24} className="group-hover:animate-spin-slow" />
+              <Sparkles size={18} className="group-hover:animate-spin-slow" />
               View Skills & Projects
             </Link>
           </RevealOnScroll>

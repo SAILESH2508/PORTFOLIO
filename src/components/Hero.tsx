@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Brain, Code2, Cloud, Rocket, Download } from 'lucide-react';
+import { Brain, Code2, Cloud, Rocket } from 'lucide-react';
 import PythonLogo from './logos/PythonLogo';
 import ReactLogo from './logos/ReactLogo';
 import DjangoLogo from './logos/DjangoLogo';
 import SQLiteLogo from './logos/SQLiteLogo';
 import AnimatedText from './AnimatedText';
 import RevealOnScroll from './RevealOnScroll';
+import ResumeDropdown from './ResumeDropdown';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-hidden bg-transparent" id="home">
+    <section className="relative min-h-screen flex items-center justify-center px-6 pt-32 pb-12 bg-transparent" id="home">
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -29,20 +30,13 @@ export default function Hero() {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <Link
                   to="/contact"
-                  className="group px-8 py-4 btn-gradient font-bold rounded-xl flex items-center gap-2"
+                  className="group px-8 py-4 btn-gradient font-bold rounded-xl flex items-center gap-2 shadow-lg shadow-blue-600/20"
                 >
                   <Rocket size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   Hire Me Now
                 </Link>
 
-                <a
-                  href="/Resume.pdf"
-                  download="Sailesh_S_Resume.pdf"
-                  className="group px-8 py-4 btn-gradient-cyan font-bold rounded-xl flex items-center gap-2"
-                >
-                  <Download size={20} className="group-hover:translate-y-1 transition-transform" />
-                  Download Resume
-                </a>
+                <ResumeDropdown />
               </div>
             </RevealOnScroll>
           </div>

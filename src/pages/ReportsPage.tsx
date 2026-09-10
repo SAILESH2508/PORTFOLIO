@@ -1,7 +1,8 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { reports, Report } from '../data/reports';
-import { FileText, Download, Search, X, BookOpen, ChevronRight, Award, Github } from 'lucide-react';
+import { FileText, Download, Search, X, BookOpen, ChevronRight, Award, Github, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import RevealOnScroll from '../components/RevealOnScroll';
 
 export default function ReportsPage() {
@@ -115,7 +116,7 @@ export default function ReportsPage() {
       </div>
 
       {/* Reports Grid */}
-      <div className="container mx-auto max-w-6xl px-6">
+      <div className="container mx-auto max-w-6xl px-6 mb-12">
         {filteredReports.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredReports.map((report, idx) => (
@@ -350,6 +351,35 @@ export default function ReportsPage() {
         </div>,
         document.body
       )}
+
+      {/* Bottom CTA */}
+      <div className="py-16 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div className="absolute top-0 left-1/4 w-48 h-48 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="container mx-auto max-w-2xl relative z-10 text-center">
+          <RevealOnScroll>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Want to Collaborate?</h2>
+            <p className="text-base mb-8 text-gray-500 max-w-md mx-auto leading-relaxed">These case studies are just the beginning — let's build something impactful together.</p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
+              >
+                <Rocket size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                Get In Touch
+              </Link>
+              <Link
+                to="/skills-projects"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+              >
+                View Projects
+              </Link>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </div>
     </div>
   );
 }

@@ -149,46 +149,58 @@ const internships = [
 
 const certifications = [
   {
+    title: 'Data Analytics Job Simulation',
+    issuer: 'Forage | Deloitte',
+    period: 'July 20, 2025',
+    type: 'Job Simulation',
+    description: 'Completed a data analytics simulation involving forensic technology tasks, data analysis using Excel and Tableau, and presenting business insights.',
+    location: 'Virtual',
+    color: {
+      primary: 'text-blue-700',
+      bg: 'bg-blue-50',
+      bgGradient: 'from-blue-50/90 via-indigo-50/70 to-sky-50/50',
+      border: 'border-blue-200/60',
+      gradient: 'from-blue-600 via-indigo-600 to-sky-600',
+      glow: 'shadow-blue-400/20',
+      blob: 'bg-blue-200/10'
+    },
+    boxTheme: { border: 'border-blue-400/50', glow: 'shadow-blue-500/20' }
+  },
+  {
     title: 'Solutions Architecture Job Simulation',
     issuer: 'Forage | AWS',
-    period: 'July 2025',
+    period: 'July 19, 2025',
     type: 'Job Simulation',
     description: 'Developed practical skills in designing simple, scalable, and secure hosting architectures on AWS.',
     location: 'Virtual',
     color: {
       primary: 'text-purple-700',
       bg: 'bg-purple-50',
-      bgGradient: 'from-purple-50/90 via-blue-50/70 to-indigo-50/50',
+      bgGradient: 'from-purple-50/90 via-violet-50/70 to-indigo-50/50',
       border: 'border-purple-200/60',
-      gradient: 'from-purple-600 via-indigo-600 to-blue-600',
+      gradient: 'from-purple-600 via-violet-600 to-indigo-600',
       glow: 'shadow-purple-400/20',
       blob: 'bg-purple-200/10'
     },
-    boxTheme: {
-      border: 'border-amber-400/50',
-      glow: 'shadow-amber-500/20'
-    }
+    boxTheme: { border: 'border-purple-400/50', glow: 'shadow-purple-500/20' }
   },
   {
     title: 'GenAI Powered Data Analytics Job Simulation',
     issuer: 'Forage | TATA',
-    period: 'July 2025',
+    period: 'July 13, 2025',
     type: 'Job Simulation',
     description: 'Executed data analysis tasks including risk profiling, predicting delinquency with AI, and AI-driven business storytelling.',
     location: 'Virtual',
     color: {
-      primary: 'text-purple-700',
-      bg: 'bg-purple-50',
-      bgGradient: 'from-purple-50/90 via-blue-50/70 to-indigo-50/50',
-      border: 'border-purple-200/60',
-      gradient: 'from-purple-600 via-indigo-600 to-blue-600',
-      glow: 'shadow-purple-400/20',
-      blob: 'bg-purple-200/10'
+      primary: 'text-orange-700',
+      bg: 'bg-orange-50',
+      bgGradient: 'from-orange-50/90 via-amber-50/70 to-yellow-50/50',
+      border: 'border-orange-200/60',
+      gradient: 'from-orange-600 via-amber-600 to-yellow-600',
+      glow: 'shadow-orange-400/20',
+      blob: 'bg-orange-200/10'
     },
-    boxTheme: {
-      border: 'border-amber-400/50',
-      glow: 'shadow-amber-500/20'
-    }
+    boxTheme: { border: 'border-orange-400/50', glow: 'shadow-orange-500/20' }
   },
   {
     title: 'Python Machine Learning: From Beginner to Pro',
@@ -198,18 +210,105 @@ const certifications = [
     description: 'In-depth training on machine learning algorithms, model evaluation, and deployment using Python.',
     location: 'Online',
     color: {
+      primary: 'text-blue-700',
+      bg: 'bg-blue-50',
+      bgGradient: 'from-blue-50/90 via-indigo-50/70 to-sky-50/50',
+      border: 'border-blue-200/60',
+      gradient: 'from-blue-600 via-indigo-600 to-sky-600',
+      glow: 'shadow-blue-400/20',
+      blob: 'bg-blue-200/10'
+    },
+    boxTheme: { border: 'border-blue-400/50', glow: 'shadow-blue-500/20' }
+  },
+  {
+    title: 'ReactJs - The Complete ReactJs Course For Beginners',
+    issuer: 'Udemy',
+    period: '2025',
+    type: 'Course Completion',
+    description: 'Comprehensive React.js course covering components, hooks, state management, and building modern web UIs.',
+    location: 'Online',
+    color: {
       primary: 'text-purple-700',
       bg: 'bg-purple-50',
-      bgGradient: 'from-purple-50/90 via-blue-50/70 to-indigo-50/50',
+      bgGradient: 'from-purple-50/90 via-violet-50/70 to-indigo-50/50',
       border: 'border-purple-200/60',
-      gradient: 'from-purple-600 via-indigo-600 to-blue-600',
+      gradient: 'from-purple-600 via-violet-600 to-indigo-600',
       glow: 'shadow-purple-400/20',
       blob: 'bg-purple-200/10'
     },
-    boxTheme: {
-      border: 'border-amber-400/50',
-      glow: 'shadow-amber-500/20'
-    }
+    boxTheme: { border: 'border-purple-400/50', glow: 'shadow-purple-500/20' }
+  },
+  {
+    title: 'Django Full Stack Web Development with Python',
+    issuer: 'Udemy',
+    period: '2025',
+    type: 'Course Completion',
+    description: 'Full stack web development using Django and Python, covering models, views, templates, REST APIs, and deployment.',
+    location: 'Online',
+    color: {
+      primary: 'text-orange-700',
+      bg: 'bg-orange-50',
+      bgGradient: 'from-orange-50/90 via-amber-50/70 to-yellow-50/50',
+      border: 'border-orange-200/60',
+      gradient: 'from-orange-600 via-amber-600 to-yellow-600',
+      glow: 'shadow-orange-400/20',
+      blob: 'bg-orange-200/10'
+    },
+    boxTheme: { border: 'border-orange-400/50', glow: 'shadow-orange-500/20' }
+  },
+  {
+    title: 'Create, Publish & Monetize GPTs on ChatGPT',
+    issuer: 'Udemy',
+    period: '2025',
+    type: 'Course Completion',
+    description: 'Hands-on training in building, publishing, and monetizing custom GPTs using the ChatGPT platform.',
+    location: 'Online',
+    color: {
+      primary: 'text-blue-700',
+      bg: 'bg-blue-50',
+      bgGradient: 'from-blue-50/90 via-indigo-50/70 to-sky-50/50',
+      border: 'border-blue-200/60',
+      gradient: 'from-blue-600 via-indigo-600 to-sky-600',
+      glow: 'shadow-blue-400/20',
+      blob: 'bg-blue-200/10'
+    },
+    boxTheme: { border: 'border-blue-400/50', glow: 'shadow-blue-500/20' }
+  },
+  {
+    title: 'MongoDB - The Complete MongoDB Developers Course',
+    issuer: 'Udemy',
+    period: '2025',
+    type: 'Course Completion',
+    description: 'Complete MongoDB course covering CRUD operations, aggregation pipelines, indexing, and integration with Node.js.',
+    location: 'Online',
+    color: {
+      primary: 'text-purple-700',
+      bg: 'bg-purple-50',
+      bgGradient: 'from-purple-50/90 via-violet-50/70 to-indigo-50/50',
+      border: 'border-purple-200/60',
+      gradient: 'from-purple-600 via-violet-600 to-indigo-600',
+      glow: 'shadow-purple-400/20',
+      blob: 'bg-purple-200/10'
+    },
+    boxTheme: { border: 'border-purple-400/50', glow: 'shadow-purple-500/20' }
+  },
+  {
+    title: 'Python Pro: Essential Tips for Real-World Coding & Careers',
+    issuer: 'Udemy',
+    period: '2025',
+    type: 'Course Completion',
+    description: 'Advanced Python tips covering best practices, real-world coding patterns, performance optimization, and career guidance.',
+    location: 'Online',
+    color: {
+      primary: 'text-orange-700',
+      bg: 'bg-orange-50',
+      bgGradient: 'from-orange-50/90 via-amber-50/70 to-yellow-50/50',
+      border: 'border-orange-200/60',
+      gradient: 'from-orange-600 via-amber-600 to-yellow-600',
+      glow: 'shadow-orange-400/20',
+      blob: 'bg-orange-200/10'
+    },
+    boxTheme: { border: 'border-orange-400/50', glow: 'shadow-orange-500/20' }
   },
   {
     title: 'Python for Data Science',
@@ -219,18 +318,15 @@ const certifications = [
     description: 'Comprehensive course on data analysis, visualization, and machine learning using NumPy, Pandas, and Scikit-learn.',
     location: 'Coimbatore',
     color: {
-      primary: 'text-purple-700',
-      bg: 'bg-purple-50',
-      bgGradient: 'from-purple-50/90 via-blue-50/70 to-indigo-50/50',
-      border: 'border-purple-200/60',
-      gradient: 'from-purple-600 via-indigo-600 to-blue-600',
-      glow: 'shadow-purple-400/20',
-      blob: 'bg-purple-200/10'
+      primary: 'text-blue-700',
+      bg: 'bg-blue-50',
+      bgGradient: 'from-blue-50/90 via-indigo-50/70 to-sky-50/50',
+      border: 'border-blue-200/60',
+      gradient: 'from-blue-600 via-indigo-600 to-sky-600',
+      glow: 'shadow-blue-400/20',
+      blob: 'bg-blue-200/10'
     },
-    boxTheme: {
-      border: 'border-amber-400/50',
-      glow: 'shadow-amber-500/20'
-    }
+    boxTheme: { border: 'border-blue-400/50', glow: 'shadow-blue-500/20' }
   },
   {
     title: 'ChatGPT + Bing (Copilot): Prompt Engineering Masterclass',
@@ -242,16 +338,13 @@ const certifications = [
     color: {
       primary: 'text-purple-700',
       bg: 'bg-purple-50',
-      bgGradient: 'from-purple-50/90 via-blue-50/70 to-indigo-50/50',
+      bgGradient: 'from-purple-50/90 via-violet-50/70 to-indigo-50/50',
       border: 'border-purple-200/60',
-      gradient: 'from-purple-600 via-indigo-600 to-blue-600',
+      gradient: 'from-purple-600 via-violet-600 to-indigo-600',
       glow: 'shadow-purple-400/20',
       blob: 'bg-purple-200/10'
     },
-    boxTheme: {
-      border: 'border-amber-400/50',
-      glow: 'shadow-amber-500/20'
-    }
+    boxTheme: { border: 'border-purple-400/50', glow: 'shadow-purple-500/20' }
   },
   {
     title: 'Full Stack Development with Python',
@@ -261,18 +354,51 @@ const certifications = [
     description: 'Covering Python, Django, and modern web application architecture.',
     location: 'Coimbatore',
     color: {
+      primary: 'text-orange-700',
+      bg: 'bg-orange-50',
+      bgGradient: 'from-orange-50/90 via-amber-50/70 to-yellow-50/50',
+      border: 'border-orange-200/60',
+      gradient: 'from-orange-600 via-amber-600 to-yellow-600',
+      glow: 'shadow-orange-400/20',
+      blob: 'bg-orange-200/10'
+    },
+    boxTheme: { border: 'border-orange-400/50', glow: 'shadow-orange-500/20' }
+  },
+  {
+    title: 'Critical Thinking and Problem Solving',
+    issuer: 'LinkedIn Learning',
+    period: 'April 24, 2025',
+    type: 'Course Completion',
+    description: 'Developed structured critical thinking and problem-solving frameworks for professional and technical decision-making.',
+    location: 'Online',
+    color: {
+      primary: 'text-blue-700',
+      bg: 'bg-blue-50',
+      bgGradient: 'from-blue-50/90 via-indigo-50/70 to-sky-50/50',
+      border: 'border-blue-200/60',
+      gradient: 'from-blue-600 via-indigo-600 to-sky-600',
+      glow: 'shadow-blue-400/20',
+      blob: 'bg-blue-200/10'
+    },
+    boxTheme: { border: 'border-blue-400/50', glow: 'shadow-blue-500/20' }
+  },
+  {
+    title: 'Problem-Solving Techniques',
+    issuer: 'LinkedIn Learning',
+    period: 'November 23, 2024',
+    type: 'Course Completion',
+    description: 'Learned systematic problem-solving techniques including root cause analysis, decision trees, and creative ideation methods.',
+    location: 'Online',
+    color: {
       primary: 'text-purple-700',
       bg: 'bg-purple-50',
-      bgGradient: 'from-purple-50/90 via-blue-50/70 to-indigo-50/50',
+      bgGradient: 'from-purple-50/90 via-violet-50/70 to-indigo-50/50',
       border: 'border-purple-200/60',
-      gradient: 'from-purple-600 via-indigo-600 to-blue-600',
+      gradient: 'from-purple-600 via-violet-600 to-indigo-600',
       glow: 'shadow-purple-400/20',
       blob: 'bg-purple-200/10'
     },
-    boxTheme: {
-      border: 'border-amber-400/50',
-      glow: 'shadow-amber-500/20'
-    }
+    boxTheme: { border: 'border-purple-400/50', glow: 'shadow-purple-500/20' }
   }
 ];
 

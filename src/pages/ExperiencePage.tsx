@@ -1,6 +1,7 @@
 import Experience from '../components/Experience';
 import Achievements from '../components/Achievements';
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import RevealOnScroll from '../components/RevealOnScroll';
 
 export default function ExperiencePage() {
@@ -34,30 +35,6 @@ export default function ExperiencePage() {
           </p>
         </div>
       </div>
-
-      {/* Quick Stats Summary - Added 'More Things' */}
-      <RevealOnScroll>
-        <div className="container mx-auto max-w-6xl px-6 mb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl text-center border-2 border-blue-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all transform hover:-translate-y-1">
-              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">2+</h3>
-              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Years Coding</p>
-            </div>
-            <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl text-center border-2 border-purple-200 hover:shadow-xl hover:shadow-purple-500/10 transition-all transform hover:-translate-y-1">
-              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">15+</h3>
-              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Projects</p>
-            </div>
-            <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl text-center border-2 border-amber-200 hover:shadow-xl hover:shadow-amber-500/10 transition-all transform hover:-translate-y-1">
-              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-orange-600">5+</h3>
-              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Certificates</p>
-            </div>
-            <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl text-center border-2 border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/10 transition-all transform hover:-translate-y-1">
-              <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">Top 5%</h3>
-              <p className="text-gray-700 font-bold uppercase tracking-wider text-[10px] mt-1">Class Rank</p>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
 
       {/* Education Section - Added based on user request */}
       <section className="py-12 px-6">
@@ -102,6 +79,35 @@ export default function ExperiencePage() {
 
       <Experience />
       <Achievements />
+
+      {/* Bottom CTA */}
+      <div className="py-16 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div className="absolute top-0 left-1/4 w-48 h-48 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="container mx-auto max-w-2xl relative z-10 text-center">
+          <RevealOnScroll>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Like What You See?</h2>
+            <p className="text-base mb-8 text-gray-500 max-w-md mx-auto leading-relaxed">Let's connect and build something great together.</p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
+              >
+                <Rocket size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                Hire Me Now
+              </Link>
+              <Link
+                to="/skills-projects"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+              >
+                View My Projects
+              </Link>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </div>
     </div>
   );
 }

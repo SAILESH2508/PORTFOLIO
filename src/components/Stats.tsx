@@ -38,9 +38,9 @@ const stats = [
     icon: Users,
     value: '6+',
     label: 'Internships',
-    color: 'text-blue-700',
-    bgColor: 'bg-blue-100/50',
-    borderColor: 'border-blue-300'
+    color: 'text-indigo-600',
+    bgColor: 'bg-indigo-100/50',
+    borderColor: 'border-indigo-300'
   },
   {
     icon: Trophy,
@@ -68,26 +68,26 @@ export default function Stats() {
             return (
               <RevealOnScroll key={idx} delay={idx * 0.1}>
                 <div
-                  className={`group relative bg-white/40 backdrop-blur-md border ${stat.borderColor} rounded-2xl p-10 text-center hover:scale-[1.03] transition-all duration-500 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer overflow-hidden`}
+                  className={`group relative bg-white/40 backdrop-blur-md border ${stat.borderColor} rounded-2xl p-6 text-center hover:scale-[1.03] transition-all duration-500 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer overflow-hidden`}
                 >
                   {/* Subtle background gradient on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${stat.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                   <div className="relative z-10">
-                    <div className={`w-16 h-16 ${stat.bgColor} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                      <Icon className={stat.color} size={28} />
+                    <div className={`w-12 h-12 ${stat.bgColor} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500`}>
+                      <Icon className={stat.color} size={22} />
                     </div>
-                    <div className={`text-5xl font-black ${stat.color} mb-3 tracking-tight group-hover:scale-110 transition-transform duration-500`}>
+                    <div className={`text-3xl font-black ${stat.color} mb-2 tracking-tight group-hover:scale-110 transition-transform duration-500`}>
                       {stat.value}
                     </div>
-                    <div className="text-sm text-gray-900 font-black uppercase tracking-widest">
+                    <div className="text-xs text-gray-900 font-black uppercase tracking-widest">
                       {stat.label}
                     </div>
                   </div>
 
                   {/* Sparkle effect on hover */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className={`w-2 h-2 ${stat.color.replace('text-', 'bg-')} rounded-full animate-ping`}></div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className={`w-2 h-2 rounded-full animate-ping`} style={{ backgroundColor: 'currentColor' }}></div>
                   </div>
                 </div>
               </RevealOnScroll>

@@ -1,32 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Mail, Linkedin, Github, Heart, MapPin, Code, Rocket, Send, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
-import { useEmailJS } from '../hooks/useEmailJS';
+import { Mail, Linkedin, Github, Heart, Code, Rocket, ArrowRight } from 'lucide-react';
 import { LanguageLogo } from './LanguageLogos';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { submitStatus, sendEmail, setSubmitStatus } = useEmailJS();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    await sendEmail(formData);
-
-    if (submitStatus === 'success') {
-      setFormData({ name: '', email: '', message: '' });
-    }
-
-    setIsSubmitting(false);
-    setTimeout(() => setSubmitStatus('idle'), 3000);
-  };
 
   const quickLinks = [
     { name: 'Home', href: '/' },
@@ -42,7 +19,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative py-8 px-4 bg-blue-950 border-t border-blue-900 overflow-hidden">
+    <footer className="relative py-12 px-6 bg-blue-950 border-t border-blue-900 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-5 left-5 w-20 h-20 bg-primary rounded-full blur-2xl animate-pulse"></div>
@@ -51,63 +28,27 @@ export default function Footer() {
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
 
           {/* About Section */}
-          <div className="space-y-3 animate-fade-in">
+          <div className="space-y-4 animate-fade-in">
             <h3 className="text-xl font-bold text-white drop-shadow-lg">
               SAILESH S
             </h3>
-            <p className="text-white/70 text-xs leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               Python Full Stack Developer <br />
               ML & Gen AI Enthusiast <br />
               DevOps Learner
             </p>
-            <div className="space-y-2 pt-1">
-              <div className="flex items-center gap-2 text-white/70 text-xs hover:text-white transition-colors">
-                <MapPin size={12} className="flex-shrink-0 text-cyan-400" />
-                <span>Coimbatore, India</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/70 text-xs hover:text-white transition-colors">
-                <Mail size={12} className="flex-shrink-0 text-cyan-400" />
-                <a href="mailto:sailesh25008@gmail.com">sailesh25008@gmail.com</a>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex gap-2 pt-1">
-              <a
-                href="mailto:sailesh25008@gmail.com"
-                className="group w-8 h-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-600 hover:border-transparent transition-all"
-              >
-                <Mail size={14} className="text-white" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/sailesh-s-825293276/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group w-8 h-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:border-transparent transition-all"
-              >
-                <Linkedin size={14} className="text-white" />
-              </a>
-              <a
-                href="https://github.com/SAILESH2508"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group w-8 h-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center hover:bg-purple-600 hover:border-transparent transition-all"
-              >
-                <Github size={14} className="text-white" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-3 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <h4 className="text-sm font-bold text-white flex items-center gap-2 mb-3">
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h4 className="text-sm font-bold text-white flex items-center gap-2">
               <Rocket size={16} className="text-secondary-light" />
               Quick Links
             </h4>
-            <ul className="space-y-1.5">
+            <ul className="space-y-2.5">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
                   <Link
@@ -122,83 +63,69 @@ export default function Footer() {
           </div>
 
           {/* Tech & Services - Hidden on mobile to shorten footer */}
-          <div className="hidden md:block space-y-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div>
-              <h4 className="text-sm font-bold text-white flex items-center gap-2 mb-3">
-                <Code size={16} className="text-accent-light" />
-                Technologies
-              </h4>
-              <div className="flex flex-wrap gap-1">
-                {techLogos.slice(0, 10).map((tech, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-white/10 transition-all cursor-pointer group/tech text-white"
-                    title={tech}
-                  >
-                    <div className="transform group-hover/tech:scale-110 transition-transform">
-                      <LanguageLogo name={tech} />
-                    </div>
-                    <span className="text-white/80 font-semibold text-xs">{tech}</span>
+          <div className="hidden md:block space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h4 className="text-sm font-bold text-white flex items-center gap-2">
+              <Code size={16} className="text-accent-light" />
+              Technologies
+            </h4>
+            <div className="flex flex-wrap gap-1.5">
+              {techLogos.slice(0, 10).map((tech, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-white/10 transition-all cursor-pointer group/tech text-white"
+                  title={tech}
+                >
+                  <div className="transform group-hover/tech:scale-110 transition-transform">
+                    <LanguageLogo name={tech} />
                   </div>
-                ))}
-              </div>
+                  <span className="text-white/80 font-semibold text-xs">{tech}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Quick Contact Form - Hidden on small mobile to shorten footer */}
-          <div className="hidden sm:block space-y-3 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <h4 className="text-sm font-bold text-white flex items-center gap-2 mb-3">
-              <Send size={16} className="text-primary-light" />
-              Quick Message
+          {/* Let's Connect CTA */}
+          <div className="hidden sm:block space-y-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <h4 className="text-sm font-bold text-white flex items-center gap-2">
+              <Mail size={16} className="text-primary-light" />
+              Let's Connect
             </h4>
-            <form onSubmit={handleSubmit} className="space-y-2">
-              <input
-                type="text"
-                placeholder="Your Name"
-                required
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-2 py-1.5 bg-white/5 border border-white/10 rounded-md text-xs text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                required
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-2 py-1.5 bg-white/5 border border-white/10 rounded-md text-xs text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 transition-colors"
-              />
-              <textarea
-                placeholder="Message"
-                required
-                rows={2}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-2 py-1.5 bg-white/5 border border-white/10 rounded-md text-xs text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 transition-colors resize-none"
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-2 btn-gradient text-xs font-semibold rounded-md flex items-center justify-center gap-2 disabled:opacity-50"
+            <p className="text-white/60 text-xs leading-relaxed">
+              Have a project in mind or just want to say hello? I'd love to hear from you!
+            </p>
+            <a
+              href="mailto:sailesh25008@gmail.com?subject=Hello%20Sailesh%20-%20Let's%20Connect&body=Hi%20Sailesh%2C%0A%0A"
+              className="w-full py-2.5 btn-gradient text-xs font-semibold rounded-md flex items-center justify-center gap-2 group hover:shadow-lg transition-all duration-300"
+            >
+              <Mail size={12} />
+              <span>Send an Email</span>
+              <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+            <div className="flex gap-2">
+              <a
+                href="https://www.linkedin.com/in/sailesh-s-825293276/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 bg-white/5 border border-white/10 rounded-md text-xs text-white/80 font-medium flex items-center justify-center gap-1.5 hover:bg-blue-600/20 hover:border-blue-500/30 transition-all"
               >
-                {isSubmitting ? (
-                  <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                ) : submitStatus === 'success' ? (
-                  <>
-                    <CheckCircle size={12} /> Sent!
-                  </>
-                ) : (
-                  <>
-                    Send <Send size={12} />
-                  </>
-                )}
-              </button>
-            </form>
+                <Linkedin size={11} />
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/SAILESH2508"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 bg-white/5 border border-white/10 rounded-md text-xs text-white/80 font-medium flex items-center justify-center gap-1.5 hover:bg-purple-600/20 hover:border-purple-500/30 transition-all"
+              >
+                <Github size={11} />
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Divider with Animation */}
-        <div className="relative mb-4">
+        <div className="relative mb-6">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-white/10"></div>
           </div>
@@ -212,7 +139,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="text-center">
           <p className="text-white/60 text-xs flex items-center justify-center gap-2 font-semibold">
-            Made with <Heart className="text-purple-500 animate-pulse" size={12} fill="currentColor" /> by SAILESH S © {currentYear}
+            Made with <Heart className="text-orange-500 animate-pulse" size={12} fill="currentColor" /> by SAILESH S © {currentYear}
           </p>
         </div>
       </div>

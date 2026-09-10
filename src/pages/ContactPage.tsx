@@ -1,26 +1,14 @@
 import Contact from '../components/Contact';
 import Services from '../components/Services';
-import { Mail } from 'lucide-react';
+import { Mail, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import RevealOnScroll from '../components/RevealOnScroll';
 
 export default function ContactPage() {
-  const location = useLocation();
-
   useEffect(() => {
-    if (location.state?.scrollToContact) {
-      setTimeout(() => {
-        const contactEl = document.getElementById('contact');
-        if (contactEl) {
-          const yOffset = -80; // offset for fixed header
-          const y = contactEl.getBoundingClientRect().top + window.scrollY + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [location]);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen pt-16 pb-16">
@@ -55,6 +43,35 @@ export default function ContactPage() {
 
       <Services />
       <Contact />
+
+      {/* Bottom CTA */}
+      <div className="py-16 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div className="absolute top-0 left-1/4 w-48 h-48 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="container mx-auto max-w-2xl relative z-10 text-center">
+          <RevealOnScroll>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Explore My Work</h2>
+            <p className="text-base mb-8 text-gray-500 max-w-md mx-auto leading-relaxed">Check out my projects and professional experience while you're here.</p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link
+                to="/skills-projects"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-blue-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 group"
+              >
+                <Rocket size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                View Projects
+              </Link>
+              <Link
+                to="/experience"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-base rounded-full hover:scale-105 transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+              >
+                My Experience
+              </Link>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </div>
     </div>
   );
 }
