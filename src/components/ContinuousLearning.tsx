@@ -1,6 +1,6 @@
 import RevealOnScroll from './RevealOnScroll';
 import AnimatedTitle from './AnimatedTitle';
-import { BookOpen, Star } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 export default function ContinuousLearning() {
     return (
@@ -18,28 +18,6 @@ export default function ContinuousLearning() {
                             <p>
                                 Always exploring new technologies and methodologies to stay at the cutting edge of software development. Currently diving deeper into <span className="font-semibold text-primary">cloud architecture</span>, <span className="font-semibold text-primary">microservices</span>, and <span className="font-semibold text-primary">advanced machine learning applications</span>.
                             </p>
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                            <Star className="text-primary" /> Languages
-                        </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
-                                <h4 className="font-bold text-gray-900">Tamil</h4>
-                                <p className="text-sm text-gray-500">Native</p>
-                            </div>
-                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
-                                <h4 className="font-bold text-gray-900">English</h4>
-                                <p className="text-sm text-gray-500">Fluent</p>
-                            </div>
-                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
-                                <h4 className="font-bold text-gray-900">Malayalam</h4>
-                                <p className="text-sm text-gray-500">Conversational</p>
-                            </div>
-                            <div className="p-4 bg-white rounded-xl border border-blue-900/20 hover:border-primary/50 transition-all hover:shadow-md">
-                                <h4 className="font-bold text-gray-900">Hindi</h4>
-                                <p className="text-sm text-gray-500">Basic (Read/Write)</p>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,7 @@ import FloatingEmojis from './components/FloatingEmojis';
 import FloatingLogos from './components/FloatingLogos';
 import PartyPopper from './components/PartyPopper';
 import BackToTop from './components/BackToTop';
+import CustomCursor from './components/CustomCursor';
 import HomePage from './pages/HomePage';
 import SkillsProjectsPage from './pages/SkillsProjectsPage';
 import ExperiencePage from './pages/ExperiencePage';
@@ -17,6 +18,7 @@ import ReportsPage from './pages/ReportsPage';
 function App() {
   return (
     <Router>
+      <CustomCursor />
       <WelcomeAnimation />
       <PartyPopper />
       <ScrollProgress />

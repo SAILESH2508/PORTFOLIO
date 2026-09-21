@@ -1,6 +1,6 @@
 import Contact from '../components/Contact';
 import Services from '../components/Services';
-import { Mail, Rocket } from 'lucide-react';
+import { Mail, Rocket, Languages } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import RevealOnScroll from '../components/RevealOnScroll';
@@ -42,6 +42,33 @@ export default function ContactPage() {
       </div>
 
       <Services />
+
+      {/* Linguistic Palette */}
+      <div className="container mx-auto max-w-4xl px-6 py-10">
+        <RevealOnScroll>
+          <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <Languages size={24} className="text-blue-500" />
+              <h3 className="text-2xl font-black text-gray-900">Linguistic Palette</h3>
+              <span className="text-sm text-gray-400 font-medium ml-1">— languages I speak</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { lang: 'Tamil', level: 'Native', color: 'from-orange-50 to-amber-50', border: 'border-orange-200', text: 'text-orange-600' },
+                { lang: 'English', level: 'Professional', color: 'from-blue-50 to-indigo-50', border: 'border-blue-200', text: 'text-blue-600' },
+                { lang: 'Malayalam', level: 'Speak & Understand (Learning)', color: 'from-purple-50 to-violet-50', border: 'border-purple-200', text: 'text-purple-600' },
+                { lang: 'Hindi', level: 'Read, Write & Learning', color: 'from-green-50 to-emerald-50', border: 'border-green-200', text: 'text-green-600' },
+              ].map(({ lang, level, color, border, text }) => (
+                <div key={lang} className={`p-6 bg-gradient-to-br ${color} rounded-2xl border-2 ${border} hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}>
+                  <h4 className="font-black text-gray-900 text-lg mb-1">{lang}</h4>
+                  <p className={`text-sm font-semibold ${text}`}>{level}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </div>
+
       <Contact />
 
       {/* Bottom CTA */}

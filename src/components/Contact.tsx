@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, MapPin, ExternalLink, Clock, Sparkles, MessageCircle, ArrowRight, Copy, Check } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, ExternalLink, Clock, Sparkles, ArrowRight, Copy, Check, Zap, Users, Briefcase } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import RevealOnScroll from './RevealOnScroll';
 import AnimatedTitle from './AnimatedTitle';
@@ -78,14 +78,7 @@ export default function Contact() {
     }
   ];
 
-  const quickTopics = [
-    { emoji: '🌐', label: 'Full Stack Web App', subject: 'Full Stack Web Development Project' },
-    { emoji: '🤖', label: 'ML / AI Project', subject: 'ML & AI Project Inquiry' },
-    { emoji: '☁️', label: 'Cloud & DevOps', subject: 'Cloud & DevOps Consultation' },
-    { emoji: '💼', label: 'Freelance Work', subject: 'Freelance Opportunity' },
-    { emoji: '🤝', label: 'Collaboration', subject: 'Collaboration Proposal' },
-    { emoji: '💬', label: 'Just Say Hi', subject: 'Hello from your portfolio!' },
-  ];
+  const quickTopics: never[] = [];
 
   return (
     <section id="contact" className="py-10 px-6 bg-transparent">
@@ -142,8 +135,8 @@ export default function Contact() {
                   <ExternalLink size={16} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                 </div>
                 <h3 className="text-lg font-black text-gray-900 mb-1">{method.title}</h3>
-                <p className="text-sm font-bold text-gray-500 mb-2">{method.subtitle}</p>
-                <p className="text-xs text-gray-400">{method.description}</p>
+                <p className="text-sm font-bold text-gray-700 mb-2">{method.subtitle}</p>
+                <p className="text-xs font-medium text-gray-600">{method.description}</p>
                 <div className={`mt-4 flex items-center gap-2 text-sm font-bold bg-clip-text text-transparent bg-gradient-to-r ${method.gradient} opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300`}>
                   <span>Open</span>
                   <ArrowRight size={14} className="text-gray-500" />
@@ -153,16 +146,16 @@ export default function Contact() {
           ))}
         </div>
 
-        {/* Quick Copy Email + Quick Topics */}
-        <div className="grid lg:grid-cols-2 gap-6">
+        {/* Quick Copy Email + Open To */}
+        <div className="grid lg:grid-cols-2 gap-6 items-stretch">
           {/* Copy Email Card */}
           <RevealOnScroll delay={0.3}>
-            <div className="glass-card p-6 hover:shadow-xl transition-all duration-300">
+            <div className="glass-card p-6 hover:shadow-xl transition-all duration-300 h-full">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles size={20} className="text-amber-500" />
                 <h3 className="text-lg font-black text-gray-900">Quick Copy</h3>
               </div>
-              <p className="text-sm text-gray-500 mb-4">Click to copy my email address to your clipboard</p>
+              <p className="text-sm text-gray-600 mb-4">Click to copy my email address to your clipboard</p>
               <button
                 onClick={handleCopyEmail}
                 className={`w-full flex items-center justify-between px-5 py-4 rounded-xl border-2 transition-all duration-300 group ${
@@ -199,24 +192,26 @@ export default function Contact() {
             </div>
           </RevealOnScroll>
 
-          {/* Quick Topic Selector */}
+          {/* What I'm Open To */}
           <RevealOnScroll delay={0.4}>
-            <div className="glass-card p-6 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <MessageCircle size={20} className="text-purple-500" />
-                <h3 className="text-lg font-black text-gray-900">Quick Reach Out</h3>
+            <div className="glass-card p-6 hover:shadow-xl transition-all duration-300 h-full">
+              <div className="flex items-center gap-3 mb-2">
+                <Zap size={20} className="text-blue-500" />
+                <h3 className="text-lg font-black text-gray-900">What I'm Open To</h3>
               </div>
-              <p className="text-sm text-gray-500 mb-4">Click a topic to open a pre-filled email</p>
-              <div className="grid grid-cols-2 gap-2.5">
-                {quickTopics.map((topic, index) => (
-                  <a
-                    key={index}
-                    href={`mailto:sailesh25008@gmail.com?subject=${encodeURIComponent(topic.subject)}&body=${encodeURIComponent(`Hi Sailesh,\n\nI'm reaching out regarding: ${topic.label}\n\n`)}`}
-                    className="flex items-center gap-2.5 px-4 py-3 rounded-xl border border-gray-100 bg-gray-50/50 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:border-blue-200 transition-all duration-300 group hover:shadow-md hover:-translate-y-0.5"
-                  >
-                    <span className="text-lg group-hover:scale-125 transition-transform duration-300">{topic.emoji}</span>
-                    <span className="text-xs font-bold text-gray-700 group-hover:text-gray-900">{topic.label}</span>
-                  </a>
+              <p className="text-sm text-gray-600 mb-5">Currently available for the following</p>
+              <div className="space-y-3">
+                {[
+                  { icon: Briefcase, label: 'Open to Work', color: 'bg-green-100 text-green-600' },
+                  { icon: Users, label: 'Seeking Internships & Full-time Roles', color: 'bg-blue-100 text-blue-600' },
+                  { icon: Zap, label: 'Available for Freelance Projects', color: 'bg-orange-100 text-orange-600' },
+                ].map(({ icon: Icon, label, color }) => (
+                  <div key={label} className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/50 border border-blue-100/60 hover:border-blue-200 hover:shadow-sm transition-all duration-200">
+                    <div className={`p-2 rounded-lg ${color} flex-shrink-0`}>
+                      <Icon size={15} />
+                    </div>
+                    <span className="text-sm font-bold text-gray-900">{label}</span>
+                  </div>
                 ))}
               </div>
             </div>
